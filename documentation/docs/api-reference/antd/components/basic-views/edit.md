@@ -1,16 +1,14 @@
 ---
 id: edit
 title: Edit
+swizzle: true
 ---
-
-import pageHeaderPropsUsage from '@site/static/img/guides-and-concepts/basic-views/edit/pageHeaderPropsUsage.png'
-import actionButtonsUsage from '@site/static/img/guides-and-concepts/basic-views/edit/actionButtonsUsage.png'
 
 `<Edit>` provides us a layout for displaying the page. It does not contain any logic but adds extra functionalities like a refresh button.
 
 We will show what `<Edit>` does using properties with examples.
 
-```tsx live hideCode url=http://localhost:3000/posts/edit/2
+```tsx live hideCode url=http://localhost:3000/posts/edit/123
 const { EditButton } = RefineAntd;
 
 interface ICategory {
@@ -107,14 +105,14 @@ const PostEdit: React.FC<IResourceComponentsProps> = () => {
 
 render(
     <RefineAntdDemo
-        initialRoutes={["/posts/edit/2"]}
+        initialRoutes={["/posts/edit/123"]}
         resources={[
             {
                 name: "posts",
                 list: () => (
                     <div>
                         <p>This page is empty.</p>
-                        <EditButton recordItemId="2">Edit Item 2</EditButton>
+                        <EditButton recordItemId="123">Edit Item 123</EditButton>
                     </div>
                 ),
                 edit: PostEdit,
@@ -123,6 +121,10 @@ render(
     />,
 );
 ```
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Properties
 
@@ -228,7 +230,7 @@ When clicked on, the delete button executes the `useDelete` method provided by t
 
 [Refer to the `<DeleteButton>` documentation for detailed usage. &#8594](/api-reference/antd/components/buttons/delete.md)
 
-```tsx live disableScroll previewHeight=280px url=http://localhost:3000/posts/edit/2
+```tsx live disableScroll previewHeight=280px url=http://localhost:3000/posts/edit/123
 const { EditButton } = RefineAntd;
 const { default: simpleRest } = RefineSimpleRest;
 
@@ -276,14 +278,14 @@ render(
     <RefineAntdDemo
         authProvider={authProvider}
         dataProvider={customDataProvider}
-        initialRoutes={["/posts/edit/2"]}
+        initialRoutes={["/posts/edit/123"]}
         resources={[
             {
                 name: "posts",
                 list: () => (
                     <div>
                         <p>This page is empty.</p>
-                        <EditButton>Edit Item 2</EditButton>
+                        <EditButton recordItemId="123">Edit Item 123</EditButton>
                     </div>
                 ),
                 edit: PostEdit,
@@ -556,7 +558,7 @@ export const App: React.FC = () => {
 
 To customize the back button or to disable it, you can use the `goBack` property.
 
-```tsx live disableScroll previewHeight=280px url=http://localhost:3000/posts/edit/2
+```tsx live disableScroll previewHeight=280px url=http://localhost:3000/posts/edit/123
 const { EditButton } = RefineAntd;
 
 // visible-block-start
@@ -574,14 +576,14 @@ const PostEdit: React.FC = () => {
 
 render(
     <RefineAntdDemo
-        initialRoutes={["/posts", "/posts/edit/2"]}
+        initialRoutes={["/posts", "/posts/edit/123"]}
         resources={[
             {
                 name: "posts",
                 list: () => (
                     <div>
                         <p>This page is empty.</p>
-                        <EditButton>Edit Item 2</EditButton>
+                        <EditButton recordItemId="123">Edit Item 123</EditButton>
                     </div>
                 ),
                 edit: PostEdit,
@@ -1030,92 +1032,13 @@ render(
 );
 ```
 
-### ~~`actionButtons`~~
-
-:::caution Deprecated
-Use `headerButtons` or `footerButtons` instead.
-:::
-
-`<Edit>` uses the Ant Design [`<Card>`](https://ant.design/components/card) component. The `action` property of the `<Card>` component shows `<SaveButton>` or `<DeleteButton>` based on your resource definition in the `resources` property you pass to `<Refine>`. If you want to use other things instead of these buttons, you can use the `actionButton` property like the code below.
-
-```tsx
-import { Edit, Button } from "@pankod/refine-antd";
-
-export const EditPage: React.FC = () => {
-    return (
-        <Edit
-            actionButtons={
-                <>
-                    <Button type="primary">Custom Button 1</Button>
-                    <Button size="small">Custom Button 2</Button>
-                </>
-            }
-        >
-            ...
-        </Edit>
-    );
-};
-```
-
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={actionButtonsUsage} alt="actionButton Usage" />
-</div>
-<br/>
-
-### ~~`pageHeaderProps`~~
-
-:::caution Deprecated
-Use `headerProps`, `wrapperProps` or `contentProps` instead.
-:::
-
-`<Edit>` uses the Ant Design [`<PageHeader>`](https://ant.design/components/page-header/#API) components, which means that you can customize the properties of `pageHeaderProps`.
-
-By default, the `extra` property of the `<PageHeader>` component shows `<RefreshButton>` or `<ListButton>` based on your resource definition in the `resources` property you pass to `<Refine>` and the `breadcrumb` property shows [`<Breadcrumb>`][breadcrumb-component] component.
-
-```tsx
-import { Edit } from "@pankod/refine-antd";
-
-export const EditPage: React.FC = () => {
-    return (
-        <Edit
-            pageHeaderProps={{
-                onBack: () => console.log("Hello, refine"),
-                subTitle: "Subtitle",
-            }}
-        >
-            ...
-        </Edit>
-    );
-};
-```
-
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={pageHeaderPropsUsage} alt="pageHeaderProps Usage"/>
-</div>
-<br/>
-
-:::caution
-`<Edit>` component needs the `id` information for work properly so if you use the `<Edit>` component in custom pages, you should pass the `recordItemId` property.
-:::
-
 ## API Reference
+
 ### Properties
 
 <PropsTable module="@pankod/refine-antd/Edit" 
 contentProps-type="[`CardProps`](https://ant.design/components/card/#API)"
-headerProps-type="[`PageHeaderProps`](https://ant.design/components/page-header/#API)"
+headerProps-type="[`PageHeaderProps`](https://procomponents.ant.design/en-US/components/page-header)" 
 headerButtons-default="[`ListButton`](https://refine.dev/docs/api-reference/antd/components/buttons/list-button/) and [`RefreshButton`](https://refine.dev/docs/api-reference/antd/components/buttons/refresh-button/)"
 headerButtonProps-type="[`SpaceProps`](https://ant.design/components/space/)"
 deleteButtonProps-type="[`DeleteButtonProps`](/docs/api-reference/antd/components/buttons/delete-button/)"

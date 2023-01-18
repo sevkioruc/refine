@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import {
     useNavigation,
     useResourceWithRoute,
@@ -8,7 +8,6 @@ import {
     userFriendlyResourceName,
     useRefineContext,
 } from "@pankod/refine-core";
-import { RefineCrudShowProps } from "@pankod/refine-ui-types";
 
 import {
     Card,
@@ -17,12 +16,7 @@ import {
     CardHeader,
     IconButton,
     Box,
-    CardProps,
-    CardHeaderProps,
-    CardContentProps,
-    CardActionsProps,
     Typography,
-    BoxProps,
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
@@ -33,36 +27,7 @@ import {
     EditButton,
     Breadcrumb,
 } from "@components";
-
-export type ShowProps = RefineCrudShowProps<
-    BoxProps,
-    CardActionsProps,
-    CardProps,
-    CardHeaderProps,
-    CardContentProps,
-    {
-        /**
-         * @deprecated use `headerButtons` or `footerButtons` instead.
-         */
-        actionButtons?: React.ReactNode;
-        /**
-         * @deprecated use `wrapperProps` instead.
-         */
-        cardProps?: CardProps;
-        /**
-         * @deprecated use `headerProps` instead.
-         */
-        cardHeaderProps?: CardHeaderProps;
-        /**
-         * @deprecated use `contentProps` instead.
-         */
-        cardContentProps?: CardContentProps;
-        /**
-         * @deprecated use `footerButtonProps` instead.
-         */
-        cardActionsProps?: CardActionsProps;
-    }
->;
+import { ShowProps } from "../types";
 
 /**
  * `<Show>` provides us a layout for displaying the page.

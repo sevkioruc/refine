@@ -1,59 +1,72 @@
 ---
 id: date
 title: Date
+swizzle: true
 ---
 
-import dateField from '@site/static/img/guides-and-concepts/fields/date/dateField.png'
 
 This field is used to display dates. It uses [`Day.js`](https://day.js.org/docs/en/display/format) to display date format.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<DateField>` with the example in the post list.
 
-```tsx
-import { 
+```tsx live url=http://localhost:3000/posts previewHeight=340px
+// visible-block-start
+import {
     List,
     Table,
-    // highlight-next-line
-    DateField 
+    useTable,
+    // highlight-start
+    DateField,
+    // highlight-end
 } from "@pankod/refine-antd";
 
-export const PostList: React.FC = () => {
+const PostList: React.FC = () => {
+    const { tableProps } = useTable<IPost>();
 
     return (
         <List>
-            <Table rowKey="id">
-                ...
-                <Table.Column<IPost>
+            <Table {...tableProps} rowKey="id">
+                <Table.Column dataIndex="id" title="ID" />
+                <Table.Column dataIndex="title" title="Title" width="50%" />
+                <Table.Column
                     dataIndex="createdAt"
                     title="Created At"
                     render={(value) => (
-                        // highlight-next-line
-                        <DateField format="LLL" value={value} />
+                        // highlight-start
+                        <DateField value={value} />
+                        // highlight-end
                     )}
+                    width="50%"
                 />
-                ...
             </Table>
         </List>
     );
 };
 
-interface IPost {   
-    id: number;    
+interface IPost {
+    id: number;
+    title: string;
     createdAt: string;
 }
-```
+// visible-block-end
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={dateField} alt="DateField" />
-</div>
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostList
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 

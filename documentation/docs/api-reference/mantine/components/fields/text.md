@@ -1,6 +1,7 @@
 ---
 id: text
 title: Text
+swizzle: true
 ---
 
 ```tsx live shared
@@ -33,6 +34,10 @@ const Wrapper = ({ children }) => {
 ```
 
 This field lets you show basic text. It uses Mantine [`<Text>`](https://mantine.dev/core/text/) component.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

@@ -3,11 +3,16 @@ id: mantine-auth-page
 title: <AuthPage>
 sidebar_label: <AuthPage>
 description: <AuthPage> component from refine is a authentication page that can be used to login, register, forgot password and update password.
+swizzle: true
 ---
 
 `<AuthPage>` component from **refine** for **Mantine** contains authentication pages that can be used to login, register, forgot password and update password.
 
 Before using `<AuthPage>` component you need to add [authProvider](/api-reference/core/providers/auth-provider.md) that will be used to handle authentication.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ```tsx live shared
 
@@ -723,8 +728,7 @@ const App = () => {
                     formProps={{
                         onSubmit: (e: any) => {
                             e.preventDefault();
-                            console.log("e", e.target.email.value);
-
+                            
                             const email = e.target.email.value;
                             const password = e.target.password.value;
 
@@ -734,6 +738,10 @@ const App = () => {
                                     password,
                                 }),
                             );
+                        },
+                        initialValues: {
+                            email: "info@refine.dev",
+                            password: "i-love-refine",
                         },
                     }}
                     // highlight-end

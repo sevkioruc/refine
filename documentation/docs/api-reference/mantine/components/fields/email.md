@@ -1,6 +1,7 @@
 ---
 id: email
 title: Email
+swizzle: true
 ---
 
 ```tsx live shared
@@ -33,6 +34,10 @@ const Wrapper = ({ children }) => {
 ```
 
 This field is used to display email values. It uses the [`<Anchor>`](https://mantine.dev/core/anchor/) component of Mantine.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

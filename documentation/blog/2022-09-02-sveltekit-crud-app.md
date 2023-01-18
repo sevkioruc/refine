@@ -4,21 +4,9 @@ description: We'll build a CRUD Blog app using SvelteKit and Svelte MUI
 slug: sveltekit-crud-app-with-svelte-mui
 authors: ekekenta_clinton
 tags: [svelte, sveltekit, crud-app]
-image: /img/blog/2022-09-02-sveltekit-crud-app/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-02-sveltekit-crud-app/social.png
 hide_table_of_contents: false
 ---
-
-
-import social from '@site/static/img/blog/2022-09-02-sveltekit-crud-app/social.png';
-import list from '@site/static/img/blog/2022-09-02-sveltekit-crud-app/list.png';
-import edit from '@site/static/img/blog/2022-09-02-sveltekit-crud-app/edit.png';
-import create from '@site/static/img/blog/2022-09-02-sveltekit-crud-app/create.png';
-import terminal from '@site/static/img/blog/2022-09-02-sveltekit-crud-app/terminal.png';
-
-
-
-
-
 
 ## Introduction
 Because of Svelte’s popularity over the years, many companies are beginning to migrate their applications or build new ones using the framework. However, developers have had difficulty implementing features such as routing in their web applications while using Svelte.
@@ -62,7 +50,7 @@ The above command will prompt you to select the configurations for your project.
 <br />
 
 <div class="img-container">
-    <img src={terminal} alt="terminal" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-02-sveltekit-crud-app/terminal.png" alt="terminal" />
 </div>
  
 
@@ -112,7 +100,7 @@ Then create a components folder in the src folder and create a `Table.svelte` fi
 			<Row>
 				<Cell numeric>{item.id}</Cell>
 				<Cell>{item.title}</Cell>
-				<Cell><img width="100" src={item.image?.[0]?.url} alt="" /></Cell>
+				<Cell><img width="100" src="https://refine.ams3.cdn.digitaloceanspaces.comundefined" alt="" /></Cell>
 				<Cell>{item.createdAt}</Cell>
 				<Cell>
 					<a href={`/post/${item.id}`}>Edit</a>
@@ -155,7 +143,7 @@ In the above code snippet, we imported the **SMUI** components we need, and we d
 <br/>
 <div>
 <a href="https://github.com/refinedev/refine">
-  <img  src="https://refine.dev/img/github-support-banner.png" alt="github support banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/github-support-banner.png" alt="github support banner" />
 </a>
 </div>
 
@@ -215,7 +203,7 @@ In the above code snippet, we created a **Post** type to tell Typescript the obj
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={list} alt="list1" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-02-sveltekit-crud-app/list.png" alt="list1" />
 </div>
 
 <br/>
@@ -328,7 +316,7 @@ In the above code snippets, we attached an event handler to change the value of 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-02-sveltekit-crud-app/create.png" alt="create" />
 </div>
 
 <br/>
@@ -414,7 +402,7 @@ In the above code snippet, we imported the components to create a UI for this pa
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={edit} alt="edit" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-02-sveltekit-crud-app/edit.png" alt="edit" />
 </div>
 
 <br/>
@@ -448,19 +436,14 @@ Throughout this tutorial, we've implemented how to create a CRUD application usi
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="https://refine.dev/img/discord-banner.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord-banner.png" alt="discord banner" />
 </a>
 </div>
 
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/sveltekit-crud/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="sveltekit-crud-app"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-sveltekit-crud" />
 
 ---
 
@@ -473,7 +456,7 @@ Check out [refine](https://github.com/refinedev/refine), if you are interested i
 
 <div>
 <a href="https://github.com/refinedev/refine">
-    <img  src="https://refine.dev/img/refine_blog_logo_1.png" alt="refine blog logo" />
+    <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/refine_blog_logo_1.png" alt="refine blog logo" />
 </a>
 </div>
 

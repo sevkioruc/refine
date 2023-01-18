@@ -4,13 +4,13 @@ description: In this guide, I'm going to show you how to multipart files upload 
 slug: how-to-multipart-file-upload-with-react-hook-form
 authors: melih
 tags: [refine, react, react-hook-form, multipart-upload, form-data, file-upload]
-image: /img/blog/2022-03-29-react-hook-form-upload/social.jpg
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-03-29-react-hook-form-upload/social.jpg
 hide_table_of_contents: false
 ---
 
-import server_start from '@site/static/img/blog/2022-03-29-react-hook-form-upload/server_start.gif';
-import image_upload from '@site/static/img/blog/2022-03-29-react-hook-form-upload/image_upload.gif';
-import overview from '@site/static/img/blog/2022-03-29-react-hook-form-upload/overview.gif';
+
+
+
 
 <div class="img-container">
     <div class="window">
@@ -18,7 +18,7 @@ import overview from '@site/static/img/blog/2022-03-29-react-hook-form-upload/ov
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={overview} alt="Refine Example Overview" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-03-29-react-hook-form-upload/overview.gif" alt="Refine Example Overview" />
 </div>
 <br />
 
@@ -101,7 +101,7 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={server_start} alt="Express Server" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-03-29-react-hook-form-upload/server_start.gif" alt="Express Server" />
 </div>
 <br />
 
@@ -141,7 +141,7 @@ Try [refine](https://github.com/pankod/refine) to rapidly build your next **CRUD
 
 <div>
 <a href="https://github.com/pankod/refine">
-   <img  src="/img/generic_banner.png" alt="refine blog logo" /> 
+   <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" alt="refine blog logo" /> 
 </a>
 </div>
 
@@ -232,7 +232,7 @@ Our project is ready! With React Hook Form, we can now send the selected file to
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={image_upload} alt="multipart/form-data file upload" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-03-29-react-hook-form-upload/image_upload.gif" alt="multipart/form-data file upload" />
 </div>
 <br />
 
@@ -240,7 +240,7 @@ Our project is ready! With React Hook Form, we can now send the selected file to
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -264,7 +264,7 @@ A React-based framework for building internal tools, rapidly. **refine** offers 
 
 📝 Boilerplate-free Code : Keeps your codebase clean and readable.
 
-[Refer to the **refine** documentation for more information. →](https://refine.dev/docs/getting-started/overview/)
+[Refer to the **refine** documentation for more information. →](https://refine.dev/docs/)
 
 ## How to Multipart File Upload with Refine and React Hook Form?
 
@@ -396,17 +396,12 @@ export const PostCreate: React.FC = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={overview} alt="Refine Example Overview" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-03-29-react-hook-form-upload/overview.gif" alt="Refine Example Overview" />
 </div>
 <br />
 
 As you can see, we have easily saved both our data such as title, category, status and an image in the form of `multipart/form-data` to our database using the `refine-react-hook-form` adapter. We've only shown how to utilize the Multipart File Upload feature for our example in this tutorial. For examine **refine** CMS example, checkout the live codeSandbox below.
 
-## Refine Multipart Upload Live CodeSandbox Example
+## Example
 
-<iframe src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/form/reactHookForm/useForm/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-react-hook-form-example"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="form-react-hook-form-use-form" />

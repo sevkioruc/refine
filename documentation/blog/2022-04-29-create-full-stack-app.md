@@ -4,23 +4,22 @@ description: In this article, we will learn how we can create a full-featured cu
 slug: create-full-stack-app-with-refine
 authors: melih
 tags: [refine, react, next.js, full-stack, web-app, b2b, admin-panel]
-image: /img/blog/2022-04-29-create-full-stack-app/social.jpg
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/social.jpg
 hide_table_of_contents: false
 ---
 
-import benchmarkChart from '@site/static/img/getting-started/benchmark.png';
-import create from '@site/static/img/blog/2022-04-29-create-full-stack-app/create.gif';
-import first from '@site/static/img/blog/2022-04-29-create-full-stack-app/first.png';
-import client_menu from '@site/static/img/blog/2022-04-29-create-full-stack-app/client_menu.png';
-import client_home from '@site/static/img/blog/2022-04-29-create-full-stack-app/client_home.png';
-import dashboard from '@site/static/img/blog/2022-04-29-create-full-stack-app/dashboard.png';
-import products from '@site/static/img/blog/2022-04-29-create-full-stack-app/products.png';
-import reviews from '@site/static/img/blog/2022-04-29-create-full-stack-app/reviews.png';
+
+
+
+
+
+
+
+
 
 We frequently require quick development and sometimes flexibility while developing a Full Stack application. Aside from speed and flexibility, we must establish the application architecture correctly at the start so that we are not subjected to any more needless work throughout the development process.
 
 In this article, we will use the **refine** framework to develop a full stack application. **Refine** will provide us with the speed and flexibility we are looking for, while assisting with the overall project architecture during web application development.
-
 
 ## What is Refine?
 
@@ -52,7 +51,7 @@ With the Data Provider feature it provides, you don't need to think about your A
 
 📝 Boilerplate-free Code : Keeps your codebase clean and readable.
 
-To learn more about **refine** features, we recommend that you read the [Overview](/docs/getting-started/overview/) document.
+To learn more about **refine** features, we recommend that you read the [Overview](/docs/) document.
 
 ### Benchmark
 
@@ -64,7 +63,7 @@ To learn more about **refine** features, we recommend that you read the [Overvie
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={benchmarkChart} alt="Refine Benchmark" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/getting-started/benchmark.png" alt="Refine Benchmark" />
 </div>
 <br />
 
@@ -121,7 +120,7 @@ npx superplate-cli -p refine-react my-first-refine-project
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="Create Refine App" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/create.gif" alt="Create Refine App" />
 </div>
 <br />
 
@@ -152,7 +151,7 @@ import { Refine } from "@pankod/refine-core";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 const App: React.FC = () => {
     return (
@@ -199,7 +198,7 @@ import { Refine } from "@pankod/refine-core";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 //highlight-next-line
 import { PostList } from "pages/post";
 
@@ -223,7 +222,7 @@ export default App;
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={first} alt="Refine Posts Page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/first.png" alt="Refine Posts Page" />
 </div>
 <br />
 
@@ -239,7 +238,7 @@ As you have seen, we have listed and paginated the titles coming from an API by 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={client_home} alt="Refine Client App" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/client_home.png" alt="Refine Client App" />
 </div>
 <br />
 
@@ -249,10 +248,9 @@ As you have seen, we have listed and paginated the titles coming from an API by 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={client_menu} alt="Refine Client App" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/client_menu.png" alt="Refine Client App" />
 </div>
 <br />
-
 
 -   Refine Admin Panel Example -> [Refine Antd + Refine Core ](https://example.admin.refine.dev/)
 
@@ -262,7 +260,7 @@ As you have seen, we have listed and paginated the titles coming from an API by 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={dashboard} alt="Refine Dashboard" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/dashboard.png" alt="Refine Dashboard" />
 </div>
 <br />
 
@@ -272,7 +270,7 @@ As you have seen, we have listed and paginated the titles coming from an API by 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={products} alt="Refine Admin Panel Producst Page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/products.png" alt="Refine Admin Panel Producst Page" />
 </div>
 <br />
 
@@ -282,7 +280,7 @@ As you have seen, we have listed and paginated the titles coming from an API by 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={reviews} alt="Refine Reviews Page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-04-29-create-full-stack-app/reviews.png" alt="Refine Reviews Page" />
 </div>
 <br />
 
@@ -301,18 +299,16 @@ As you have seen, we have listed and paginated the titles coming from an API by 
 -   Dynamic Multi-level Menus
 -   All features of **refine** are available as **open source**.
 
-[For more information about all **refine** features and **refine** →](/docs/getting-started/overview/)
+[For more information about all **refine** features and **refine** →](/docs/)
 
 [Comparison | Refine vs React-Admin vs AdminBro vs Retool →](/docs/comparison/)
 
 ## Conclusion
 
-In this article, we went through **refine** and showed you how to create a full stack application with backend providers that are integrated with it. You may rapidly and flexibly create a web application with **refine**. **refine** is a very successful and developing open source `internal tool` framework. It solves the deficiencies in `B2B`, `B2`C and `Admin panel` development processes well and offers features suitable for needs. 
+In this article, we went through **refine** and showed you how to create a full stack application with backend providers that are integrated with it. You may rapidly and flexibly create a web application with **refine**. **refine** is a very successful and developing open source `internal tool` framework. It solves the deficiencies in `B2B`, `B2`C and `Admin panel` development processes well and offers features suitable for needs.
 
-One of the biggest features that distinguishes **refine** from other frameworks is that it is customizable. Combined with *refine* `headless`, it now provides more customization options. This provides a great deal of convenience in the project you will develop.
+One of the biggest features that distinguishes **refine** from other frameworks is that it is customizable. Combined with _refine_ `headless`, it now provides more customization options. This provides a great deal of convenience in the project you will develop.
 
 You can develop any web application or admin panel you want in a very short time with **refine**.
 
 Give **refine** a star on [GitHub](https://github.com/refinedev/refine) if you like it - your support will help us continue making this tool amazing!
-
-

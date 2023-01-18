@@ -4,11 +4,11 @@ description: A guide for using Docker Build Args to Configure Image Builds
 slug: docker-build-args-and-env-vars
 authors: muhammad_khabbab
 tags: [docker, environment variables]
-image: /img/blog/2022-09-28-docker-build-args/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-28-docker-build-args/social.png
 hide_table_of_contents: false
 ---
 
-import image from '@site/static/img/blog/2022-09-28-docker-build-args/docker-environment-build-args.png';
+
 
 ## Introduction
 Containerization is a core part of modern application development, and docker containers have changed how development teams deploy their applications. As part of standard practices of containerization, it is crucial to manage the build arguments and environment variables through proper configuration instead of just hard coding them.
@@ -40,7 +40,7 @@ See the below diagram to understand the difference between ARG and ENV.
  
 
 <div class="img-container" align-items="center" >
-   <img style={{alignSelf:"center", width:"400px"}}  src={image}  alt="Docker Build Arguments comparison" />
+   <img style={{alignSelf:"center", width:"400px"}}  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-28-docker-build-args/docker-environment-build-args.png"  alt="Docker Build Arguments comparison" />
 
 </div>
 
@@ -91,7 +91,17 @@ build:
 
 ---
 
-<PromotionBanner title="Not confident with your frontend skills?" image="/img/generic_banner.png" />
+<PromotionBanner title="Not confident with your frontend skills?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/diagram.png" description={<div>
+            Meet the headless, React-based solution to build sleek CRUD applications. With refine, you can build complex projects without having advanced frontend skills.
+            <br />
+            <br />
+            Try{" "}
+            <a href="https://github.com/refinedev/refine" target="_blank">
+                refine
+            </a>{" "}
+            to rapidly build your next <b>CRUD</b> project, whether {"it's"} an
+            admin panel, dashboard, internal tool or storefront.
+        </div>} />
 
 ---
 ## How to pass env variables

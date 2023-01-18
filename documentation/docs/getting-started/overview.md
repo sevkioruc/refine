@@ -1,6 +1,7 @@
 ---
 id: overview
 title: Overview
+slug: /
 ---
 
 
@@ -21,7 +22,7 @@ Instead of being a limited set of pre-styled components, **refine** is a collect
 ## Use cases
 **refine** shines on *data-intensive* applications like *admin panels*, *dashboards* and *internal tools*. Thanks to built-in **SSR support**, **refine** can also power *customer-facing* applications like *storefronts*.
 
-<img src="/img/diagram.png" alt="Refine diagram" />
+<img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/diagram.png" alt="Refine diagram" />
 
 
 ## Key Features
@@ -31,6 +32,8 @@ Instead of being a limited set of pre-styled components, **refine** is a collect
 🔌 Connectors for **15+ backend services** including [REST API](https://github.com/refinedev/refine/tree/master/packages/simple-rest), [GraphQL](https://github.com/refinedev/refine/tree/master/packages/graphql), [NestJs CRUD](https://github.com/refinedev/refine/tree/master/packages/nestjsx-crud), [Airtable](https://github.com/refinedev/refine/tree/master/packages/airtable), [Strapi](https://github.com/refinedev/refine/tree/master/packages/strapi), [Strapi v4](https://github.com/refinedev/refine/tree/master/packages/strapi-v4), [Strapi GraphQL](https://github.com/refinedev/refine/tree/master/packages/strapi-graphql), [Supabase](https://github.com/refinedev/refine/tree/master/packages/supabase), [Hasura](https://github.com/refinedev/refine/tree/master/packages/hasura), [Nhost](https://github.com/refinedev/refine/tree/master/packages/nhost), [Appwrite](https://github.com/refinedev/refine/tree/master/packages/appwrite), [Firebase](https://firebase.google.com/), [Directus](https://directus.io/) and [Altogic](https://github.com/refinedev/refine/tree/master/packages/altogic)
 
 🌐 **SSR support** with **Next.js** or **Remix**
+
+🔍 Auto-generated **CRUD** UIs from **your API data structure**
 
 ⚛ Perfect **state management** & **mutations** with **React Query**
 
@@ -45,6 +48,8 @@ Instead of being a limited set of pre-styled components, **refine** is a collect
 💬 Support for any **i18n** framework
 
 💪 Future-proof, **robust architecture**
+
+⌛️ Built-in [CLI](https://refine.dev/docs/packages/documentation/cli/) with time-saving features
 
 ✅ Full **test coverage**
 
@@ -66,5 +71,5 @@ You can find Refine's [Public Roadmap here!](https://github.com/refinedev/refine
 
 👉 Continue with [Quickstart guide](/docs/getting-started/quickstart/) to setup and run your first **refine** project.
 
-👉 Or jump directly to [Refine - Ant Design Tutorial](/docs/tutorials/ant-design-tutorial/) to learn refine by building a full-blown CRUD application.
+👉 Or jump directly to [Tutorial](/docs/tutorial/introduction/index/) to learn refine by building a full-blown CRUD application.
 

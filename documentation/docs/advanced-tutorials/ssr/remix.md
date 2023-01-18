@@ -12,10 +12,10 @@ npm i @pankod/refine-core @pankod/refine-remix-router @pankod/refine-simple-rest
 ```
 
 :::tip
-We recommend [**superplate**][superplate] to initialize your refine projects. It configures the project according to your needs including SSR with Remix!
+We recommend using `create refine-app` to initialize your refine projects. It configures the project according to your needs including SSR with Remix!
 
 ```sh
-npx superplate-cli -o refine-remix my-refine-remix-app
+npm create refine-app@latest -- -o refine-remix my-refine-remix-app
 ```
 
 :::
@@ -119,11 +119,26 @@ interface IPost {
 export default PostList;
 ```
 
-:::important
+:::tip
+If you want to handle your `resource` with a custom route or create a custom route with or without a resource, these will not be visible in the `<Sider />` component. You can trick the `<Sider/>` by passing an empty resource to show your custom route in it.
+
+```tsx title="Example"
+const App = () => (
+    <Refine
+        resources={[
+            // This will add an item to `<Sider/>` with route `/my-custom-item`
+            { name: "my-custom-item", list: () => null }
+        ]}
+    />
+);
+```
+:::
+
+:::caution
 Notice how we passed `resource` prop to [`useTable`][usetable]. This is necessary since for `useTable` to be able to get `resource` name from route, it needs to be a route parameter in a dynamic route. [Refer here](#standard-crud-page) where standard CRUD pages can be built with dynamic routing.
 :::
 
-:::important
+:::caution
 We also used `<LayoutWrapper>` to show the page in the layout provided to [`<Refine>`][refine]. This is deliberately opt-in to provide flexibility. [If you're building a standard CRUD page layout can be baked in automatically](#standart-crud-page).
 :::
 
@@ -241,7 +256,7 @@ Export `RemixRouteComponent` as default in the following pages:
 
 :::
 
-:::important
+:::caution
 `RemixRouteComponent` will wrap the page with `Layout` provided to [`<Refine>`][refine]
 :::
 
@@ -852,7 +867,6 @@ export const loader: LoaderFunction = async ({ params, request }) => {
 [remix]: https://remix.run/
 [remixrouter]: https://www.npmjs.com/package/@pankod/remix-router
 [routerprovider]: /api-reference/core/providers/router-provider.md
-[superplate]: https://github.com/pankod/superplate
 [refine]: /api-reference/core/components/refine-config.md
 [remixroutes]: https://remix.run/docs/en/v1/api/conventions#routes
 [usetable]: /api-reference/core/hooks/useTable.md

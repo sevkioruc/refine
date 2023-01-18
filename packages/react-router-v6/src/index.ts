@@ -22,7 +22,9 @@ export type RefineRouteProps = RouteProps & {
 interface IReactRouterProvider extends IRouterProvider {
     useLocation: typeof useLocation;
     Link: typeof Link;
-    useParams: any;
+    useParams: <
+        Params extends { [K in keyof Params]?: string } = {},
+    >() => Params;
     RouterComponent: React.FC<BrowserRouterProps>;
     routes?: RefineRouteProps[];
 }
@@ -52,13 +54,18 @@ const RouterProvider: IReactRouterProvider = {
             resource:
                 Object.keys(params).length === 0
                     ? pathname.substring(1)
-                    : pathname.substring(1).replace(paramsString, ""),
+                    : decodeURIComponent(pathname.substring(1)).replace(
+                          paramsString,
+                          "",
+                      ),
         });
     },
     Prompt: Prompt as any,
     Link,
     RouterComponent: BrowserRouterComponent,
 };
-export default RouterProvider;
 
+export * from "react-router-dom";
+
+export default RouterProvider;
 export { MemoryRouterComponent, HashRouterComponent, BrowserRouterComponent };

@@ -1,58 +1,51 @@
 ---
 id: edit-button
 title: Edit
+swizzle: true
 ---
 
-import editButton from '@site/static/img/guides-and-concepts/components/buttons/edit/edit-mui.png';
 
 `<EditButton>` uses Material UI [`<Button>`](https://mui.com/material-ui/react-button/) component. It uses the `edit` method from [`useNavigation`](/api-reference/core/hooks/navigation/useNavigation.md) under the hood. It can be useful to redirect the app to the edit page route of resource.
 
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
+
 ## Usage
 
-```tsx title="src/pages/posts/list.tsx"
-import { useTable } from "@pankod/refine-core";
-
+```tsx live url=http://localhost:3000/posts previewHeight=340px
+// visible-block-start
 import {
+    useDataGrid,
+    DataGrid,
+    GridColumns,
     List,
-    Table,
     // highlight-next-line
     EditButton,
-    TableHead,
-    TableRow,
-    TableCell,
-    TableBody,
 } from "@pankod/refine-mui";
 
-export const PostList: React.FC = () => {
-    const { tableQueryResult } = useTable<IPost>();
+const columns: GridColumns = [
+    { field: "id", headerName: "ID", type: "number" },
+    { field: "title", headerName: "Title", minWidth: 400, flex: 1 },
+    {
+        field: "actions",
+        headerName: "Actions",
+        renderCell: function render({ row }) {
+            // highlight-next-line
+            return <EditButton size="small" recordItemId={row.id} />;
+        },
+        align: "center",
+        headerAlign: "center",
+        minWidth: 80,
+    },
+];
 
-    const { data } = tableQueryResult;
+const PostsList: React.FC = () => {
+    const { dataGridProps } = useDataGrid<IPost>();
 
     return (
         <List>
-            <Table aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>ID</TableCell>
-                        <TableCell>Title</TableCell>
-                        <TableCell align="center">Action</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {data?.data.map((row) => (
-                        <TableRow key={row.id}>
-                            <TableCell>{row.id}</TableCell>
-                            <TableCell component="th" scope="row">
-                                {row.title}
-                            </TableCell>
-                            <TableCell align="center">
-                                // highlight-next-line
-                                <EditButton recordItemId={row.id} />
-                            </TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+            <DataGrid {...dataGridProps} columns={columns} autoHeight />
         </List>
     );
 };
@@ -61,31 +54,109 @@ interface IPost {
     id: number;
     title: string;
 }
+// visible-block-end
+
+render(
+    <RefineMuiDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostsList,
+                edit: () => <RefineMui.Edit>Rest of the page here...</RefineMui.Edit>,
+            },
+        ]}
+    />,
+);
 ```
 
-Will look like this:
-
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={editButton} alt="Default edit button" />
-</div>
-
 ## Properties
+
+### `recordItemId`
+
+`recordItemId` is used to append the record id to the end of the route path for the edit route.
+
+```tsx live disableScroll previewHeight=120px
+const { useRouterContext } = RefineCore;
+// visible-block-start
+import { EditButton } from "@pankod/refine-mui";
+
+const MyEditComponent = () => {
+    return <EditButton
+        resourceNameOrRouteName="posts"
+        // highlight-next-line
+        recordItemId="1"
+    />;
+};
+
+// visible-block-end
+
+const EditPage = () => {
+    const params = useRouterContext().useParams();
+    return <div>{JSON.stringify(params)}</div>;
+};
+
+render(
+    <RefineMuiDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+                edit: EditPage,
+            },
+        ]}
+        DashboardPage={MyEditComponent}
+    />,
+);
+```
+
+Clicking the button will trigger the `edit` method of [`useNavigation`](/api-reference/core/hooks/navigation/useNavigation.md) and then redirect the app to `/posts/edit/1`.
+
+:::note
+**`<EditButton>`** component reads the id information from the route by default.
+:::
 
 ### `resourceNameOrRouteName`
 
 It is used to redirect the app to the `/edit` endpoint of the given resource name. By default, the app redirects to a URL with `/edit` defined by the name property of resource object.
 
-```tsx
+```tsx live disableScroll previewHeight=120px
+const { useRouterContext } = RefineCore;
+
+// visible-block-start
 import { EditButton } from "@pankod/refine-mui";
 
-export const MyEditComponent = () => {
-    return <EditButton resourceNameOrRouteName="posts" recordItemId="2" />;
+const MyEditComponent = () => {
+    return (
+        <EditButton
+            // highlight-next-line
+            resourceNameOrRouteName="categories"
+            recordItemId="2"
+        />
+    );
 };
+
+// visible-block-end
+
+const EditPage = () => {
+    const params = useRouterContext().useParams();
+    return <div>{JSON.stringify(params)}</div>;
+};
+
+render(
+    <RefineMuiDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+            },
+            {
+                name: "categories",
+                edit: EditPage,
+            },
+        ]}
+        DashboardPage={MyEditComponent}
+    />,
+);
 ```
 
 Clicking the button will trigger the `edit` method of [`useNavigation`](/api-reference/core/hooks/navigation/useNavigation.md) and then redirect to `/posts/edit/2`.
@@ -94,12 +165,40 @@ Clicking the button will trigger the `edit` method of [`useNavigation`](/api-ref
 
 It is used to show and not show the text of the button. When `true`, only the button icon is visible.
 
-```tsx
+```tsx live disableScroll previewHeight=120px
+const { useRouterContext } = RefineCore;
+
+// visible-block-start
 import { EditButton } from "@pankod/refine-mui";
 
-export const MyEditComponent = () => {
-    return <EditButton hideText />;
+const MyEditComponent = () => {
+    return (
+        <EditButton
+            // highlight-next-line
+            hideText={true}
+        />
+    );
 };
+
+// visible-block-end
+
+const EditPage = () => {
+    const params = useRouterContext().useParams();
+    return <div>{JSON.stringify(params)}</div>;
+};
+
+render(
+    <RefineMuiDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+                list: MyEditComponent,
+                edit: EditPage,
+            },
+        ]}
+    />,
+);
 ```
 
 ### `accessControl`

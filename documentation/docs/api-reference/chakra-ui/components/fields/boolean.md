@@ -1,6 +1,7 @@
 ---
 id: boolean
 title: Boolean
+swizzle: true
 ---
 
 ```tsx live shared
@@ -60,6 +61,10 @@ const IconCheck = (
 ```
 
 This field is used to display boolean values. It uses the [`<Tooltip>`](https://chakra-ui.com/docs/components/tooltip/usage) values from Chakra UI.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

@@ -4,12 +4,12 @@ description: Find out when to use dangerouslySetInnerHTML in React and how it ca
 slug: use-react-dangerouslysetinnerhtml
 authors: clara_ekekenta
 tags: [react, dangerouslySetInnerHTML]
-image: /img/blog/2022-09-25-react-dangerouslyInnerhtml/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-25-react-dangerouslyInnerhtml/social.png
 hide_table_of_contents: false
 ---
 
-import cli from '@site/static/img/blog/2022-09-25-react-dangerouslyInnerhtml/dangerouslySetInnerhtml-cli.png';
-import usage from '@site/static/img/blog/2022-09-25-react-dangerouslyInnerhtml/dangerouslySetInnerhtml-usage.png';
+
+
 
 ## Introduction
 Rendering HTML markup from rich text created in a WYSIWYG editor might be difficult. Because numerous pieces of logic are required to make things work as they should. This can be attributed to the fact that React uses a browser-independent system to manipulate the DOM elements, thus preventing direct interaction with the DOM. Things can be pretty much easier and faster with dangerouslySetInnerHTML.
@@ -76,7 +76,7 @@ The above code will strip out the script in the data that has been rendered on t
 
 ---
 
-<PromotionBanner title="Does your CRUD app need server state management?" image="/img/mui_banner.png" />
+<PromotionBanner title="Does your CRUD app need server state management?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/mui_banner.png" />
 
 ---
 
@@ -92,7 +92,7 @@ npx superplate-cli blog
 The above command will prompt you to choose the configuration for your project. Your selection should look like the screenshot below.
 
 <div class="img-container" align-items="center" style={{alignSelf:"center", width:"400px"}} >
-   <img   src={cli}  alt="dangerouslySetInnerhtml cli" />
+   <img   src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-25-react-dangerouslyInnerhtml/dangerouslySetInnerhtml-cli.png"  alt="dangerouslySetInnerhtml cli" />
 </div>
 
 <br/>
@@ -174,7 +174,7 @@ In the above code snippet, we imported dompurify to sanitize the contents in the
 
 
 <div class="img-container" align-items="center" >
-   <img   src={usage}  alt="dangerouslySetInnerhtml usage" />
+   <img   src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-25-react-dangerouslyInnerhtml/dangerouslySetInnerhtml-usage.png"  alt="dangerouslySetInnerhtml usage" />
 </div>
 
 <br/>
@@ -184,7 +184,7 @@ In the above screenshot, `dangerouslySetInnerHTML` has rendered the contents jus
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 

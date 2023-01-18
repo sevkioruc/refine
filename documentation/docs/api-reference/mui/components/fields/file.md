@@ -1,69 +1,60 @@
 ---
 id: file
 title: File
+swizzle: true
 ---
 
-import fileField from '@site/static/img/guides-and-concepts/fields/file/fileFieldMui.png'
 
 This field is used to display files and it uses the [`<Link>`](https://mui.com/material-ui/react-link/#main-content) component of [`<Typography>`](https://mui.com/material-ui/react-typography/#main-content) from Material UI.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<FileField>` with the example in the edit page.
 
-```tsx title="src/pages/posts/list.tsx"
-import { useTable } from "@pankod/refine-core";
+```tsx live url=http://localhost:3000/posts previewHeight=340px
+// visible-block-start
 import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow,
+    useDataGrid,
+    DataGrid,
+    GridColumns,
     List,
     // highlight-next-line
     FileField,
 } from "@pankod/refine-mui";
 
-export const PostList: React.FC = () => {
-    const { tableQueryResult } = useTable<IPost>({
-        initialSorter: [
-            {
-                field: "id",
-                order: "asc",
-            },
-        ],
-    });
+const columns: GridColumns = [
+    { field: "id", headerName: "ID", type: "number" },
+    { field: "title", headerName: "Title", minWidth: 100, flex: 1 },
+    {
+        field: "image",
+        headerName: "Image",
+        renderCell: function render({ row }) {
+            // highlight-start
+            return (
+                <FileField src={row.image[0].url} />
+            );
+            // highlight-end
+        },
+        minWidth: 100,
+        flex: 2,
+    },
+];
 
-    const { data } = tableQueryResult;
+const PostsList: React.FC = () => {
+    const { dataGridProps } = useDataGrid<IPost>();
 
     return (
         <List>
-            <Table aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Title</TableCell>
-                        <TableCell align="center">Image</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {data?.data.map((row) => (
-                        <TableRow key={row.title}>
-                            <TableCell component="th" scope="row">
-                                {row.title}
-                            </TableCell>
-                            <TableCell align="center">
-                                // highlight-next-line
-                                <FileField src={row.image[0].url} />
-                            </TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+            <DataGrid {...dataGridProps} columns={columns} autoHeight />
         </List>
     );
 };
 
-export interface IPost {
+interface IPost {
     id: number;
     title: string;
     image: [
@@ -72,21 +63,23 @@ export interface IPost {
         },
     ];
 }
+// visible-block-end
+
+render(
+    <RefineMuiDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostsList,
+            },
+        ]}
+    />,
+);
 ```
 
 :::tip
 If you don't use `title` prop it will use `src` as `title`
 :::
-
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={fileField} alt="FileField" />
-</div>
 
 ## API Reference
 

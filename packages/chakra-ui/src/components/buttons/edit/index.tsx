@@ -6,22 +6,11 @@ import {
     useResource,
     useRouterContext,
 } from "@pankod/refine-core";
-import {
-    RefineEditButtonProps,
-    RefineButtonTestIds,
-} from "@pankod/refine-ui-types";
-import { IconPencil, TablerIconProps } from "@tabler/icons";
-import { Button, ButtonProps, IconButton } from "@chakra-ui/react";
+import { RefineButtonTestIds } from "@pankod/refine-ui-types";
+import { IconPencil } from "@tabler/icons";
+import { Button, IconButton } from "@chakra-ui/react";
 
-export type EditButtonProps = Omit<
-    RefineEditButtonProps<
-        ButtonProps,
-        {
-            svgIconProps?: TablerIconProps;
-        }
-    >,
-    "ignoreAccessControlProvider"
->;
+import { EditButtonProps } from "../types";
 
 /**
  * `<EditButton>` uses Chakra UI {@link https://chakra-ui.com/docs/components/button `<Button> component`}.
@@ -93,7 +82,7 @@ export const EditButton: React.FC<EditButtonProps> = ({
                     variant="outline"
                     aria-label={translate("buttons.edit", "Edit")}
                     title={disabledTitle()}
-                    disabled={data?.can === false}
+                    isDisabled={data?.can === false}
                     data-testid={RefineButtonTestIds.EditButton}
                     {...rest}
                 >
@@ -102,7 +91,7 @@ export const EditButton: React.FC<EditButtonProps> = ({
             ) : (
                 <Button
                     variant="outline"
-                    disabled={data?.can === false}
+                    isDisabled={data?.can === false}
                     leftIcon={<IconPencil size={20} {...svgIconProps} />}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.EditButton}

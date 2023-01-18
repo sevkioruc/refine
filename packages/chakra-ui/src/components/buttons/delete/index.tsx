@@ -6,14 +6,10 @@ import {
     useCan,
     useResource,
 } from "@pankod/refine-core";
-import {
-    RefineDeleteButtonProps,
-    RefineButtonTestIds,
-} from "@pankod/refine-ui-types";
+import { RefineButtonTestIds } from "@pankod/refine-ui-types";
 
 import {
     Button,
-    ButtonProps,
     HStack,
     IconButton,
     Popover,
@@ -23,17 +19,9 @@ import {
     PopoverHeader,
     PopoverTrigger,
 } from "@chakra-ui/react";
-import { IconTrash, TablerIconProps } from "@tabler/icons";
+import { IconTrash } from "@tabler/icons";
 
-export type DeleteButtonProps = Omit<
-    RefineDeleteButtonProps<
-        ButtonProps,
-        {
-            svgIconProps?: TablerIconProps;
-        }
-    >,
-    "ignoreAccessControlProvider"
->;
+import { DeleteButtonProps } from "../types";
 
 /**
  * `<DeleteButton>` uses Chakra UI {@link https://chakra-ui.com/docs/components/button `<Button>`} and {@link https://chakra-ui.com/docs/components/popover `<Popover>`} components.
@@ -118,7 +106,7 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                         variant="outline"
                         aria-label={translate("buttons.edit", "Edit")}
                         onClick={() => setOpened((o) => !o)}
-                        disabled={isLoading || data?.can === false}
+                        isDisabled={isLoading || data?.can === false}
                         isLoading={id === variables?.id && isLoading}
                         data-testid={RefineButtonTestIds.DeleteButton}
                         {...rest}
@@ -130,7 +118,7 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                         colorScheme="red"
                         variant="outline"
                         onClick={() => setOpened((o) => !o)}
-                        disabled={isLoading || data?.can === false}
+                        isDisabled={isLoading || data?.can === false}
                         isLoading={id === variables?.id && isLoading}
                         leftIcon={<IconTrash size={20} {...svgIconProps} />}
                         data-testid={RefineButtonTestIds.DeleteButton}

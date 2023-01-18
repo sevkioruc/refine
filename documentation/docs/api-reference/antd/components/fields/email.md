@@ -1,55 +1,70 @@
 ---
 id: email
 title: Email
+swizzle: true
 ---
 
-import emailField from '@site/static/img/guides-and-concepts/fields/email/emailField.png'
 
 This field is used to display email values. It uses the [`<Link>`](https://ant.design/components/typography/#FAQ) component of [`<Typography>`](https://ant.design/components/typography) from Ant Design.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<EmailField>` with the example in the user list.
 
-```tsx
+```tsx live
+// visible-block-start
 import { 
     List,
     Table,
+    useTable,
     // highlight-next-line
     EmailField
 } from "@pankod/refine-antd";
 
-export const UserList: React.FC = () => {
+const UserList: React.FC = () => {
+    const { tableProps } = useTable<IPost>();
 
     return (
         <List>
-            <Table rowKey="id">
-                ...
+            <Table {...tableProps} rowKey="id">
+                <Table.Column dataIndex="id" title="ID" />
                  <Table.Column
                     dataIndex="email"
                     title="Email"
                     // highlight-next-line
                     render={(value: string) => <EmailField value={value} />}
+                    width="100%"
                 />
                 ...
             </Table>
         </List>
     );
 };
+
+interface IPost {
+    id: number;
+    email: string;
+}
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "users",
+                list: UserList
+            },
+        ]}
+    />,
+);
 ```
 :::tip
 `<EmailField>` uses "mailto:" in the href prop of the `<Link>` component. For this reason, clicking `<EmailField>` opens your device's default mail application.
 :::
-
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={emailField} alt="EmailField" />
-</div>
 
 ## API Reference
 

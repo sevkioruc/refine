@@ -6,8 +6,10 @@
  */
 
 require("dotenv").config();
+const path = require("path");
 
 const redirectJson = require("./redirects.json");
+const tutorialData = require("./tutorial-units");
 
 /** @type {import('@docusaurus/types/src/index').DocusaurusConfig} */
 const siteConfig = {
@@ -37,6 +39,20 @@ const siteConfig = {
                         },
                     },
                     lastVersion: "current",
+                    admonitions: {
+                        tag: ":::",
+                        keywords: [
+                            "additional",
+                            "note",
+                            "tip",
+                            "info-tip",
+                            "info",
+                            "caution",
+                            "danger",
+                            "sourcecode",
+                            "create-example",
+                        ],
+                    },
                 },
                 blog: false,
                 theme: {
@@ -53,6 +69,7 @@ const siteConfig = {
         ],
     ],
     plugins: [
+        path.resolve(__dirname, "plugins/use-case-routes.js"),
         [
             "@docusaurus/plugin-client-redirects",
             {
@@ -80,6 +97,7 @@ const siteConfig = {
         },
         "./plugins/docgen.js",
         "./plugins/examples.js",
+        "./plugins/checklist.js",
         [
             "./plugins/blog-plugin.js",
             {
@@ -99,6 +117,8 @@ const siteConfig = {
     ],
     themeConfig: {
         prism: {
+            theme: require("prism-react-renderer/themes/vsDark"),
+            darkTheme: require("prism-react-renderer/themes/vsDark"),
             magicComments: [
                 // Remember to extend the default highlight class name as well!
                 {
@@ -133,36 +153,10 @@ const siteConfig = {
                 src: "img/refine_logo.png",
             },
             items: [
-                {
-                    to: "docs/getting-started/overview/",
-                    label: "Docs",
-                    position: "left",
-                },
-                {
-                    to: "docs",
-                    label: "Tutorial",
-                    position: "left",
-                    activeBaseRegex: "/^/docs(/)?$/",
-                },
-                {
-                    to: "examples",
-                    label: "Examples",
-                    position: "left",
-                },
-                {
-                    to: "integrations",
-                    label: "Integrations",
-                    position: "left",
-                },
                 { to: "blog", label: "Blog", position: "left" },
                 {
-                    to: "https://github.com/refinedev/refine",
-                    label: "GitHub",
-                    position: "left",
-                },
-                {
-                    to: "https://store.refine.dev",
-                    label: "Store 🎁",
+                    to: "blog/refine-hackathon/",
+                    label: "Hackathon",
                     position: "left",
                 },
                 {
@@ -198,11 +192,11 @@ const siteConfig = {
                     items: [
                         {
                             label: "Getting Started",
-                            to: "docs/getting-started/overview",
+                            to: "docs",
                         },
                         {
                             label: "Tutorials",
-                            to: "docs",
+                            to: "docs/tutorial/introduction/index/",
                         },
                         {
                             label: "Blog",
@@ -303,6 +297,8 @@ const siteConfig = {
         /** Live Preview */
         LIVE_PREVIEW_URL:
             process.env.LIVE_PREVIEW_URL ?? "http://localhost:3030/preview",
+        /** ---- */
+        tutorial: tutorialData,
     },
 };
 

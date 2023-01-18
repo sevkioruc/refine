@@ -3,9 +3,6 @@ id: multipart-upload
 title: Multipart Upload
 ---
 
-import create from '@site/static/img/guides-and-concepts/multipart-upload/create.png';
-import uploadedFile from '@site/static/img/guides-and-concepts/multipart-upload/uploaded.png';
-import edit from '@site/static/img/guides-and-concepts/multipart-upload/edit.png';
 
 We will show you how to multipart upload with **refine**.
 
@@ -106,7 +103,7 @@ It will look like this.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="multipart upload in a create page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multipart-upload/create.png" alt="multipart upload in a create page" />
 </div>
 
 <br/>
@@ -119,7 +116,7 @@ What we need now is an upload end-point that accepts multipart uploads. We write
 }
 ```
 
-:::important
+:::caution
 This end-point should be `Content-type: multipart/form-data` and `Form Data: file: binary`?.
 :::
 
@@ -137,11 +134,11 @@ This end-point should respond similarly.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={uploadedFile} alt="multipart upload uploaded item" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multipart-upload/uploaded.png" alt="multipart upload uploaded item" />
 </div>
 <br/>
 
-:::important
+:::caution
 We have to use the `getValueFromEvent` method to convert the uploaded files to [Antd UploadFile](https://ant.design/components/upload/#UploadFile) object.
 :::
 
@@ -164,7 +161,7 @@ This data is sent to the API when form submitted.
 }
 ```
 
-:::important
+:::caution
 The following data are required for the [Antd Upload](https://ant.design/components/upload) component and all should be saved.
 :::
 
@@ -247,7 +244,7 @@ export const PostEdit: React.FC = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={edit} alt="multipart upload in edit page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multipart-upload/edit.png" alt="multipart upload in edit page" />
 </div>
 <br/>
 

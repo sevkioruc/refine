@@ -1,31 +1,41 @@
 ---
 id: file
 title: File
+swizzle: true
 ---
 
-import fileField from '@site/static/img/guides-and-concepts/fields/file/fileField.png'
 
 This field is used to display files and uses [`<Typography.Link>`](https://ant.design/components/typography) from Ant Design.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<FileField>` with the example in the edit page. 
 
-```tsx
+```tsx live
+// visible-block-start
 import { 
     List,
     Table,
+    useTable,
     // highlight-next-line
     FileField 
 } from "@pankod/refine-antd";
 
-export const PostList: React.FC = () => {
+const PostList: React.FC = () => {
+    const { tableProps } = useTable<IPost>();
+
     return (
         <List>
-            <Table<IPost> rowKey="id">
+            <Table {...tableProps} rowKey="id">
+                <Table.Column dataIndex="id" title="ID" />
                 <Table.Column
                     dataIndex="title"
                     title="Title"
+                    width="50%"
                 />
                 <Table.Column<IPost>
                     title="Image"
@@ -34,6 +44,7 @@ export const PostList: React.FC = () => {
                         // highlight-next-line
                         <FileField src={record.image[0].url} />
                     )}
+                    width="50%"
                 />
             </Table>
         </List>
@@ -49,22 +60,23 @@ interface IPost {
         },
     ];
 }
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostList
+            },
+        ]}
+    />,
+);
 ```
 
 :::tip
 If you don't use `title` prop it will use `src` as `title`
 :::
-
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={fileField} alt="FileField" />
-</div>
-
 
 ## API Reference
 

@@ -4,12 +4,12 @@ description: How to test API calls in React?
 slug: mocking-api-calls-in-react
 authors: necati
 tags: [react, testing, nock, jest, mocking]
-image: /img/blog/2022-08-04-mocking-api-calls/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-04-mocking-api-calls/social.png
 hide_table_of_contents: false
 ---
 
-import testrun from '@site/static/img/blog/2022-08-04-mocking-api-calls/test-run.png';
-import nockrecord from '@site/static/img/blog/2022-08-04-mocking-api-calls/nock-recorder-log.png';
+
+
 
 ## Introduction
 Writing unit tests is very important for the development process. Testing components that use HTTP requests sometimes may be a real pain.
@@ -115,7 +115,7 @@ Above we can see that we do fetch call to [refine](https://github.com/refinedev/
 <br/>
 <div>
 <a href="https://github.com/refinedev/refine">
-  <img  src="https://refine.dev/img/github-support-banner.png" alt="github support banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/github-support-banner.png" alt="github support banner" />
 </a>
 </div>
 
@@ -152,7 +152,7 @@ With the nock mock service, we can intercept requests to the API and return cust
 
 ---
 
-<PromotionBanner title="React state management: Even the pros get it wrong!" image="/img/generic_banner.png" />
+<PromotionBanner title="React state management: Even the pros get it wrong!" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -201,7 +201,7 @@ At this point, our test works.
 
 
 <div >
-    <img src={testrun} alt="Test run" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-04-mocking-api-calls/test-run.png" alt="Test run" />
 </div>
 
 <br/>
@@ -296,7 +296,7 @@ When the test runs, the console logs all the service calls that nock has recorde
 
 
 <div >
-    <img src={nockrecord} alt="nock record log" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-04-mocking-api-calls/nock-recorder-log.png" alt="nock record log" />
 </div>
 
 <br/>
@@ -324,7 +324,7 @@ We have seen how to test only the behavior of an application in isolation. Avoid
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="https://refine.dev/img/discord-banner.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord-banner.png" alt="discord banner" />
 </a>
 </div>
 

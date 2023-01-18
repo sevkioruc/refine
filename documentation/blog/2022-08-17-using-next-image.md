@@ -4,7 +4,7 @@ description: Built-in image optimization using next image component
 slug: using-next-image
 authors: michael
 tags: [nextjs, img, image, next-image,image-optimization]
-image: /img/blog/2022-08-17-using-next-image/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-17-using-next-image/social.png
 hide_table_of_contents: false
 ---
 
@@ -54,7 +54,7 @@ Once you're done optimizing your images manually, you can now proceed to use the
 
 ---
 
-<PromotionBanner title="Not confident with your frontend skills?" image="/img/generic_banner.png" />
+<PromotionBanner title="Not confident with your frontend skills?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -120,7 +120,7 @@ You **should** always add the `width` and `height` props in the image component 
 <br/>
 <div>
 <a href="https://github.com/refinedev/refine">
-  <img  src="https://refine.dev/img/github-support-banner.png" alt="github support banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/github-support-banner.png" alt="github support banner" />
 </a>
 </div>
 
@@ -323,7 +323,7 @@ Sets how an image should be sized to its parent element when using `layout="fill
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 

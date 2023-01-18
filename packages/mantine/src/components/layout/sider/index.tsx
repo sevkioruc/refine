@@ -33,9 +33,9 @@ import {
     IconLogout,
     IconDashboard,
 } from "@tabler/icons";
-import { RefineLayoutSiderProps } from "@pankod/refine-ui-types";
+import { RefineLayoutSiderProps } from "../types";
 
-import { Title as DefaultTitle } from "../title";
+import { RefineTitle as DefaultTitle } from "@components";
 
 const defaultNavIcon = <IconList size={18} />;
 
@@ -248,6 +248,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
                     sx={{
                         width: drawerWidth(),
                         transition: "width 200ms ease, min-width 200ms ease",
+                        flexShrink: 0,
                     }}
                 />
             </MediaQuery>

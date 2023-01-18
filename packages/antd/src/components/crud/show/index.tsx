@@ -1,13 +1,5 @@
-import React, { ReactNode } from "react";
-import {
-    Card,
-    CardProps,
-    PageHeader,
-    PageHeaderProps,
-    Space,
-    SpaceProps,
-    Spin,
-} from "antd";
+import React from "react";
+import { Card, Space, Spin } from "antd";
 import {
     useNavigation,
     useResourceWithRoute,
@@ -24,29 +16,9 @@ import {
     RefreshButton,
     ListButton,
     Breadcrumb,
+    PageHeader,
 } from "@components";
-import { RefineCrudShowProps } from "@pankod/refine-ui-types";
-
-export type ShowProps = RefineCrudShowProps<
-    SpaceProps,
-    SpaceProps,
-    React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >,
-    PageHeaderProps,
-    CardProps,
-    {
-        /**
-         * @deprecated use `headerButtons` or `footerButtons` instead.
-         */
-        actionButtons?: React.ReactNode;
-        /**
-         * @deprecated use `headerProps`, `wrapperProps` and `contentProps` instead.
-         */
-        pageHeaderProps?: PageHeaderProps;
-    }
->;
+import { ShowProps } from "../types";
 
 /**
  * `<Show>` provides us a layout for displaying the page.
@@ -58,10 +30,8 @@ export const Show: React.FC<ShowProps> = ({
     title,
     canEdit,
     canDelete,
-    actionButtons,
     isLoading = false,
     children,
-    pageHeaderProps,
     resource: resourceFromProps,
     recordItemId,
     dataProviderName,
@@ -170,7 +140,6 @@ export const Show: React.FC<ShowProps> = ({
                         <Breadcrumb />
                     )
                 }
-                {...(pageHeaderProps ?? {})}
                 {...(headerProps ?? {})}
             >
                 <Spin spinning={isLoading}>
@@ -191,8 +160,6 @@ export const Show: React.FC<ShowProps> = ({
                                               : footerButtons}
                                       </Space>,
                                   ]
-                                : actionButtons
-                                ? [actionButtons]
                                 : undefined
                         }
                         {...(contentProps ?? {})}

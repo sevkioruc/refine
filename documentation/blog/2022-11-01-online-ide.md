@@ -4,17 +4,17 @@ description: We'll compare the best online IDEs and code editors for web develop
 slug: 6-best-online-code-editors-comparison
 authors: joseph_mawa
 tags: [online-editor, online-ide, comparison]
-image: /img/blog/2022-11-01-online-ide/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/social.png
 hide_table_of_contents: false
 ---
 
-import codepenIde from '@site/static/img/blog/2022-11-01-online-ide/codepen-ide.png';
-import codesandboxForm from '@site/static/img/blog/2022-11-01-online-ide/codesandbox-form.png';
-import codesandboxSettings from '@site/static/img/blog/2022-11-01-online-ide/codesandbox-settings.png';
-import glitch from '@site/static/img/blog/2022-11-01-online-ide/glitch.png';
-import jsFiddle from '@site/static/img/blog/2022-11-01-online-ide/jsfiddle-editor.png';
-import replForm from '@site/static/img/blog/2022-11-01-online-ide/repl-form.png';
-import stackblitz from '@site/static/img/blog/2022-11-01-online-ide/stackblitz.png';
+
+
+
+
+
+
+
 
 
 
@@ -86,7 +86,7 @@ To start using Codepen,  sign up using your e-mail id, Facebook, Twitter, or Git
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={codepenIde}  alt="codepen ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/codepen-ide.png"  alt="codepen ide" />
 
 </div>
 
@@ -129,7 +129,7 @@ As a [refine](https://github.com/refinedev/refine) team, we use +100 example cod
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={stackblitz}  alt="stackblitz ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/stackblitz.png"  alt="stackblitz ide" />
 
 </div>
 
@@ -154,10 +154,10 @@ https://www.stackblitz.com/github/{GITHUB_USERNAME}/{REPOSITORY_NAME}/{BRANCH|TA
 You can also specify the script in your `package.json` file StackBlitz will use to set up the development serve as a query string. In the example below, StackBlitz will use the `dev` script.
 
 ```txt
-https://www.stackblitz.com/github/refinedev/refine/tree/master/examples/tutorial/antd?terminal=start&preset=node
+https://www.stackblitz.com/github/refinedev/refine/tree/master/examples/tutorial-antd?terminal=start&preset=node
 ```
 
-You can open one of the tutorial examples in StackBlitz by following [this link](https://www.stackblitz.com/github/refinedev/refine/tree/master/examples/tutorial/antd?terminal=start&preset=node).
+You can open one of the tutorial examples in StackBlitz by following [this link](https://www.stackblitz.com/github/refinedev/refine/tree/master/examples/tutorial-antd?terminal=start&preset=node).
 
 ### Pros of using StackBlitz
 
@@ -176,7 +176,7 @@ You can open one of the tutorial examples in StackBlitz by following [this link]
   
 ---
 
-<PromotionBanner title="Small dev teams love this React framework!" image="/img/generic_banner.png" />
+<PromotionBanner title="Small dev teams love this React framework!" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -243,7 +243,7 @@ After logging into your CodeSandbox account, grant CodeSandbox access to your Gi
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={codesandboxForm}  alt="codesandboxForm ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/codesandbox-form.png"  alt="codesandboxForm ide" />
 
 </div>
 
@@ -261,7 +261,7 @@ After successfully connecting your GitHub account as described above, you can im
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={codesandboxSettings}  alt="codesandboxSettings ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/codesandbox-settings.png"  alt="codesandboxSettings ide" />
 
 </div>
 
@@ -305,7 +305,7 @@ JsFiddle is very similar to Codepen. You can use it to work with HTML, CSS, and 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={jsFiddle}  alt="jsFiddle ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/jsfiddle-editor.png"  alt="jsFiddle ide" />
 
 </div>
 
@@ -356,7 +356,7 @@ In your Repl account, create a new Repl by clicking the "Create" button on the l
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={replForm}  alt="replForm ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/repl-form.png"  alt="replForm ide" />
 
 </div>
 
@@ -384,7 +384,7 @@ As you import a project from GitHub, be aware of the [Repl.it resources limitat
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -403,7 +403,7 @@ Select the "Import from GitHub" option when creating a new project. Enter the fu
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={glitch}  alt="glitch ide" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-01-online-ide/glitch.png"  alt="glitch ide" />
 
 </div>
 

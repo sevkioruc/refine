@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout as AntLayout, Grid } from "antd";
-import { RefineLayoutLayoutProps } from "@pankod/refine-ui-types";
+import { Grid, Layout as AntdLayout } from "antd";
 
 import { Sider as DefaultSider } from "./sider";
 import { Header as DefaultHeader } from "./header";
+import { RefineLayoutLayoutProps } from "./types";
 
 export const Layout: React.FC<RefineLayoutLayoutProps> = ({
     children,
@@ -13,29 +13,28 @@ export const Layout: React.FC<RefineLayoutLayoutProps> = ({
     OffLayoutArea,
 }) => {
     const breakpoint = Grid.useBreakpoint();
-
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
-
     const isSmall = typeof breakpoint.sm === "undefined" ? true : breakpoint.sm;
+
     return (
-        <AntLayout style={{ minHeight: "100vh", flexDirection: "row" }}>
+        <AntdLayout style={{ minHeight: "100vh" }}>
             <SiderToRender />
-            <AntLayout>
+            <AntdLayout>
                 <HeaderToRender />
-                <AntLayout.Content>
+                <AntdLayout.Content>
                     <div
                         style={{
-                            padding: isSmall ? 24 : 12,
                             minHeight: 360,
+                            padding: isSmall ? 24 : 12,
                         }}
                     >
                         {children}
                     </div>
                     {OffLayoutArea && <OffLayoutArea />}
-                </AntLayout.Content>
+                </AntdLayout.Content>
                 {Footer && <Footer />}
-            </AntLayout>
-        </AntLayout>
+            </AntdLayout>
+        </AntdLayout>
     );
 };

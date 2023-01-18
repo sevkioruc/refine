@@ -3,10 +3,6 @@ id: appwrite
 title: Appwrite
 ---
 
-import collections from '@site/static/img/guides-and-concepts/multi-tenant/appwrite/collections.png';
-import sider from '@site/static/img/guides-and-concepts/multi-tenant/appwrite/sider.png';
-import store_filter from '@site/static/img/guides-and-concepts/multi-tenant/appwrite/store-filter.gif';
-import create from '@site/static/img/guides-and-concepts/multi-tenant/appwrite/create.gif';
 
 ## What is Multitenancy?
 
@@ -36,11 +32,16 @@ To make this example more visual, we used the [`@pankod/refine-antd`](https://gi
 
 ```tsx
 import { Refine } from "@pankod/refine-core";
-import { Layout, ReadyPage, notificationProvider, ErrorComponent } from "@pankod/refine-antd";
+import {
+    Layout,
+    ReadyPage,
+    notificationProvider,
+    ErrorComponent,
+} from "@pankod/refine-antd";
 import { dataProvider } from "@pankod/refine-appwrite";
 import routerProvider from "@pankod/refine-react-router-v6";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 import { appwriteClient } from "utility";
 import { authProvider } from "./authProvider";
@@ -76,7 +77,7 @@ We need three collections for our Cake House application. Let's create these col
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={collections} alt="Collections" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multi-tenant/appwrite/collections.png" alt="Collections" />
 </div>
 <br/>
 
@@ -126,7 +127,7 @@ import { Layout, ReadyPage, notificationProvider, ErrorComponent } from "@pankod
 import { dataProvider } from "@pankod/refine-appwrite";
 import routerProvider from "@pankod/refine-react-router-v6";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 import { appwriteClient } from "utility";
 import { authProvider } from "./authProvider";
@@ -217,12 +218,7 @@ import {
     CanAccess,
     useRouterContext,
 } from "@pankod/refine-core";
-import {
-    AntdLayout,
-    Menu,
-    Grid,
-    Icons,
-} from "@pankod/refine-antd";
+import { AntdLayout, Menu, Grid, Icons } from "@pankod/refine-antd";
 import { antLayoutSider, antLayoutSiderMobile } from "./styles";
 
 import { StoreSelect } from "components/select";
@@ -237,7 +233,7 @@ export const CustomSider: React.FC = () => {
 
     const isMobile =
         typeof breakpoint.lg === "undefined" ? false : !breakpoint.lg;
-    
+
     const renderTreeView = (tree: ITreeMenu[], selectedKey: string) => {
         return tree.map((item: ITreeMenu) => {
             const { icon, label, route, name, children, parentName } = item;
@@ -268,7 +264,9 @@ export const CustomSider: React.FC = () => {
                         style={{
                             fontWeight: isSelected ? "bold" : "normal",
                         }}
-                        icon={icon ?? (isRoute && <Icons.UnorderedListOutlined />)}
+                        icon={
+                            icon ?? (isRoute && <Icons.UnorderedListOutlined />)
+                        }
                     >
                         <Link to={route}>{label}</Link>
                         {!collapsed && isSelected && (
@@ -314,7 +312,7 @@ export const CustomSider: React.FC = () => {
 </p>
 </details>
 
-|                                                                    <img src={sider} alt="sider" />                                                                     |
+|                                                                    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multi-tenant/appwrite/sider.png" alt="sider" />                                                                     |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | _As you can see, you can now choose the store you want and create products and orders specifically for the store we have chosen according to the storeId information._ |
 
@@ -397,7 +395,7 @@ export const ProductList: React.FC<IResourceComponentsProps> = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={store_filter} alt="Store Filter" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multi-tenant/appwrite/store-filter.gif" alt="Store Filter" />
 </div>
 <br/>
 
@@ -482,13 +480,11 @@ export const CreateProduct: React.FC<CreateProductProps> = ({
                     }}
                     //highlight-start
                     onFinish={(values) => {
-                        return (
-                            formProps.onFinish?.({
-                                ...values,
-                                storeId: store,
-                                image: JSON.stringify(values.image),
-                            })
-                        );
+                        return formProps.onFinish?.({
+                            ...values,
+                            storeId: store,
+                            image: JSON.stringify(values.image),
+                        });
                     }}
                     //highlight-end
                 >
@@ -577,7 +573,7 @@ export const CreateProduct: React.FC<CreateProductProps> = ({
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/multi-tenant/appwrite/create.gif" alt="create" />
 </div>
 <br/>
 
@@ -591,11 +587,16 @@ Appwrite Realtime API support is out-of-the-box supported by **refine**, just ad
 
 ```tsx
 import { Refine } from "@pankod/refine-core";
-import { Layout, ReadyPage, notificationProvider, ErrorComponent } from "@pankod/refine-antd";
+import {
+    Layout,
+    ReadyPage,
+    notificationProvider,
+    ErrorComponent,
+} from "@pankod/refine-antd";
 import { dataProvider, liveProvider } from "@pankod/refine-appwrite";
 import routerProvider from "@pankod/refine-react-router-v6";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 import { appwriteClient } from "utility";
 import { authProvider } from "./authProvider";
@@ -646,11 +647,6 @@ export default App;
 
 In this guide and in our example app, we talked about how we can build Multitenancy apps with **refine**. Developing a Multitenancy application with **refine** is quite simple. By creating a context and with the hooks that **refine** provides, you can quickly and easily produce similar applications in this logic.
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/multi-tenancy/appwrite?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="cake-house"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="multi-tenancy-appwrite" />

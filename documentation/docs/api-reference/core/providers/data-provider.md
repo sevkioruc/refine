@@ -4,7 +4,6 @@ title: Data Provider
 sidebar_label: Data Provider
 ---
 
-import dpFlow from '@site/static/img/guides-and-concepts/providers/data-provider/flow.png';
 
 ## Overview
 
@@ -65,7 +64,7 @@ const dataProvider = {
 
 ### Community ❤️
 
--   [Firebase](https://github.com/rturan29/refine-firebase) by [rturan29](https://github.com/rturan29)
+-   [Firebase](https://github.com/resulturan/refine-firebase) by [rturan29](https://github.com/resulturan)
 -   [Directus](https://github.com/tspvivek/refine-directus) by [tspvivek](https://github.com/tspvivek)
 -   [Elide](https://github.com/chirdeeptomar/refine-elide-rest) by [chirdeeptomar](https://github.com/chirdeeptomar)
 
@@ -73,7 +72,7 @@ const dataProvider = {
 
 <br/>
 
-:::important
+:::caution
 **refine** consumes these methods using [data hooks](/api-reference/core/hooks/data/useCreate.md).
 
 Data hooks are used to operate CRUD actions like creating a new record, listing a resource or deleting a record, etc.
@@ -90,7 +89,7 @@ Data hooks use [React Query](https://react-query.tanstack.com/) to manage data f
 <br/>
 
 <div>
-    <img src={dpFlow} />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/providers/data-provider/flow.png" />
 </div>
 
 <br/>
@@ -299,7 +298,7 @@ Let's build a method that returns our data provider:
 
 ```ts title="dataProvider.ts"
 import axios, { AxiosInstance } from "axios";
-import { DataProvider } from "./interfaces/dataProvider.ts";
+import type { DataProvider } from "@pankod/refine-core";
 
 const axiosInstance = axios.create();
 

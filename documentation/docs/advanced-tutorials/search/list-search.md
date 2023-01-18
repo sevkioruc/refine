@@ -3,17 +3,15 @@ id: list-search
 title: List Search
 ---
 
-import basicList from '@site/static/img/guides-and-concepts/list-search/basic-list.png';
-import formList from '@site/static/img/guides-and-concepts/list-search/form-list.png';
 
 We will examine how to make an extensive search and filtering with the [`useSimpleList`](/api-reference/antd/hooks/list/useSimpleList.md) hook that works with the Ant Design's [`<List>`](https://ant.design/components/list) component.
 
 To do this, let's list posts using the posts resource.
 
 ```tsx title="pages/posts/list.tsx"
-import { 
+import {
     // highlight-next-line
-    useMany 
+    useMany,
 } from "@pankod/refine-core";
 import {
     List,
@@ -95,11 +93,16 @@ After creating the `<PostList>` component, add it to resource with `list` prop:
 
 ```tsx
 import { Refine } from "@pankod/refine-core";
-import { Layout, ReadyPage, notificationProvider, ErrorComponent } from "@pankod/refine-antd";
+import {
+    Layout,
+    ReadyPage,
+    notificationProvider,
+    ErrorComponent,
+} from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 // highlight-next-line
 import { PostList } from "pages/posts";
@@ -136,7 +139,7 @@ export default App;
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={basicList} alt="basic list" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/list-search/basic-list.png" alt="basic list" />
 </div>
 <br />
 
@@ -231,18 +234,15 @@ When the form is submitted, the `onSearch` method runs and we get the search for
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={formList} alt="form list" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/list-search/form-list.png" alt="form list" />
 </div>
 
 <br />
 
-:::important
+:::caution
 [`CrudFilters`](/api-reference/core/interfaces.md#crudfilters) type object has `field`, `operator` and `value` properties. These properties help us to filter in which field, with which operator, and with which data.
 :::
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/list/useSimpleList?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-use-simple-list-example"
-></iframe>
+<StackblitzExample path="use-simple-list-antd" />

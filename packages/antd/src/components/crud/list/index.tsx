@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { PageHeader, PageHeaderProps, Space, SpaceProps } from "antd";
+import React from "react";
+import { Space } from "antd";
 import {
     useResourceWithRoute,
     useRouterContext,
@@ -9,28 +9,8 @@ import {
     useRefineContext,
 } from "@pankod/refine-core";
 
-import { Breadcrumb, CreateButton, CreateButtonProps } from "@components";
-import { RefineCrudListProps } from "@pankod/refine-ui-types";
-
-export type ListProps = RefineCrudListProps<
-    CreateButtonProps,
-    SpaceProps,
-    React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >,
-    PageHeaderProps,
-    React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >,
-    {
-        /**
-         * @deprecated use `headerProps`, `wrapperProps` and `contentProps` instead.
-         */
-        pageHeaderProps?: PageHeaderProps;
-    }
->;
+import { Breadcrumb, CreateButton, PageHeader } from "@components";
+import { ListProps } from "../types";
 
 /**
  * `<List>` provides us a layout for displaying the page.
@@ -43,7 +23,6 @@ export const List: React.FC<ListProps> = ({
     title,
     children,
     createButtonProps,
-    pageHeaderProps,
     resource: resourceFromProps,
     wrapperProps,
     contentProps,
@@ -112,7 +91,6 @@ export const List: React.FC<ListProps> = ({
                         <Breadcrumb />
                     )
                 }
-                {...(pageHeaderProps ?? {})}
                 {...(headerProps ?? {})}
             >
                 <div {...(contentProps ?? {})}>{children}</div>

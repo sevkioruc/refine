@@ -13,16 +13,16 @@ tags:
         internal-tool,
         strapi,
     ]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import company from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/company.png';
-import client from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/client.png';
-import contact from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/contact.png';
-import refine_company from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/refine_company.png';
-import refine_contacts from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/refine_contacts.png';
-import clients_overview from '@site/static/img/blog/2022-02-22-refine-invoice-genarator/clients_overview.gif';
+
+
+
+
+
+
 
 Invoice management can be a daunting task for any business. With so many different software programs and options, it's hard to know where you need start or what will work best with your company culture! You can solve this problem with **refine**. With Refine, you can develop your own customizable invoice generator with ease.
 
@@ -92,7 +92,9 @@ export const authProvider: AuthProvider = {
             localStorage.setItem(TOKEN_KEY, data.jwt);
 
             // set header axios instance
-            axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${data.jwt}`;
+            axiosInstance.defaults.headers.common[
+                "Authorization"
+            ] = `Bearer ${data.jwt}`;
 
             return Promise.resolve();
         }
@@ -106,7 +108,9 @@ export const authProvider: AuthProvider = {
     checkAuth: () => {
         const token = localStorage.getItem(TOKEN_KEY);
         if (token) {
-            axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+            axiosInstance.defaults.headers.common[
+                "Authorization"
+            ] = `Bearer ${token}`;
             return Promise.resolve();
         }
 
@@ -148,7 +152,7 @@ import { DataProvider } from "@pankod/refine-strapi-v4";
 import { authProvider, axiosInstance } from "./authProvider";
 //highlight-end
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 function App() {
     const API_URL = "Your_Strapi_Url";
@@ -190,7 +194,7 @@ We created three collections on Strapi as `company`, `client` and `contact` and 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={company} alt="Strapi Company Collection" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/company.png" alt="Strapi Company Collection" />
 </div>
 <br />
 
@@ -205,7 +209,7 @@ We created three collections on Strapi as `company`, `client` and `contact` and 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={client} alt="Strapi Client Collection" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/client.png" alt="Strapi Client Collection" />
 </div>
 <br />
 
@@ -224,7 +228,7 @@ We created three collections on Strapi as `company`, `client` and `contact` and 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={contact} alt="Strapi Contact Collection" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/contact.png" alt="Strapi Contact Collection" />
 </div>
 <br />
 
@@ -388,7 +392,7 @@ function App() {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_company} alt="Refine Company List" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/refine_company.png" alt="Refine Company List" />
 </div>
 <br />
 
@@ -492,7 +496,7 @@ export const ContactsList: React.FC = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_contacts} alt="Refine Contacts List" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/refine_contacts.png" alt="Refine Contacts List" />
 </div>
 <br />
 
@@ -884,22 +888,19 @@ We created our `Client` and `Contact` pages. Now, let's create a Client with **r
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={clients_overview} alt="Refine Clients Overview" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-02-22-refine-invoice-genarator/clients_overview.gif" alt="Refine Clients Overview" />
 </div>
 <br />
 
-## Live CodeSandbox Example
+## Example
 
+:::note Demo Credentials
 `Username`: demo
 
 `Password`: demodemo
+:::
 
-<iframe src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/invoiceGenerator/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-invoice-genarator-basics"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-invoice-generator" />
 
 ## Conclusion
 

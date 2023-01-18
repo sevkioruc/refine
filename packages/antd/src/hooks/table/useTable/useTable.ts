@@ -22,7 +22,7 @@ import {
 import {
     mapAntdSorterToCrudSorting,
     mapAntdFilterToCrudFilter,
-} from "../../../definitions/table";
+} from "@definitions/table";
 import { PaginationLink } from "./paginationLink";
 
 export type useTableProps<
@@ -39,13 +39,19 @@ export type useTableProps<
 
 export type useTableReturnType<
     TData extends BaseRecord = BaseRecord,
+    TError extends HttpError = HttpError,
     TSearchVariables = unknown,
 > = {
     searchFormProps: FormProps<TSearchVariables>;
     tableProps: TableProps<TData>;
-    tableQueryResult: QueryObserverResult<GetListResponse<TData>>;
+    tableQueryResult: QueryObserverResult<GetListResponse<TData>, TError>;
     sorter?: CrudSorting;
     filters?: CrudFilters;
+    current?: number;
+    setCurrent: useTableCoreReturnType<TData>["setCurrent"];
+    pageSize: number;
+    setPageSize: useTableCoreReturnType<TData>["setPageSize"];
+    pageCount: number;
     setFilters: useTableCoreReturnType<TData>["setFilters"];
     setSorter: useTableCoreReturnType<TData>["setSorter"];
 };
@@ -86,7 +92,7 @@ export const useTable = <
         metaData,
         dataProviderName,
     }: useTableProps<TData, TError, TSearchVariables> = { hasPagination: true },
-): useTableReturnType<TData, TSearchVariables> => {
+): useTableReturnType<TData, TError, TSearchVariables> => {
     const {
         tableQueryResult,
         current,
@@ -98,7 +104,8 @@ export const useTable = <
         sorter,
         setSorter,
         createLinkForSyncWithLocation,
-    } = useTableCore({
+        pageCount,
+    } = useTableCore<TData, TError>({
         permanentSorter,
         permanentFilter,
         initialCurrent,
@@ -144,6 +151,7 @@ export const useTable = <
             const crudFilters = mapAntdFilterToCrudFilter(
                 tableFilters,
                 filters,
+                initialFilter,
             );
             setFilters(crudFilters);
         }
@@ -244,5 +252,10 @@ export const useTable = <
         filters,
         setSorter,
         setFilters,
+        current,
+        setCurrent,
+        pageSize,
+        setPageSize,
+        pageCount,
     };
 };

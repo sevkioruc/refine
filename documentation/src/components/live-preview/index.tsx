@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import base64url from "base64url";
 // @ts-expect-error Docusaurus components has an issue with TypeScript
 import CodeBlock from "@theme/CodeBlock";
 import styles from "./styles.module.css";
@@ -9,6 +10,9 @@ import { useInView } from "../../hooks/use-in-view";
 import { Conditional } from "../conditional";
 import { splitCode } from "../../utils/split-code";
 import { useLivePreviewContext } from "../live-preview-context";
+import Buffer from "buffer";
+
+global.Buffer = global.Buffer || Buffer.Buffer;
 
 /**
  * Live Preview Frame
@@ -16,9 +20,11 @@ import { useLivePreviewContext } from "../live-preview-context";
 const LivePreviewFrameBase = ({
     query,
     code,
+    css,
 }: {
     code: string;
     query?: string;
+    css?: string;
 }) => {
     const {
         siteConfig: { customFields },
@@ -39,7 +45,9 @@ const LivePreviewFrameBase = ({
                         setUrl(
                             `${customFields.LIVE_PREVIEW_URL}?code=${
                                 data.compressed
-                            }${query ? `&query=${query}` : ""}`,
+                            }${css ? `&css=${base64url.encode(css)}` : ""}${
+                                query ? `${query}` : ""
+                            }`,
                         );
                     }
                     worker.terminate();
@@ -62,6 +70,7 @@ const LivePreviewFrameBase = ({
                 width="100%"
                 height="100%"
                 style={{
+                    borderRadius: "3px",
                     position: "absolute",
                     left: 0,
                     top: 0,
@@ -76,7 +85,11 @@ const LivePreviewFrameBase = ({
 };
 
 const LivePreviewFrame = React.memo(LivePreviewFrameBase, (prev, next) => {
-    return prev.code === next.code && prev.query === next.query;
+    return (
+        prev.code === next.code &&
+        prev.query === next.query &&
+        prev.css === next.css
+    );
 });
 
 /**
@@ -96,15 +109,24 @@ function Editor({ hidden, code }: { hidden: boolean; code: string }) {
                 </button>
             </div>
             <div
-                className={clsx(styles.playgroundEditorWrapper)}
+                className={clsx(
+                    styles.playgroundEditorWrapper,
+                    "playground-code",
+                    visible && "playground-code-visible",
+                )}
                 style={{
                     maxHeight: visible ? "4500px" : "0px",
                     padding: visible ? undefined : "0px",
-                    transition: "0.3s max-height ease-in-out",
+                    transition: "0.3s all ease-in-out",
                     overflow: "hidden",
                 }}
             >
-                <CodeBlock language="tsx" style={{ borderRadius: 0 }}>
+                <CodeBlock
+                    language="tsx"
+                    style={{
+                        borderRadius: 0,
+                    }}
+                >
                     {code}
                 </CodeBlock>
             </div>
@@ -121,6 +143,7 @@ type PlaygroundProps = {
     previewHeight?: string;
     url?: string;
     previewOnly?: boolean;
+    tailwind?: boolean;
 };
 
 /**
@@ -133,9 +156,10 @@ const LivePreviewBase = ({
     hideCode = false,
     url = "http://localhost:3000",
     previewOnly = false,
+    tailwind = false,
 }: PlaygroundProps): JSX.Element => {
     const code = String(children);
-    const { shared } = useLivePreviewContext();
+    const { shared, sharedCss } = useLivePreviewContext();
     const { visible } = splitCode(
         `
     ${shared ?? ""}
@@ -172,14 +196,15 @@ const LivePreviewBase = ({
                                 return (
                                     <LivePreviewFrame
                                         code={`
-${shared}
+${shared ?? ""}
 ${code}
                                         `}
-                                        query={
+                                        css={sharedCss}
+                                        query={`${
                                             disableScroll
                                                 ? "&disableScroll=true"
-                                                : undefined
-                                        }
+                                                : ""
+                                        }${tailwind ? "&tailwind=true" : ""}`}
                                     />
                                 );
                             }}

@@ -4,7 +4,7 @@ description: A detailed guide on React props with examples
 slug: react-props
 authors: chidume_nnamdi
 tags: [react, react-props, react-basics]
-image: /img/blog/2022-11-16-react-props/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-16-react-props/social.png
 hide_table_of_contents: false
 ---
 
@@ -274,7 +274,7 @@ function DisplayUser(props) {
 
 ---
 
-<PromotionBanner title="Small dev teams love this React framework!" image="/img/generic_banner.png" />
+<PromotionBanner title="Small dev teams love this React framework!" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -492,7 +492,7 @@ The application didn't crash this time.
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 

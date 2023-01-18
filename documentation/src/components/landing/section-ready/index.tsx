@@ -9,7 +9,7 @@ const SectionReady = () => {
                 </h2>
 
                 <a
-                    href="https://refine.dev/docs/"
+                    href="https://refine.dev/docs/tutorial/introduction/index/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shadow-startTiles mt-6 appearance-none flex items-center justify-center no-underline font-bold font-montserrat text-sm h-8 w-44 text-white text-center bg-gradient-to-l from-[#1890FF] to-[#47EBF5] border-0 rounded-[4px] cursor-pointer"
@@ -19,7 +19,7 @@ const SectionReady = () => {
 
                 <div className="border border-dashed border-[#acacb68b] w-full h-[1px] my-12" />
 
-                <p className="text-center max-w-[408px] text-[16px] leading-[20px] mb-0 font-medium">
+                <p className="text-center max-w-[408px] text-[16px] leading-[20px] mb-0 font-medium text-[#242436]">
                     <strong className="block font-bold">
                         NEED ANY FURTHER INFORMATION?
                     </strong>

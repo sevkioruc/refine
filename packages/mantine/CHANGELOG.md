@@ -1,5 +1,121 @@
 # @pankod/refine-mantine
 
+## 1.15.6
+
+### Patch Changes
+
+-   [#3396](https://github.com/refinedev/refine/pull/3396) [`bb2774e3941`](https://github.com/refinedev/refine/commit/bb2774e39411c844b01f552d1cae2931d4f6b9f9) Thanks [@omeraplak](https://github.com/omeraplak)! - fix: `onSubmit` is set to nullable on [`<AuthPage>`](https://refine.dev/docs/api-reference/mantine/components/mantine-auth-page/)
+
+## 1.15.5
+
+### Patch Changes
+
+-   [#3396](https://github.com/refinedev/refine/pull/3396) [`bb2774e3941`](https://github.com/refinedev/refine/commit/bb2774e39411c844b01f552d1cae2931d4f6b9f9) Thanks [@omeraplak](https://github.com/omeraplak)! - fix: `onSubmit` is set to nullable on [`<AuthPage>`](https://refine.dev/docs/api-reference/mantine/components/mantine-auth-page/)
+
+## 1.15.4
+
+### Patch Changes
+
+-   [#3228](https://github.com/refinedev/refine/pull/3228) [`5aabfa19493`](https://github.com/refinedev/refine/commit/5aabfa1949374850f0f352acf842fafb01adcdcb) Thanks [@aliemir](https://github.com/aliemir)! - Fixed useForm's saveButtonProps.onClick event type
+
+## 1.15.3
+
+### Patch Changes
+
+-   [#3228](https://github.com/refinedev/refine/pull/3228) [`5aabfa19493`](https://github.com/refinedev/refine/commit/5aabfa1949374850f0f352acf842fafb01adcdcb) Thanks [@aliemir](https://github.com/aliemir)! - Fixed useForm's saveButtonProps.onClick event type
+
+## 1.15.2
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.2
+
+## 1.15.1
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.1
+
+## 1.15.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 1.14.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 1.13.4
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 1.13.3
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 1.13.2
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 1.13.1
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 1.13.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
+## 1.12.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
+## 1.11.8
+
+### Patch Changes
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fix `Layout` component for `Table` overflows. `Table` was not respecting the flex layout even inside `ScrollArea` component. This was causing the table to overflow the parent container.
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fixed shrink issue for Layout
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Added `...rest` props to `MarkdownField` component
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fixed `TagField` prop types.
+
+## 1.11.7
+
+### Patch Changes
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fix `Layout` component for `Table` overflows. `Table` was not respecting the flex layout even inside `ScrollArea` component. This was causing the table to overflow the parent container.
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fixed shrink issue for Layout
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Added `...rest` props to `MarkdownField` component
+
+-   [#3027](https://github.com/refinedev/refine/pull/3027) [`177d0a764fe`](https://github.com/refinedev/refine/commit/177d0a764feb60fe9235a36debc052133dc72fa8) Thanks [@aliemir](https://github.com/aliemir)! - Fixed `TagField` prop types.
+
 ## 1.11.6
 
 ### Patch Changes

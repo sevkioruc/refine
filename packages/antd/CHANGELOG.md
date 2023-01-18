@@ -1,5 +1,297 @@
 # @pankod/refine-antd
 
+## 4.7.1
+
+### Patch Changes
+
+-   [#3399](https://github.com/refinedev/refine/pull/3399) [`22b44a857a8`](https://github.com/refinedev/refine/commit/22b44a857a8ede3473965ab6baff70fc8ae31332) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Fix `useTable` hook error return type.
+
+## 4.7.0
+
+### Minor Changes
+
+-   [#3324](https://github.com/refinedev/refine/pull/3324) [`9bfb34749bc`](https://github.com/refinedev/refine/commit/9bfb34749bc8ddaaf80ccffbd0ad6d0a4487309b) Thanks [@aliemir](https://github.com/aliemir)! - Added the ability to pass mutation options to `useMutation` hooks in mutation hooks:
+    -   `useForm`
+    -   `useStepsForm`
+    -   `useModalForm`
+    -   `useDrawerForm`
+
+## 4.6.0
+
+### Minor Changes
+
+-   [#3324](https://github.com/refinedev/refine/pull/3324) [`9bfb34749bc`](https://github.com/refinedev/refine/commit/9bfb34749bc8ddaaf80ccffbd0ad6d0a4487309b) Thanks [@aliemir](https://github.com/aliemir)! - Added the ability to pass mutation options to `useMutation` hooks in mutation hooks:
+    -   `useForm`
+    -   `useStepsForm`
+    -   `useModalForm`
+    -   `useDrawerForm`
+
+## 4.5.0
+
+### Minor Changes
+
+-   [#3294](https://github.com/refinedev/refine/pull/3294) [`3c9c8c07d21`](https://github.com/refinedev/refine/commit/3c9c8c07d2183595402d70a3a2bc49093778e183) Thanks [@aliemir](https://github.com/aliemir)! - Remove `getContainer: false` from `useModalForm` and `useDrawerForm` and let it fallback to the default value. Users wanting to override the default value can still do so by passing `getContainer` prop to the `Modal` and `Drawer` components.
+
+## 4.4.0
+
+### Minor Changes
+
+-   [#3294](https://github.com/refinedev/refine/pull/3294) [`3c9c8c07d21`](https://github.com/refinedev/refine/commit/3c9c8c07d2183595402d70a3a2bc49093778e183) Thanks [@aliemir](https://github.com/aliemir)! - Remove `getContainer: false` from `useModalForm` and `useDrawerForm` and let it fallback to the default value. Users wanting to override the default value can still do so by passing `getContainer` prop to the `Modal` and `Drawer` components.
+
+## 4.3.0
+
+### Minor Changes
+
+-   [#3285](https://github.com/refinedev/refine/pull/3285) [`cc2c1f042bf`](https://github.com/refinedev/refine/commit/cc2c1f042bf43ae20c58745cccc815c337e17ae7) Thanks [@omeraplak](https://github.com/omeraplak)! - Added exports for new [`<App />`](https://ant.design/components/app), [`<QrCode />`](https://ant.design/components/qrcode) and [`<Watermark />`](https://ant.design/components/watermark) components.
+
+## 4.2.0
+
+### Minor Changes
+
+-   [#3285](https://github.com/refinedev/refine/pull/3285) [`cc2c1f042bf`](https://github.com/refinedev/refine/commit/cc2c1f042bf43ae20c58745cccc815c337e17ae7) Thanks [@omeraplak](https://github.com/omeraplak)! - Added exports for new [`<App />`](https://ant.design/components/app), [`<QrCode />`](https://ant.design/components/qrcode) and [`<Watermark />`](https://ant.design/components/watermark) components.
+
+## 4.1.5
+
+### Patch Changes
+
+-   [#3273](https://github.com/refinedev/refine/pull/3273) [`a30ba43cce2`](https://github.com/refinedev/refine/commit/a30ba43cce27279deaab60c000dac0537552f7c7) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Set the `theme="dark"` of the `Menu` component in `Sider` by default.
+
+-   [`a8d3f648a28`](https://github.com/refinedev/refine/commit/a8d3f648a282329cac04c1dd4b736864d6fbf756) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed onClick event type of the `<Button />` component
+
+## 4.1.4
+
+### Patch Changes
+
+-   [`a8d3f648a28`](https://github.com/refinedev/refine/commit/a8d3f648a282329cac04c1dd4b736864d6fbf756) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed onClick event type of the `<Button />` component
+-   [#3273](https://github.com/refinedev/refine/pull/3273) [`a30ba43cce2`](https://github.com/refinedev/refine/commit/a30ba43cce27279deaab60c000dac0537552f7c7) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Set the `theme="dark"` of the `Menu` component in `Sider` by default.
+
+## 4.1.3
+
+### Patch Changes
+
+-   [#3273](https://github.com/refinedev/refine/pull/3273) [`a30ba43cce2`](https://github.com/refinedev/refine/commit/a30ba43cce27279deaab60c000dac0537552f7c7) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Set the `theme="dark"` of the `Menu` component in `Sider` by default.
+
+## 4.1.2
+
+### Patch Changes
+
+-   [#3269](https://github.com/refinedev/refine/pull/3269) [`8b86c0c4c45`](https://github.com/refinedev/refine/commit/8b86c0c4c4529dce9eef4d6e49958eb2c50c31f2) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: Wrong import and usage after `swizzling` `<Layout>` component.
+
+## 4.1.1
+
+### Patch Changes
+
+-   [#3269](https://github.com/refinedev/refine/pull/3269) [`8b86c0c4c45`](https://github.com/refinedev/refine/commit/8b86c0c4c4529dce9eef4d6e49958eb2c50c31f2) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: Wrong import and usage after `swizzling` `<Layout>` component.
+
+## 4.1.0
+
+### Minor Changes
+
+-   [#3249](https://github.com/refinedev/refine/pull/3249) [`fd2e1882e06`](https://github.com/refinedev/refine/commit/fd2e1882e060135674f53350f2fe1d22347543d7) Thanks [@rajaomariajaona](https://github.com/rajaomariajaona)! - Add ability to pass pagination values in `useTable` hook. (Resolves #3246)
+
+    -   `current`
+    -   `setCurrent`
+    -   `pageSize`
+    -   `setPageSize`
+    -   `pageCount`
+
+-   [#3121](https://github.com/refinedev/refine/pull/3121) [`214ea79c81c`](https://github.com/refinedev/refine/commit/214ea79c81c2f21573f999083612d30256be76a9) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - We've released Ant Design v5 support :tada:
+
+    ## Upgrade
+
+    ⚡️ You can easily update **refine** packages with **refine** CLI [`update`](https://refine.dev/docs/packages/documentation/cli/#update) command.
+
+    ```bash
+    npm run refine update
+    ```
+
+    > [How to add refine CLI to an existing project?](https://refine.dev/docs/packages/documentation/cli/#how-to-add-to-an-existing-project)
+
+    ### 🪄 Migrating your project automatically with Codemod ✨
+
+    `@pankod/refine-codemod` package handles the breaking changes for your project automatically, without any manual steps. It migrates your [`@pankod/refine-antd`](https://github.com/refinedev/refine/tree/next/packages/antd) version from 3.x.x to 4.x.x.
+
+    Just `cd` into root folder of your project (where `package.json` is contained) and run this command:
+
+    ```sh
+    npx @pankod/refine-codemod antd4-to-antd5
+    ```
+
+    And it's done. Now your project uses `@pankod/refine-antd@4.x.x`.
+
+    ## Changes
+
+    -   `<PageHeader>` component moved into `@ant-design/pro-components`. **refine** is using `<PageHeader>` in `<List>`, `<Create>`, `<Edit>`, `<Show>` components and added as a dependency. You don't need to install `@ant-design/pro-components` package manually.
+    -   `<Comment>` component moved into `@ant-design/compatible`.
+    -   `moment.js` is replaced with `day.js`.
+    -   `less` is removed from `antd` package.
+
+    > Please refer to [Ant Design Migration Guide](https://ant.design/docs/react/migration-v5) for detailed information.
+
+    🚨 Next.js 13 Not Supported Now
+
+    Currently `ant-design/pro-components` does not compatible with Next.js 13.
+    **refine** is using `ant-design/pro-components` as a dependency for `<PageHeader/>` component.
+
+    > [Refer to a related issue on ant-design/pro-components repository](https://github.com/ant-design/pro-components/issues/6338)
+
+## 4.0.0
+
+### Major Changes
+
+-   [#3121](https://github.com/refinedev/refine/pull/3121) [`214ea79c81c`](https://github.com/refinedev/refine/commit/214ea79c81c2f21573f999083612d30256be76a9) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - We've released Ant Design v5 support :tada:
+
+    ## Upgrade
+
+    ⚡️ You can easily update **refine** packages with **refine** CLI [`update`](https://refine.dev/docs/packages/documentation/cli/#update) command.
+
+    ```bash
+    npm run refine update
+    ```
+
+    > [How to add refine CLI to an existing project?](https://refine.dev/docs/packages/documentation/cli/#how-to-add-to-an-existing-project)
+
+    ### 🪄 Migrating your project automatically with Codemod ✨
+
+    `@pankod/refine-codemod` package handles the breaking changes for your project automatically, without any manual steps. It migrates your [`@pankod/refine-antd`](https://github.com/refinedev/refine/tree/next/packages/antd) version from 3.x.x to 4.x.x.
+
+    Just `cd` into root folder of your project (where `package.json` is contained) and run this command:
+
+    ```sh
+    npx @pankod/refine-codemod antd4-to-antd5
+    ```
+
+    And it's done. Now your project uses `@pankod/refine-antd@4.x.x`.
+
+    ## Changes
+
+    -   `<PageHeader>` component moved into `@ant-design/pro-components`. **refine** is using `<PageHeader>` in `<List>`, `<Create>`, `<Edit>`, `<Show>` components and added as a dependency. You don't need to install `@ant-design/pro-components` package manually.
+    -   `<Comment>` component moved into `@ant-design/compatible`.
+    -   `moment.js` is replaced with `day.js`.
+    -   `less` is removed from `antd` package.
+
+    > Please refer to [Ant Design Migration Guide](https://ant.design/docs/react/migration-v5) for detailed information.
+
+    🚨 Next.js 13 Not Supported Now
+
+    Currently `ant-design/pro-components` does not compatible with Next.js 13.
+    **refine** is using `ant-design/pro-components` as a dependency for `<PageHeader/>` component.
+
+    > [Refer to a related issue on ant-design/pro-components repository](https://github.com/ant-design/pro-components/issues/6338)
+
+### Minor Changes
+
+-   [#3249](https://github.com/refinedev/refine/pull/3249) [`fd2e1882e06`](https://github.com/refinedev/refine/commit/fd2e1882e060135674f53350f2fe1d22347543d7) Thanks [@rajaomariajaona](https://github.com/rajaomariajaona)! - Add ability to pass pagination values in `useTable` hook. (Resolves #3246)
+    -   `current`
+    -   `setCurrent`
+    -   `pageSize`
+    -   `setPageSize`
+    -   `pageCount`
+
+## 3.70.4
+
+### Patch Changes
+
+-   [#3252](https://github.com/refinedev/refine/pull/3252) [`cf696235d0b`](https://github.com/refinedev/refine/commit/cf696235d0bdaca8554698293e8a644131522f34) Thanks [@aliemir](https://github.com/aliemir)! - Updated `esbuild` configuration to handle `antd/lib` imports in `esm` builds. (Resolves #3187)
+
+## 3.70.3
+
+### Patch Changes
+
+-   [#3252](https://github.com/refinedev/refine/pull/3252) [`cf696235d0b`](https://github.com/refinedev/refine/commit/cf696235d0bdaca8554698293e8a644131522f34) Thanks [@aliemir](https://github.com/aliemir)! - Updated `esbuild` configuration to handle `antd/lib` imports in `esm` builds. (Resolves #3187)
+
+## 3.70.2
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.2
+
+## 3.70.1
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.1
+
+## 3.70.0
+
+### Minor Changes
+
+-   [#3216](https://github.com/refinedev/refine/pull/3216) [`e09eb81588e`](https://github.com/refinedev/refine/commit/e09eb81588e985e270a7b3d49f9c5b28ffcbb134) Thanks [@leapful](https://github.com/leapful)! - Support filter dropdown on number value of single Select component
+
+## 3.69.0
+
+### Minor Changes
+
+-   [#3216](https://github.com/refinedev/refine/pull/3216) [`e09eb81588e`](https://github.com/refinedev/refine/commit/e09eb81588e985e270a7b3d49f9c5b28ffcbb134) Thanks [@leapful](https://github.com/leapful)! - Support filter dropdown on number value of single Select component
+
+## 3.68.0
+
+### Minor Changes
+
+-   [#3195](https://github.com/refinedev/refine/pull/3195) [`2fdc5c2a88e`](https://github.com/refinedev/refine/commit/2fdc5c2a88e490c7f3b6ed5b562974787863931e) Thanks [@leapful](https://github.com/leapful)! - Support Date Picker component when using with Filter Dropdown
+
+## 3.67.0
+
+### Minor Changes
+
+-   [#3195](https://github.com/refinedev/refine/pull/3195) [`2fdc5c2a88e`](https://github.com/refinedev/refine/commit/2fdc5c2a88e490c7f3b6ed5b562974787863931e) Thanks [@leapful](https://github.com/leapful)! - Support Date Picker component when using with Filter Dropdown
+
+## 3.66.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 3.65.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 3.64.4
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 3.64.3
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 3.64.2
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 3.64.1
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 3.64.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
+## 3.63.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
 ## 3.62.0
 
 ### Minor Changes

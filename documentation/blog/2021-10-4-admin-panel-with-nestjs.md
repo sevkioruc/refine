@@ -4,19 +4,19 @@ description: We will prepare a simple `job-posting` application. We will also us
 slug: customizable-admin-panel-with-nestjs
 authors: yildiray
 tags: [refine, nestjs, crud, react]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import api from '@site/static/img/blog/2021-10-4-admin-panel-with-nestjs/api.png';
-import refine_sample from '@site/static/img/blog/2021-10-4-admin-panel-with-nestjs/refine_sample.png';
-import refine_job from '@site/static/img/blog/2021-10-4-admin-panel-with-nestjs/refine_job.png';
+
+
+
 
 In this article, we will prepare a simple `job-posting` application. We will also use the [refine](https://github.com/refinedev/refine) framework for the **admin panel**. The project will consist of two parts, api and admin.
 
 <!--truncate-->
 
-All the steps described are in this [repo](https://github.com/refinedev/refine/tree/master/examples/blog/jobPosting).
+All the steps described are in this [repo](https://github.com/refinedev/refine/tree/master/examples/blog-job-posting).
 
 ## Intro
 [NestJS](https://github.com/nestjs/nest) is a framework for building efficient, scalable Node.js server-side applications. With [nestjsx/crud](https://github.com/nestjsx/crud) we can add CRUD functions quickly and effortlessly on this framework.
@@ -77,7 +77,7 @@ It created these end-points automatically with nestjsx/crud.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={api} alt="api" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-admin-panel-with-nestjs/api.png" alt="api" />
 </div>
 <br />
 
@@ -118,7 +118,7 @@ Refine's sample application will welcome you.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_sample} alt="refine_sample" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-admin-panel-with-nestjs/refine_sample.png" alt="refine_sample" />
 </div>
 <br />
 
@@ -274,6 +274,6 @@ function App() {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_job} alt="refine_job" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-admin-panel-with-nestjs/refine_job.png" alt="refine_job" />
 </div>
 <br />

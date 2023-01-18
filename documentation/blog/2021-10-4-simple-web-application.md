@@ -4,18 +4,18 @@ description: Do you want to develop a web application quickly? You are at the ri
 slug: simple-web-application-with-refine
 authors: aydin
 tags: [refine, supabase, react, tutorial]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import cli from '@site/static/img/blog/2021-10-4-simple-web-application/cli.png';
-import create from '@site/static/img/blog/2021-10-4-simple-web-application/create.png';
-import detailed from '@site/static/img/blog/2021-10-4-simple-web-application/detailed.png';
-import edit from '@site/static/img/blog/2021-10-4-simple-web-application/edit.png';
-import movies_all from '@site/static/img/blog/2021-10-4-simple-web-application/movies_all.png';
-import movies from '@site/static/img/blog/2021-10-4-simple-web-application/movies.png';
-import show from '@site/static/img/blog/2021-10-4-simple-web-application/show.png';
-import signin from '@site/static/img/blog/2021-10-4-simple-web-application/signin.png';
+
+
+
+
+
+
+
+
 
 Do you want to develop a web application quickly? You are at the right place! I will develop a simple movie web application with **refine** on the frontend and **Supabase** on the backend, you should continue reading. I will try to explain it step by step in a very simple way.
 
@@ -37,7 +37,7 @@ I will use superplate-cli and select a Supabase. You can customize other options
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={cli} alt="cli" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/cli.png" alt="cli" />
 </div>
 <br />
 
@@ -241,7 +241,7 @@ You can use default user for login.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={signin} alt="signin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/signin.png" alt="signin" />
 </div>
 <br />
 
@@ -372,7 +372,7 @@ export interface IMovies {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={movies} alt="movies" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/movies.png" alt="movies" />
 </div>
 <br />
 
@@ -528,7 +528,7 @@ export const normalizeFile = (event: EventArgs) => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/create.png" alt="create" />
 </div>
 <br />
 
@@ -644,7 +644,7 @@ export const AdminMovieEdit: React.FC<IResourceComponentsProps> = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={edit} alt="edit" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/edit.png" alt="edit" />
 </div>
 <br />
 
@@ -731,7 +731,7 @@ export const AdminMovieShow: React.FC<IResourceComponentsProps> = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={show} alt="show" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/show.png" alt="show" />
 </div>
 <br />
 
@@ -892,7 +892,7 @@ export const MoviesList: React.FC<IResourceComponentsProps> = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={movies_all} alt="movies_all" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/movies_all.png" alt="movies_all" />
 </div>
 <br />
 
@@ -972,17 +972,12 @@ export const MovieShow: React.FC<IResourceComponentsProps> = () => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={detailed} alt="detailed" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-simple-web-application/detailed.png" alt="detailed" />
 </div>
 <br />
 
-## Live Codesandbox Example
+## Example
 
-<iframe src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/refineflix/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-react-hook-form-example"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-refineflix" />
 
-[here is repo](https://github.com/refinedev/refine/tree/master/examples/blog/refineflix)
+[here is repo](https://github.com/refinedev/refine/tree/master/examples/blog-refineflix)

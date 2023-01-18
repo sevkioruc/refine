@@ -1,18 +1,10 @@
 import React from "react";
 import { useOne, useTranslate, useResource } from "@pankod/refine-core";
-import {
-    RefineButtonTestIds,
-    RefineRefreshButtonProps,
-} from "@pankod/refine-ui-types";
-import { IconButton, Button, ButtonProps } from "@chakra-ui/react";
-import { IconRefresh, TablerIconProps } from "@tabler/icons";
+import { RefineButtonTestIds } from "@pankod/refine-ui-types";
+import { IconButton, Button } from "@chakra-ui/react";
+import { IconRefresh } from "@tabler/icons";
 
-export type RefreshButtonProps = RefineRefreshButtonProps<
-    ButtonProps,
-    {
-        svgIconProps?: TablerIconProps;
-    }
->;
+import { RefreshButtonProps } from "../types";
 
 /**
  * `<RefreshButton>` uses Chakra UI {@link https://chakra-ui.com/docs/components/button `<Button> `} component.
@@ -56,7 +48,7 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
             onClick={(e: React.PointerEvent<HTMLButtonElement>) =>
                 onClick ? onClick(e) : refetch()
             }
-            disabled={isFetching}
+            isDisabled={isFetching}
             data-testid={RefineButtonTestIds.RefreshButton}
             {...rest}
         >

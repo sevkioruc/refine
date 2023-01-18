@@ -6,7 +6,6 @@ title: i18n Provider
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import changeLanguage from '@site/static/img/i18n/changing-language.gif';
 
 refine is capable of supporting any i18n framework but a `i18nProvider` according to the relevant library must be created.
 
@@ -52,7 +51,7 @@ const App: React.FC = () => {
 ## Example
 
 :::tip
-We recommend [**superplate**][superplate] to initialize your refine projects. It configures the project according to your needs including i18n provider.
+We recommend using [`create refine-app`][create-refine-app] to initialize your refine projects. It configures the project according to your needs including i18n provider.
 :::
 
 :::caution
@@ -809,17 +808,12 @@ export interface IPost {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={changeLanguage} alt="Language change action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/i18n/changing-language.gif" alt="Language change action" />
 </div>
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/i18n/react?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-i18n-example"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<StackblitzExample path="i18n-react" />
 
 [i18nnextjs]: /examples/i18n/i18n-nextjs.md
-[superplate]: https://github.com/pankod/superplate
+[create-refine-app]: /docs/getting-started/quickstart.md

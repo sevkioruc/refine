@@ -1,31 +1,16 @@
+/** @type {import('@docusaurus/plugin-content-docs/src/sidebars/types').Sidebars} */
 module.exports = {
     someSidebar: [
         {
             type: "category",
             label: "Getting Started",
-            link: {
-                type: "generated-index",
-                title: "Getting Started",
-                slug: "/getting-started",
-            },
             items: ["getting-started/overview", "getting-started/quickstart"],
             collapsed: false,
         },
         {
-            type: "category",
-            label: "Basic Tutorials",
-            link: {
-                type: "doc",
-                id: "tutorials",
-            },
-            items: [
-                "tutorials/ant-design-tutorial",
-                "tutorials/chakra-ui-tutorial",
-                "tutorials/mantine-tutorial",
-                "tutorials/material-ui-tutorial",
-                "tutorials/headless-tutorial",
-            ],
-            collapsed: true,
+            type: "doc",
+            id: "tutorial/introduction/index",
+            label: "Tutorial",
         },
         {
             type: "category",
@@ -224,6 +209,7 @@ module.exports = {
                                 "api-reference/core/components/auth-page",
                                 "api-reference/core/components/refine-config",
                                 "api-reference/core/components/layout-wrapper",
+                                "api-reference/core/components/inferencer",
                                 {
                                     type: "category",
                                     label: "Authorization",
@@ -243,6 +229,7 @@ module.exports = {
                         "api-reference/core/interfaceReferences",
                     ],
                 },
+
                 {
                     type: "category",
                     label: "Ant Design API",
@@ -297,6 +284,13 @@ module.exports = {
                                         "api-reference/antd/hooks/table/useTable",
                                     ],
                                 },
+                                {
+                                    type: "category",
+                                    label: "UI",
+                                    items: [
+                                        "api-reference/antd/hooks/ui/useModal",
+                                    ],
+                                },
                             ],
                         },
                         {
@@ -304,7 +298,7 @@ module.exports = {
                             label: "Components",
                             items: [
                                 "api-reference/antd/components/antd-auth-page",
-
+                                "api-reference/antd/components/inferencer",
                                 {
                                     type: "category",
                                     label: "Basic Views",
@@ -367,6 +361,7 @@ module.exports = {
                                 "api-reference/antd/customization/antd-custom-sider",
                             ],
                         },
+                        "api-reference/antd/migration-guide/v4-to-v5",
                     ],
                 },
 
@@ -384,6 +379,7 @@ module.exports = {
                             label: "Components",
                             items: [
                                 "api-reference/chakra-ui/components/chakra-auth-page",
+                                "api-reference/chakra-ui/components/inferencer",
                                 {
                                     type: "category",
                                     label: "Basic Views",
@@ -471,6 +467,7 @@ module.exports = {
                             label: "Components",
                             items: [
                                 "api-reference/mantine/components/mantine-auth-page",
+                                "api-reference/mantine/components/inferencer",
                                 {
                                     type: "category",
                                     label: "Basic Views",
@@ -549,6 +546,7 @@ module.exports = {
                             label: "Components",
                             items: [
                                 "api-reference/mui/components/mui-auth-page",
+                                "api-reference/mui/components/inferencer",
                                 {
                                     type: "category",
                                     label: "Basic Views",
@@ -625,6 +623,7 @@ module.exports = {
                         slug: "/packages/documentation",
                     },
                     items: [
+                        "packages/documentation/cli",
                         "packages/documentation/command-palette",
                         "packages/documentation/react-table",
                         {
@@ -636,6 +635,7 @@ module.exports = {
                                 "packages/documentation/react-hook-form/useStepsForm",
                             ],
                         },
+                        "packages/documentation/inferencer",
                     ],
                 },
             ],
@@ -819,7 +819,10 @@ module.exports = {
                 {
                     type: "category",
                     label: "Next.js",
-                    items: ["examples/next-js/nextjs"],
+                    items: [
+                        "examples/next-js/nextjs",
+                        "examples/next-js/nextjs-appdir",
+                    ],
                 },
                 {
                     type: "category",

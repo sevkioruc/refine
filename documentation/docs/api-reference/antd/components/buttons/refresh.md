@@ -1,15 +1,20 @@
 ---
 id: refresh-button
 title: Refresh
+swizzle: true
 ---
 
-import refreshButton from '@site/static/img/guides-and-concepts/components/buttons/refresh/refresh.png';
 
 `<RefreshButton>` uses Ant Design's [`<Button>`](https://ant.design/components/button/) component to update the data shown on the page via the [`useOne`](/api-reference/core/hooks/data/useOne.md) method provided by your [`dataProvider`](/api-reference/core/providers/data-provider.md).
 
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
+
 ## Usage
 
-```tsx
+```tsx live
+// visible-block-start
 import { useShow } from "@pankod/refine-core";
 import {
     // highlight-next-line
@@ -20,7 +25,7 @@ import {
 
 const { Title, Text } = Typography;
 
-export const PostShow: React.FC = () => {
+const PostShow: React.FC = () => {
     const { queryResult } = useShow<IPost>();
     const { data, isLoading } = queryResult;
     const record = data?.data;
@@ -29,7 +34,7 @@ export const PostShow: React.FC = () => {
         <Show
             isLoading={isLoading}
             // highlight-next-line
-            pageHeaderProps={{ extra: <RefreshButton /> }}
+            headerButtons={<RefreshButton />}
         >
             <Title level={5}>Id</Title>
             <Text>{record?.id}</Text>
@@ -44,18 +49,27 @@ interface IPost {
     id: string;
     title: string;
 }
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        initialRoutes={["/posts/show/123"]}
+        resources={[
+            {
+                name: "posts",
+                show: PostShow,
+                list: () => {
+                    return (
+                        <RefineAntd.List>
+                            <p>Your list page here</p>
+                        </RefineAntd.List>
+                    );
+                }
+            },
+        ]}
+    />,
+);
 ```
-
-Will Look like this:
-
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={refreshButton} alt="Default refresh button" />
-</div>
 
 ## Properties
 
@@ -63,12 +77,32 @@ Will Look like this:
 
 `recordItemId` allows us to manage which data is going to be refreshed.
 
-```tsx 
+```tsx live disableScroll previewHeight=120px
+// visible-block-start
 import { RefreshButton } from "@pankod/refine-antd";
 
-export const MyRefreshComponent = () => {
-    return <RefreshButton resourceName="posts" recordItemId="1" />;
+const MyRefreshComponent = () => {
+    return (
+        <RefreshButton
+            resourceNameOrRouteName="posts" 
+            // highlight-next-line
+            recordItemId="1"
+        />
+    );
 };
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+            },
+        ]}
+        DashboardPage={MyRefreshComponent}
+    />,
+);
 ```
 
 Clicking the button will trigger the [`useOne`](/api-reference/core/hooks/data/useOne.md) method and then fetches the record whose resource is "post" and whose id is "1".
@@ -81,12 +115,34 @@ Clicking the button will trigger the [`useOne`](/api-reference/core/hooks/data/u
 
 `resourceNameOrRouteName` allows us to manage which resource is going to be refreshed.
 
-```tsx 
+```tsx live disableScroll previewHeight=120px
+// visible-block-start
 import { RefreshButton } from "@pankod/refine-antd";
 
-export const MyRefreshComponent = () => {
-    return <RefreshButton resourceNameOrRouteName="categories" recordItemId="2" />;
+const MyRefreshComponent = () => {
+    return (
+        <RefreshButton
+            // highlight-next-line
+            resourceNameOrRouteName="posts" 
+        />
+    );
 };
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+            },
+            {
+                name: "categories"
+            }
+        ]}
+        DashboardPage={MyRefreshComponent}
+    />,
+);
 ```
 
 Clicking the button will trigger the [`useOne`](/api-reference/core/hooks/data/useOne.md) method and then fetches the record whose resource is "categories" and whose id is "2".
@@ -99,12 +155,31 @@ Clicking the button will trigger the [`useOne`](/api-reference/core/hooks/data/u
 
 It is used to show and not show the text of the button. When `true`, only the button icon is visible.
 
-```tsx 
+```tsx live disableScroll previewHeight=120px
+// visible-block-start
 import { RefreshButton } from "@pankod/refine-antd";
 
-export const MyRefreshComponent = () => {
-    return <RefreshButton hideText />;
+const MyRefreshComponent = () => {
+    return (
+        <RefreshButton
+            // highlight-next-line
+            hideText
+        />
+    );
 };
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        initialRoutes={["/"]}
+        resources={[
+            {
+                name: "posts",
+            },
+        ]}
+        DashboardPage={MyRefreshComponent}
+    />,
+);
 ```
 
 ## API Reference

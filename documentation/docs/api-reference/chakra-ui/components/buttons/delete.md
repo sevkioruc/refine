@@ -1,6 +1,7 @@
 ---
 id: delete-button
 title: Delete
+swizzle: true
 ---
 
 ```tsx live shared
@@ -23,6 +24,10 @@ const Wrapper = ({ children }) => {
 
 `<DeleteButton>` uses Chakra UI's [`<Button>`](https://chakra-ui.com/docs/components/button/usage) and [`<Popover>`](https://chakra-ui.com/docs/components/popover/usage) components.
 When you try to delete something, a pop-up shows up and asks for confirmation. When confirmed it executes the [`useDelete`](/api-reference/core/hooks/data/useDelete.md) method provided by your [`dataProvider`](/api-reference/core/providers/data-provider.md).
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

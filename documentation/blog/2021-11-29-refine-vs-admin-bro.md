@@ -4,15 +4,15 @@ description: Refine vs AdminBro
 slug: refine-vs-adminbro
 authors: melih
 tags: [refine, admin-bro, react, admin-panel, react-framework]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import refine_flow from '@site/static/img/blog/2021-11-29-refine-vs-adminbro/refine_flow.png';
-import project_setup from '@site/static/img/blog/2021-11-29-refine-vs-adminbro/project_setup.gif';
+
+
 
 Looking for open source **admin panel framework**? Here we are going to review two of the best **Open Source admin panel frameworks of 2021**.
 
@@ -44,7 +44,7 @@ Although **refine** is a newer framework, it is successful in identifying defici
 npx superplate-cli demo-refine-project
 ```
 
-<img src={project_setup} alt="setup" />
+<img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-11-29-refine-vs-adminbro/project_setup.gif" alt="setup" />
 
 ### Features
 
@@ -183,7 +183,7 @@ You just need to tell the route of your component to the routerProvider.
 
 A data provider is the place where a **refine** app communicates with an API.
 
-<img src={refine_flow} alt="refine" />
+<img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-11-29-refine-vs-adminbro/refine_flow.png" alt="refine" />
 
 
 A data provider must include following methods:
@@ -373,16 +373,16 @@ Here we only make requests for queries that are necessary. As you can see, all y
 ### Refine Avaible Providers
 Connects to any REST or GraphQL custom backend.
 
-* NestJs CRUD: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/nestjsxCrud](https://github.com/refinedev/refine/tree/master/examples/dataProvider/nestjsxCrud)
-* Airtable: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/airtable](https://github.com/refinedev/refine/tree/master/examples/dataProvider/airtable)
-* Strapi: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi](https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi)
-* Strapi v4: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi-v4](https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi-v4)
-* Strapi GraphQL: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi-graphql](https://github.com/refinedev/refine/tree/master/examples/dataProvider/strapi-graphql)
-* Supabase: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/supabase](https://github.com/refinedev/refine/tree/master/examples/dataProvider/supabase)
-* Hasura: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/hasura](https://github.com/refinedev/refine/tree/master/examples/dataProvider/hasura)
-* Nhost: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/nhost](https://github.com/refinedev/refine/tree/master/examples/dataProvider/nhost)
-* Appwrite: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/appwrite](https://github.com/refinedev/refine/tree/master/examples/dataProvider/appwrite)
-* Altogic: [https://github.com/refinedev/refine/tree/master/examples/dataProvider/altogic](https://github.com/refinedev/refine/tree/master/examples/dataProvider/altogic)
+* NestJs CRUD: [https://github.com/refinedev/refine/tree/master/examples/data-provider-nestjsx-crud](https://github.com/refinedev/refine/tree/master/examples/data-provider-nestjsx-crud)
+* Airtable: [https://github.com/refinedev/refine/tree/master/examples/data-provider-airtable](https://github.com/refinedev/refine/tree/master/examples/data-provider-airtable)
+* Strapi: [https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi](https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi)
+* Strapi v4: [https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi-v4](https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi-v4)
+* Strapi GraphQL: [https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi-graphql](https://github.com/refinedev/refine/tree/master/examples/data-provider-strapi-graphql)
+* Supabase: [https://github.com/refinedev/refine/tree/master/examples/data-provider-supabase](https://github.com/refinedev/refine/tree/master/examples/data-provider-supabase)
+* Hasura: [https://github.com/refinedev/refine/tree/master/examples/data-provider-hasura](https://github.com/refinedev/refine/tree/master/examples/data-provider-hasura)
+* Nhost: [https://github.com/refinedev/refine/tree/master/examples/data-provider-nhost](https://github.com/refinedev/refine/tree/master/examples/data-provider-nhost)
+* Appwrite: [https://github.com/refinedev/refine/tree/master/examples/data-provider-appwrite](https://github.com/refinedev/refine/tree/master/examples/data-provider-appwrite)
+* Altogic: [https://github.com/refinedev/refine/tree/master/examples/data-provider-altogic](https://github.com/refinedev/refine/tree/master/examples/data-provider-altogic)
 * Medusa: [https://github.com/refinedev/refine/tree/next/packages/medusa](https://github.com/refinedev/refine/tree/next/packages/medusa)
 
 ### Customization

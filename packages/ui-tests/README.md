@@ -1,6 +1,6 @@
 <div align="center" style="margin: 30px;">
 <a href="https://refine.dev/">
-  <img src="https://raw.githubusercontent.com/refinedev/refine/master/logo.png"   style="width:250px;" align="center" />
+  <img src="https://refine.ams3.cdn.digitaloceanspaces.com/refine_logo.png"   style="width:250px;" align="center" />
 </a>
 <br />
 <br />
@@ -128,10 +128,10 @@ In addition to **shorter development** times and **overall performance gains**, 
 
 ## Quick Start
 
-Run the **superplate** tool with the following command:
+Run the **create refine-app** CLI tool with the following command:
 
 ```
-npx superplate-cli -p refine-react tutorial
+npm create refine-app@latest tutorial
 ```
 
 Follow the _CLI wizard_ to select options and start creating your project.

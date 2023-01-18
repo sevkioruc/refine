@@ -1,6 +1,7 @@
 ---
 id: tag
 title: Tag
+swizzle: true
 ---
 
 ```tsx live shared
@@ -23,6 +24,10 @@ const Wrapper = ({ children }) => {
 ```
 
 This field lets you display a value in a tag. It uses Chakra UI [`<Tag>`](https://chakra-ui.com/docs/components/tag/usage) component.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

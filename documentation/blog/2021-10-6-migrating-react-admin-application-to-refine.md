@@ -4,14 +4,14 @@ description: Recently, our team decided to migrate a B2B admin panel of one of o
 slug: migrating-a-react-admin-application-to-refine
 authors: umut
 tags: [refine, react-admin, adminpanel, crud]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import sider from '@site/static/img/blog/2021-10-6-migrating-react-admin-to-refine/sider.png';
-import react_admin from '@site/static/img/blog/2021-10-6-migrating-react-admin-to-refine/react_admin.png';
-import refine_table from '@site/static/img/blog/2021-10-6-migrating-react-admin-to-refine/refine_table.png';
-import react_admin_create from '@site/static/img/blog/2021-10-6-migrating-react-admin-to-refine/react_admin_create.png';
+
+
+
+
 
 Recently, our team decided to migrate a B2B admin panel of one of our customers from React-Admin to refine to battle test our new framework and improve our productivity. My mission was to migrate it and it took one and a half days for me to rewrite the panel in refine.
 
@@ -27,9 +27,9 @@ Recently, our team decided to migrate a B2B admin panel of one of our customers 
 
 It is, also, one step forward towards the dream of <strong>making it headless</strong>.
 
-To learn more about refine, see: https://refine.dev/docs/getting-started/overview
+To learn more about refine, see: https://refine.dev/docs/
 
-|                                                                                                  <img src={sider} alt="sider" />                                                                                                   |
+|                                                                                                  <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/sider.png" alt="sider" />                                                                                                   |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | _Our panel has 7 resources (all listable), which 4 of them must have create and edit pages, 6 of them must be exportable to `.csv` files and some of those resources have images, all images must be uploaded in `base64` format._ |
 
@@ -41,7 +41,7 @@ This is how it looks before the migration (React-Admin):
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={react_admin} alt="react-admin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/react_admin.png" alt="react-admin" />
 </div>
 <br/>
 
@@ -53,7 +53,7 @@ And this is how it looks like after the migration (refine):
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_table} alt="refine" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/refine_table.png" alt="refine" />
 </div>
 <br/>
 
@@ -63,7 +63,7 @@ Both of these images show a list page of a resource (campaign).
 
 List pages have one/more tables inside them. Ideally, all table state should be managed by the framework in use.
 
-refine is very flexible with tables. You can put them anywhere, configure it as much as you want with [useTable](https://refine.dev/docs/api-reference/antd/hooks/table/useTable/). See the [fineFoods example](https://refine.dev/demo/) and [it's code](https://github.com/refinedev/refine/blob/master/examples/fineFoods/admin/antd/src/pages/categories/list.tsx).
+refine is very flexible with tables. You can put them anywhere, configure it as much as you want with [useTable](https://refine.dev/docs/api-reference/antd/hooks/table/useTable/). See the [fineFoods example](https://refine.dev/demo/) and [it's code](https://github.com/refinedev/refine/blob/master/examples/finefoods-antd/src/pages/categories/list.tsx).
 
 Here is an example list page from React-Admin that shows you the list of `id`,`name`, `isActive`, `startDate`, `endDate` from the API endpoint for `campaigns` resource.
 
@@ -103,7 +103,7 @@ And looks like this:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={react_admin} alt="react-admin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/react_admin.png" alt="react-admin" />
 </div>
 <br/>
 
@@ -257,7 +257,7 @@ And it looks like this:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_table} alt="refine" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/refine_table.png" alt="refine" />
 </div>
 <br/>
 
@@ -322,7 +322,7 @@ And it looks like this:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={react_admin_create} alt="react-admin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-6-migrating-react-admin-to-refine/react_admin_create.png" alt="react-admin" />
 </div>
 <br/>
 

@@ -4,12 +4,12 @@ description: Improve the APP performance with React useCallback() hook
 slug: react-usecallback-guide
 authors: abdullah_numan
 tags: [react, memoization, usecallback, performance]
-image: /img/blog/2022-09-20-react-use-callback/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-20-react-use-callback/social.png
 hide_table_of_contents: false
 ---
 
-import usecallback1 from '@site/static/img/blog/2022-09-20-react-use-callback/usecallback1.png';
-import usecallback2 from '@site/static/img/blog/2022-09-20-react-use-callback/usecallback2.png';
+
+
 
 
 
@@ -135,7 +135,7 @@ If we check our console, we can see the logs for the inital rendering of the com
 Then if we click the `SignOut` button on the navbar, we see batches of renders from `<UserPostsIndex />`, `<UserPostsList />` and `<UserPost />`:
 
 <div class="img-container" align-items="center" >
-   <img style={{alignSelf:"center", width:"400px"}} src={usecallback1} alt="usecallback1" />
+   <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-20-react-use-callback/usecallback1.png" alt="usecallback1" />
 </div>
 
 <br/>
@@ -150,7 +150,7 @@ We already memoized `<UserPostsList />` with `React.memo()`. We don't see any re
 
 ---
 
-<PromotionBanner title="Building a side project?" image="/img/generic_banner.png" />
+<PromotionBanner title="Building a side project?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -188,7 +188,7 @@ export default React.memo(UserPostsIndex);
 Now, if we click the `Sign Out` button a few times, we'll see in the console that `<UserPostsIndex />` is re-rendered, but `<UserPostsList />` and `<UserPost />` is not:
 
 <div class="img-container" align-items="center" >
-   <img style={{alignSelf:"center", width:"400px"}}  src={usecallback2}  alt="usecallback2" />
+   <img style={{alignSelf:"center", width:"400px"}}  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-20-react-use-callback/usecallback2.png"  alt="usecallback2" />
 </div>
 
 <br/>
@@ -200,7 +200,7 @@ Here, a change in `userPosts` triggers renewal of the memo of the function, so e
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -215,17 +215,12 @@ In this article, we looked at how re-renders of a parent component lead to viola
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="https://refine.dev/img/discord-banner.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord-banner.png" alt="discord banner" />
 </a>
 </div>
 
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/react-memoization-memo/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="react-memoization-memo"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-react-memoization-memo" />
 

@@ -5,12 +5,6 @@ title: Tutorial
 sidebar_label: Tutorial
 ---
 
-import readyPage from '@site/static/img/tutorial/ready-page.png';
-import resourceFirst from '@site/static/img/tutorial/resource-1.png';
-import resourceSecond from '@site/static/img/tutorial/resource-2.png';
-import createGif from '@site/static/img/tutorial/create.gif';
-import editGif from '@site/static/img/tutorial/edit.gif';
-import showGif from '@site/static/img/tutorial/show.gif';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -71,7 +65,7 @@ yarn add @pankod/refine @pankod/refine-react-router
   </TabItem>
 </Tabs>
 
-:::warning
+:::danger
 This tutorial assumes your project is configured for absolute imports. Since CRA does not configure it by default, you should configure it yourself to be able to use absolute imports. You should configure a [`tsconfig.json`](https://www.typescriptlang.org/tsconfig#baseUrl) with `baseUrl` setting pointing to the `/src` directory in your project.
 
 [Refer to CRA docs for more information about absolute imports. &#8594](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
@@ -176,7 +170,7 @@ Fake REST API is based on [JSON Server Project](https://github.com/typicode/json
 -   [Altogic](https://github.com/refinedev/refine/tree/master/packages/altogic)
 
 ### Community ❤️
--   [Firebase](https://github.com/rturan29/refine-firebase) by [rturan29](https://github.com/rturan29)
+-   [Firebase](https://github.com/resulturan/refine-firebase) by [rturan29](https://github.com/resulturan)
 -   [Directus](https://github.com/tspvivek/refine-directus) by [tspvivek](https://github.com/tspvivek)
 
 [Refer to the `dataProvider` documentation for detailed usage. &#8594](/api-references/providers/data-provider.md)
@@ -242,7 +236,7 @@ Point your browser to [http://localhost:3000](http://localhost:3000) to access i
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={readyPage} alt="Ready Page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/ready-page.png" alt="Ready Page" />
 </div>
 <br/>
 
@@ -321,7 +315,7 @@ Instead of showing the welcome page, the application should redirect now? to an 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={resourceFirst} alt="Resource only with name" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/resource-1.png" alt="Resource only with name" />
 </div>
 <br/>
 </>
@@ -455,7 +449,7 @@ On the next step, we are going to add a category field to the table which involv
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={resourceSecond} alt="Resource only List component" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/resource-2.png" alt="Resource only List component" />
 </div>
 <br/>
 </>
@@ -917,7 +911,7 @@ the `<Show>` component which has extra features like `list` and `refresh` button
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={showGif} alt="Show record action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/show.gif" alt="Show record action" />
 </div>
 <br/>
 
@@ -1145,7 +1139,7 @@ In edit page, `useForm` hook initializes the form with current record values.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={editGif} alt="Edit record action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/edit.gif" alt="Edit record action" />
 </div>
 <br/>
 
@@ -1268,7 +1262,7 @@ We should notice some minor differences from the edit example:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={createGif} alt="Create record action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/tutorial/create.gif" alt="Create record action" />
 </div>
 
 <br/>

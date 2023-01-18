@@ -10,7 +10,6 @@ import {
     useTitle,
     useTranslate,
 } from "@pankod/refine-core";
-import { RefineLayoutSiderProps } from "@pankod/refine-ui-types";
 import {
     Accordion,
     AccordionButton,
@@ -36,9 +35,8 @@ import {
     IconMenu2,
 } from "@tabler/icons";
 
-import { Title as DefaultTitle } from "../title";
-
-const defaultNavIcon = <IconList size={20} />;
+import { Title as DefaultTitle } from "@components";
+import { RefineLayoutSiderProps } from "../types";
 
 export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
     const [collapsed, setCollapsed] = useState(false);
@@ -111,7 +109,12 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
                                         color="white"
                                         fontWeight="normal"
                                         leftIcon={
-                                            icon ?? (defaultNavIcon as any)
+                                            icon ??
+                                            ((
+                                                <>
+                                                    <IconList size={20} />
+                                                </>
+                                            ) as any)
                                         }
                                         rightIcon={
                                             isParent ? (

@@ -32,16 +32,16 @@ export default function Layout(props) {
     const isMobile = useIsMobile();
 
     const showGithubCta = useMemo(() => {
-        if (location.pathname.startsWith("/docs")) {
-            return false;
-        }
-
         if (typeof window !== "undefined" && !isMobile) {
             if (location.pathname.startsWith("/blog")) {
                 window?.Intercom?.("update", { hide_default_launcher: true });
             } else {
                 window?.Intercom?.("update", { hide_default_launcher: false });
             }
+        }
+
+        if (location.pathname.startsWith("/docs")) {
+            return false;
         }
 
         return true;

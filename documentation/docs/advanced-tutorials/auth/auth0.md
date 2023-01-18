@@ -3,7 +3,6 @@ id: auth0
 title: Auth0 Login
 ---
 
-import login from '@site/static/img/guides-and-concepts/auth0/auth0-login.gif';
 
 [Auth0](https://auth0.com/) is a flexible, drop-in solution for adding authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that comes with building your own solution to authenticate and authorize users. You can check the [Auth0 document](https://auth0.com/docs) for details.
 
@@ -34,7 +33,7 @@ const container = document.getElementById("root");
 const root = createRoot(container!);
 root.render(
     <React.StrictMode>
-// highlight-start
+        // highlight-start
         <Auth0Provider
             domain="YOUR_DOMAIN"
             clientId="YOUR_CLIENT_ID"
@@ -42,13 +41,12 @@ root.render(
         >
             <App />
         </Auth0Provider>
-// highlight-end
+        // highlight-end
     </React.StrictMode>,
 );
-
 ```
 
-:::important
+:::caution
 Refer to [**Auth0 docs**](https://auth0.com/docs/quickstart/spa/react#configure-auth0) for detailed configuration.
 :::
 
@@ -100,7 +98,7 @@ After clicking the `Login` button, you will be directed to the auth0 login scree
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={login} alt="auth0-login" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/auth0/auth0-login.gif" alt="auth0-login" />
 </div>
 <br/>
 
@@ -110,12 +108,17 @@ In refine, authentication and authorization processes are performed with the aut
 
 ```tsx title="App.tsx"
 import { Refine, AuthProvider } from "@pankod/refine-core";
-import { Layout, ReadyPage, notificationProvider, ErrorComponent } from "@pankod/refine-antd";
+import {
+    Layout,
+    ReadyPage,
+    notificationProvider,
+    ErrorComponent,
+} from "@pankod/refine-antd";
 import dataProvider from "@pankod/refine-simple-rest";
 import routerProvider from "@pankod/refine-react-router-v6";
 import { useAuth0 } from "@auth0/auth0-react";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 import { Login } from "pages/login";
 
@@ -124,13 +127,8 @@ import axios from "axios";
 const API_URL = "https://api.fake-rest.refine.dev";
 
 const App = () => {
-    const {
-        isLoading,
-        isAuthenticated,
-        user,
-        logout,
-        getIdTokenClaims,
-    } = useAuth0();
+    const { isLoading, isAuthenticated, user, logout, getIdTokenClaims } =
+        useAuth0();
 
     if (isLoading) {
         return <span>loading...</span>;
@@ -184,7 +182,7 @@ const App = () => {
             resources={[
                 {
                     name: "posts",
-                }
+                },
             ]}
         />
     );
@@ -213,11 +211,10 @@ We can use the `isAuthenticated` method, which returns the authentication status
 
 We can use it with the `user` from the `useAuth0` hook.
 
-## Live StackBlitz Example
+## Example
 
+:::caution
 Auth0 example doesn't work in StackBlitz embed mode. With [this](https://ussft.csb.app/) link, you can open the example in the browser and try it.
+:::
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/authProvider/auth0?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-auth0-example"
-></iframe>
+<StackblitzExample path="auth-auth0" />

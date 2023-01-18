@@ -1,11 +1,14 @@
 ---
 id: number
 title: Number
+swizzle: true
 ---
 
-import numberField from '@site/static/img/guides-and-concepts/fields/number/numberField.png'
-
 This field is used to display a number formatted according to the browser locale, right aligned. and uses [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) to display date format.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
@@ -13,15 +16,24 @@ This field is used to display a number formatted according to the browser locale
 
 If Intl is not available, `<NumberField>` outputs numbers as is (and ignores the locales and options props).
 
-```tsx
-// highlight-next-line
-import { List, Table, NumberField } from "@pankod/refine-antd";
+```tsx live
+// visible-block-start
+import {
+    List,
+    Table,
+    // highlight-next-line
+    NumberField,
+    useTable
+} from "@pankod/refine-antd";
 
-export const PostList: React.FC = () => {
+const PostList: React.FC = () => {
+    const { tableProps } = useTable<IPost>();
+
     return (
         <List>
-            <Table rowKey="id">
-                <Table.Column dataIndex="title" title="Title" key="title" />
+            <Table {...tableProps} rowKey="id">
+                <Table.Column dataIndex="id" title="ID" />
+                <Table.Column dataIndex="title" title="Title" width="50%" />
                 <Table.Column<IPost>
                     key="hit"
                     title="Hit"
@@ -36,6 +48,7 @@ export const PostList: React.FC = () => {
                         />
                         // highlight-end
                     )}
+                    width="50%"
                 />
             </Table>
         </List>
@@ -44,19 +57,22 @@ export const PostList: React.FC = () => {
 
 interface IPost {
     id: number;
+    title: string;
     hit: number;
 }
-```
+// visible-block-end
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={numberField} alt="NumberField" />
-</div>
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostList
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 

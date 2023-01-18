@@ -4,13 +4,13 @@ description: We will deep dive into Next.js getInitialProps and getServerSidePro
 slug: next-js-getinitialprops-and-getserversideprops
 authors: michael
 tags: [nextjs, getInitialProps, getServerSideProps]
-image: /img/blog/2022-10-31-next-getInitial/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-31-next-getInitial/social.png
 hide_table_of_contents: false
 ---
 
 
-import getInit from '@site/static/img/blog/2022-10-31-next-getInitial/getInitProp.gif';
-import getServer from '@site/static/img/blog/2022-10-31-next-getInitial/getServerProp.gif';
+
+
 
 ## Introduction 
 
@@ -185,7 +185,7 @@ You can learn more about configuration options for the HTTP header field `Cache-
 
 ---
 
-<PromotionBanner title="Does your CRUD app need server state management?" image="/img/generic_banner.png" />
+<PromotionBanner title="Does your CRUD app need server state management?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -207,7 +207,7 @@ The GIF below shows how `getInitialProps` behaves when it's used to fetch data f
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={getInit}  alt="getinitialprops" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-31-next-getInitial/getInitProp.gif"  alt="getinitialprops" />
 
 </div>
 
@@ -260,7 +260,7 @@ However, when we make client-side navigation to the home page `localhost:3000` u
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -275,7 +275,7 @@ The GIF below shows the same example from the previous section using `getServerS
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={getServer}  alt="getserversideprops" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-31-next-getInitial/getServerProp.gif"  alt="getserversideprops" />
 
 </div>
 

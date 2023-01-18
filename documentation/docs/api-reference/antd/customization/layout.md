@@ -1,6 +1,7 @@
 ---
 id: antd-custom-layout
 title: Layout
+swizzle: true
 ---
 
 You can create custom layouts using [`<Refine>`][refine] and [`<LayoutWrapper>`][layoutwrapper] components.
@@ -13,6 +14,10 @@ Both of these components can accept the listed props for customization. [`<Refin
 -   [`Header`][header]
 -   [`OffLayoutArea`][offlayoutarea]
 -   [`Title`][title]
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Creating a Custom Layout
 
@@ -29,7 +34,7 @@ import {
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 import { PostList } from "pages/posts";
 // highlight-next-line
@@ -121,16 +126,11 @@ By default, [`<Sider>`][sider] is responsible for rendering [`<Title>`][title]. 
 This example demonstrated how to configure a global layout. To learn how to use global layout in custom pages and make local modifications per page, [refer to the `<LayoutWrapper>` docs. &#8594][layoutwrapper]
 :::
 
-## Live StackBlitz Example
+## Example
 
 Here's how it looks in the end:
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/customization/topMenuLayout?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-top-menu-layout-example"
-    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="customization-top-menu-layout" />
 
 [refine]: /api-reference/core/components/refine-config.md
 [layout]: /api-reference/core/components/refine-config.md#layout

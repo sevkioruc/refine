@@ -1,34 +1,43 @@
 ---
 id: boolean
 title: Boolean
+swizzle: true
 ---
 
-import booleanField from '@site/static/img/guides-and-concepts/fields/boolean/booleanfield.png'
 
 This field is used to display boolean values. It uses the [`<Tooltip>`](https://ant.design/components/tooltip/#header) values from Ant Design.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<BooleanField>` with the example in the post list.
 
-```tsx
+```tsx live
+// visible-block-start
 import {
     List,
     Table,
+    useTable,
     // highlight-start
     BooleanField,
     Icons
     // highlight-end
 } from "@pankod/refine-antd";
 
-export const PostList: React.FC = () => {
+const PostList: React.FC = () => {
+    const { tableProps } = useTable<IPost>();
+
     // highlight-next-line
     const { CloseCircleOutlined, CheckCircleOutlined } = Icons;
 
     return (
         <List>
-            <Table rowKey="id">
-                ...
+            <Table {...tableProps} rowKey="id">
+                <Table.Column dataIndex="id" title="ID" />
+                <Table.Column dataIndex="title" title="Title" width="50%" />
                 <Table.Column
                     dataIndex="status"
                     title="Published"
@@ -43,22 +52,31 @@ export const PostList: React.FC = () => {
                         />
                         // highlight-end
                     )}
+                    width="50%"
                 />
             </Table>
         </List>
     );
 };
-```
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={booleanField} alt="BooleanField" />
-</div>
+interface IPost {
+    id: number;
+    title: string;
+    status: "published" | "draft" | "rejected";
+}
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostList
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 

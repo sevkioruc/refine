@@ -6,22 +6,11 @@ import {
     useResource,
     useRouterContext,
 } from "@pankod/refine-core";
-import {
-    RefineCreateButtonProps,
-    RefineButtonTestIds,
-} from "@pankod/refine-ui-types";
-import { Button, ButtonProps, IconButton } from "@chakra-ui/react";
-import { IconSquarePlus, TablerIconProps } from "@tabler/icons";
+import { RefineButtonTestIds } from "@pankod/refine-ui-types";
+import { Button, IconButton } from "@chakra-ui/react";
+import { IconSquarePlus } from "@tabler/icons";
 
-export type CreateButtonProps = Omit<
-    RefineCreateButtonProps<
-        ButtonProps,
-        {
-            svgIconProps?: TablerIconProps;
-        }
-    >,
-    "ignoreAccessControlProvider"
->;
+import { CreateButtonProps } from "../types";
 
 export const CreateButton: React.FC<CreateButtonProps> = ({
     resourceNameOrRouteName,
@@ -86,7 +75,7 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
                     variant="outline"
                     aria-label={translate("buttons.create", "Create")}
                     title={disabledTitle()}
-                    disabled={data?.can === false}
+                    isDisabled={data?.can === false}
                     data-testid={RefineButtonTestIds.CreateButton}
                     {...rest}
                 >
@@ -95,7 +84,7 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
             ) : (
                 <Button
                     variant="outline"
-                    disabled={data?.can === false}
+                    isDisabled={data?.can === false}
                     leftIcon={<IconSquarePlus size={20} />}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.CreateButton}

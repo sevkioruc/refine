@@ -3,8 +3,6 @@ id: useDrawerForm
 title: useDrawerForm
 ---
 
-import createGif from '@site/static/img/hooks/useDrawerForm/create.gif';
-import editGif from '@site/static/img/hooks/useDrawerForm/edit.gif';
 
 `useDrawerForm` hook allows you to manage a form within a Drawer. It returns Ant Design [Form](https://ant.design/components/form/) and [Drawer](https://ant.design/components/drawer/) components props.
 
@@ -102,7 +100,7 @@ This code block makes `<Drawer>` appear when you click the button.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={createGif} alt="Create record action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/hooks/useDrawerForm/create.gif" alt="Create record action" />
 </div>
 
 <br />
@@ -193,7 +191,7 @@ interface IPost {
 }
 ```
 
-:::important
+:::caution
 refine doesn't automatically add a edit button to the each record in `<PostList>` which opens edit form in `<Drawer>` when clicking.
 
 So, we have to put the edit buttons on our list. In that way, `<Edit>` form in `<Drawer>` can fetch data by the record `id`.
@@ -223,7 +221,7 @@ The `saveButtonProps` and `deleteButtonProps` gives us the ability of saving and
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={editGif} alt="Edit record action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/hooks/useDrawerForm/edit.gif" alt="Edit record action" />
 </div>
 <br />
 
@@ -245,10 +243,10 @@ The `saveButtonProps` and `deleteButtonProps` gives us the ability of saving and
 | formProps                | Ant Design form props                                        | [`FormProps`](https://ant.design/components/form/#Form)                                                                                                                               |
 | drawerProps              | Props for managed drawer                                     | [`DrawerProps`](https://ant.design/components/drawer/#API)                                                                                                                            |
 | saveButtonProps          | Props for a submit button                                    | `{ disabled: boolean; onClick: () => void; loading: boolean; }`                                                                                                                       |
-| deleteButtonProps        | Adds props for delete button                                 | [`DeleteButtonProps`](/api-reference/core/interfaces.md#delete-button-props)                                                                                                                        |
+| deleteButtonProps        | Adds props for delete button                                 | [`DeleteButtonProps`](/api-reference/core/interfaces.md#delete-button-props)                                                                                                          |
 | formLoading              | Loading status of form                                       | `boolean`                                                                                                                                                                             |
 | submit                   | Submit method, the parameter is the value of the form fields | `() => void`                                                                                                                                                                          |
-| visible                  | Whether the drawer is visible or not                         | `boolean`                                                                                                                                                                             |
+| open                     | Whether the drawer is open or not                            | `boolean`                                                                                                                                                                             |
 | close                    | Specify a function that can close the drawer                 | `() => void`                                                                                                                                                                          |
 | defaultFormValuesLoading | DefaultFormValues loading status of form                     | `boolean`                                                                                                                                                                             |
 | form                     | Ant Design form instance                                     | [`FormInstance<TVariables>`](https://ant.design/components/form/#FormInstance)                                                                                                        |
@@ -265,14 +263,9 @@ The `saveButtonProps` and `deleteButtonProps` gives us the ability of saving and
 | TError     | Custom error object that extends [`HttpError`][httperror]        | [`HttpError`][httperror]   |
 | TVariables | Values for params.                                               | `{}`                       |
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/form/antd/useDrawerForm?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-use-drawer-form-example"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<StackblitzExample path="form-antd-use-drawer-form" />
 
 [BaseRecord]: /api-reference/core/interfaces.md#baserecord
 [HttpError]: /api-reference/core/interfaces.md#httperror

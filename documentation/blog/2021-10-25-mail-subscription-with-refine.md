@@ -4,23 +4,23 @@ description: We will make a web application that allows you to quickly create su
 slug: e-mail-subscription-panel-with-refine
 authors: melih
 tags: [refine, strapi, react, tutorial]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import auth from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/auth.png';
-import create from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/create.gif';
-import dummy_data from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/dummy_data.png';
-import login from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/login.gif';
-import messages from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/messages.png';
-import overview from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/overview.png';
-import refine_messages from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/refine_messages.png';
-import refine_subs from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/refine_subs.png';
-import refine_welcome from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/refine_welcome.png';
-import send from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/send.gif';
-import signin from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/signin.png';
-import strapi from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/strapi.png';
-import subscribers from '@site/static/img/blog/2021-10-25-mail-subscription-with-refine/subscribers.png';
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 We will make a web application that allows you to quickly create subscribers and send emails to your subscribers in a simple way. We’ll use refine to develop the frontend easily and strapi for backend solutions.
 
@@ -35,7 +35,7 @@ npx create-strapi-app strapi-email-subscription-api --quickstart
 
 After the project is loaded, the admin panel will open automatically open in the browser. We need to create an admin user in order to log in to the strapi.
 
-<img src={strapi} alt="strapi" />
+<img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/strapi.png" alt="strapi" />
 
 
 With the information we will create here, we can now enter the strapi and start shaping our backend.
@@ -54,7 +54,7 @@ We will create these collections from the Collection-Types Builder part of the s
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={subscribers} alt="subscribers" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/subscribers.png" alt="subscribers" />
 </div>
 <br />
  
@@ -69,7 +69,7 @@ We will create these collections from the Collection-Types Builder part of the s
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={messages} alt="messages" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/messages.png" alt="messages" />
 </div>
 <br />
  
@@ -130,7 +130,7 @@ This is a example Refine project:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_welcome} alt="refine_welcome" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/refine_welcome.png" alt="refine_welcome" />
 </div>
 <br />
 
@@ -182,7 +182,7 @@ export default App;
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={signin} alt="signin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/signin.png" alt="signin" />
 </div>
 <br />
 
@@ -194,7 +194,7 @@ After adding the resources, we need to define a user in the strapi in order to b
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={auth} alt="auth" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/auth.png" alt="auth" />
 </div>
 <br />
 
@@ -206,7 +206,7 @@ Let's login with this user we created
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={login} alt="login" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/login.gif" alt="login" />
 </div>
 
  
@@ -218,7 +218,7 @@ We can now list subscribers and messages and make changes to our list. Before do
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={dummy_data} alt="dummy_data" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/dummy_data.png" alt="dummy_data" />
 </div>
 <br />
  
@@ -332,7 +332,7 @@ Now let's see how our subscriber panel looks like:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_subs} alt="refine_subs" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/refine_subs.png" alt="refine_subs" />
 </div>
 <br />
 
@@ -345,7 +345,7 @@ Now let's see how our subscriber panel looks like:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={refine_messages} alt="refine_messages" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/refine_messages.png" alt="refine_messages" />
 </div>
 <br />
 
@@ -461,7 +461,7 @@ Using refine's [form](https://refine.dev/docs/api-reference/antd/hooks/form/useF
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/create.gif" alt="create" />
 </div>
 <br />
   
@@ -554,7 +554,7 @@ Our project is finished. Let's try it now.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={overview} alt="overview" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/overview.png" alt="overview" />
 </div>
 <br />
  
@@ -568,13 +568,13 @@ Let's send the same e-mail to our subscribers shown in the picture at once.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={send} alt="send" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-25-mail-subscription-with-refine/send.gif" alt="send" />
 </div>
 <br />
 
 Sending mail was successful. As you can see, we were able to send the same email to all subscribers by sending a single email.
 
-[Here is repo](https://github.com/refinedev/refine/tree/master/examples/blog/mailSubscription) 
+[Here is repo](https://github.com/refinedev/refine/tree/master/examples/blog-mail-subscription) 
 
 
  

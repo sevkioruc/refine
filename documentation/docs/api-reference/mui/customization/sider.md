@@ -1,28 +1,43 @@
 ---
 id: mui-custom-sider
 title: Sider
+swizzle: true
 ---
 
-import customMenu from '@site/static/img/guides-and-concepts/hooks/useMenu/mui/custom-menu.gif';
+```tsx live shared
+const Wrapper = ({children}) => {
+    return (
+        <RefineMui.ThemeProvider theme={RefineMui.LightTheme}>
+            <RefineMui.CssBaseline />
+            <RefineMui.GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
+            {children}
+        </RefineMui.ThemeProvider>
+    )
+}
+```
 
-import customMenuLogout from '@site/static/img/guides-and-concepts/hooks/useMenu/mui/custom-menu-logout.gif';
+You can access the `logout`, `dashboard`, `items` elements and `collapsed` state that we use in our default `Sider` component by using `render` properties. Customize it to your needs or you can create a custom `<Sider />` component and use it either by passing it to [`<Refine />`][refine] or using a [Custom Layout][muicustomlayout].
 
-import customMobileMenu from '@site/static/img/guides-and-concepts/hooks/useMenu/mui/custom-menu-mobile.gif';
-
-You can access the `logout`, `dashboard`, `items` elements and `collapsed` state that we use in our default `Sider` component by using `render` properties. Customize it to your needs or you can create a custom `<Sider />` component and use it either by passing it to [`<Refine />`][refine] or using a [Custom Layout][antdcustomlayout].
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Customize Sider by Using `render` property
 
-```tsx title="src/App.tsx"
+```tsx live
+// visible-block-start
+import { Refine } from "@pankod/refine-core";
+import routerProvider from "@pankod/refine-react-router-v6";
+import dataProvider from "@pankod/refine-simple-rest";
 import { Box, ListItemText, Sider } from "@pankod/refine-mui";
 
 const PostList: React.FC = () => {
     return <div>PostList Page</div>;
 };
 
-const App: React.FC = () => {
-    const API_URL = "https://api.fake-rest.refine.dev";
+const API_URL = "https://api.fake-rest.refine.dev";
 
+const App: React.FC = () => {
     return (
         <Refine
             routerProvider={routerProvider}
@@ -36,7 +51,7 @@ const App: React.FC = () => {
             Sider={Sider}
             Layout={({ children, Sider, Header, Footer, OffLayoutArea }) => (
                 <Box display="flex" flexDirection="row">
-                    // highlight-start
+                    {/* highlight-start */}
                     <Sider
                         render={({ items }) => {
                             return (
@@ -47,7 +62,7 @@ const App: React.FC = () => {
                             );
                         }}
                     />
-                    // highlight-end
+                    {/* highlight-end */}
                     <Box
                         sx={{
                             display: "flex",
@@ -76,6 +91,9 @@ const App: React.FC = () => {
         />
     );
 };
+// visible-block-end
+
+render(<Wrapper><App/></Wrapper>);
 ```
 
 :::tip
@@ -88,31 +106,12 @@ You can also customize your Sider component by creating the `CustomSider` compon
 
 When you examine the code of the live-preview example below, you will see the same code that we used for the `default sider` component. You can create a customized `CustomSider` component for yourself by following this code.
 
-```tsx title="src/CustomSider.tsx"
+:::info-tip Swizzle
+You can also run the `swizzle` command to export the source code of the default sider component. Refer to [**refine CLI**](/docs/packages/documentation/cli) for more information.
+:::
+
+```tsx title="src/components/CustomSider.tsx"
 import React, { useState } from "react";
-import { RefineLayoutSiderProps } from "@pankod/refine-ui-types";
-import {
-    Box,
-    Drawer,
-    List,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    Collapse,
-    Tooltip,
-    Button,
-    IconButton,
-} from "@mui/material";
-import {
-    ListOutlined,
-    Logout,
-    ExpandLess,
-    ExpandMore,
-    ChevronLeft,
-    ChevronRight,
-    MenuRounded,
-    Dashboard,
-} from "@mui/icons-material";
 import {
     CanAccess,
     ITreeMenu,
@@ -124,10 +123,35 @@ import {
     useMenu,
     useRefineContext,
 } from "@pankod/refine-core";
+import {
+    Layout,
+    Box,
+    Drawer,
+    MuiList,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+    Collapse,
+    Tooltip,
+    Button,
+    IconButton,
+    Title as DefaultTitle,
+} from "@pankod/refine-mui";
+import type { RefineLayoutSiderProps } from "@pankod/refine-mui";
 
-import { Title as DefaultTitle } from "../title";
+// We use @mui/icons-material for icons but you can use any icon library you want.
+import {
+    ListOutlined,
+    Logout,
+    ExpandLess,
+    ExpandMore,
+    ChevronLeft,
+    ChevronRight,
+    MenuRounded,
+    Dashboard,
+} from "@mui/icons-material";
 
-export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
+const CustomSider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
     const [collapsed, setCollapsed] = useState(false);
     const [opened, setOpened] = useState(false);
 
@@ -248,9 +272,9 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
                                     timeout="auto"
                                     unmountOnExit
                                 >
-                                    <List component="div" disablePadding>
+                                    <MuiList component="div" disablePadding>
                                         {renderTreeView(children, selectedKey)}
-                                    </List>
+                                    </MuiList>
                                 </Collapse>
                             )}
                         </div>
@@ -403,6 +427,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
                 dashboard,
                 logout,
                 items,
+                collapsed,
             });
         }
         return (
@@ -415,9 +440,9 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({ render }) => {
     };
 
     const drawer = (
-        <List disablePadding sx={{ mt: 1, color: "primary.contrastText" }}>
+        <MuiList disablePadding sx={{ mt: 1, color: "primary.contrastText" }}>
             {renderSider()}
-        </List>
+        </MuiList>
     );
 
     return (
@@ -552,14 +577,57 @@ If you want to create a multi-level menu, you can take a look at this [`multi-le
 
 We can override the default sider and show the custom menu we implemented in its place by passing a custom component to `<Refine>`s `Sider` prop:
 
-```tsx title="App.tsx"
+```tsx live previewHeight=420px
+import {
+    useDataGrid,
+    DataGrid,
+    GridColumns,
+    List,
+    Sider as CustomSider,
+    TextField,
+} from "@pankod/refine-mui";
+
+const columns: GridColumns = [
+    { field: "id", headerName: "ID", type: "number" },
+    {
+        field: "title",
+        headerName: "Title",
+        minWidth: 100,
+        flex: 1,
+    },
+    {
+        field: "slug",
+        headerName: "Slug",
+        minWidth: 100,
+        flex: 1,
+    }
+];
+
+const PostsList: React.FC = () => {
+    const { dataGridProps } = useDataGrid<IPost>();
+
+    return (
+        <List>
+            <DataGrid {...dataGridProps} columns={columns} autoHeight />
+        </List>
+    );
+};
+
+interface IPost {
+    id: number;
+    title: string;
+}
+
+// visible-block-start
 import { Refine } from "@pankod/refine-core";
+import { Layout } from "@pankod/refine-mui";
+import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
 
-import { PostList } from "pages/posts";
+import { PostsList } from "pages/posts";
 
 // highlight-next-line
-import { CustomMenu } from "./CustomMenu";
+import { CustomSider } from "./components/CustomSider";
 
 const API_URL = "https://api.fake-rest.refine.dev";
 
@@ -567,24 +635,18 @@ const App: React.FC = () => {
     return (
         <Refine
             dataProvider={dataProvider(API_URL)}
+            routerProvider={routerProvider}
+            Layout={Layout}
             // highlight-next-line
-            Sider={CustomMenu}
-            resources={[{ name: "posts", list: PostList }]}
+            Sider={CustomSider}
+            resources={[{ name: "posts", list: PostsList }]}
         />
     );
 };
 
-export default App;
+// visible-block-end
+render(<Wrapper><App/></Wrapper>);
 ```
 
-<div classname="img-container">
-    <div classname="window">
-        <div classname="control red"></div>
-        <div classname="control orange"></div>
-        <div classname="control green"></div>
-    </div>
-    <img src={customMenu} alt="Custom Menu" />
-</div>
-
 [refine]: /api-reference/core/components/refine-config.md
-[antdcustomlayout]: /api-reference/mui/customization/layout.md
+[muicustomlayout]: /api-reference/mui/customization/layout.md

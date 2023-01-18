@@ -1,69 +1,61 @@
 ---
 id: url
 title: Url
+swizzle: true
 ---
 
-import urlField from '@site/static/img/guides-and-concepts/fields/url/urlFieldMui.png'
 
 This field lets you embed a link. It uses Material UI [`<Typography>`](https://mui.com/material-ui/react-typography/#main-content) and [`Link`](https://mui.com/material-ui/react-link/#main-content) components. You can pass a URL in its `value` prop and you can show a text in its place by passing any `children`.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<UrlField>` with an example:
 
-```tsx title="pages/posts/list.tsx"
-import { useTable, useMany } from "@pankod/refine-core";
+```tsx live url=http://localhost:3000/posts previewHeight=340px
+// visible-block-start
 import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow,
+    useDataGrid,
+    DataGrid,
+    GridColumns,
     List,
     // highlight-next-line
     UrlField,
 } from "@pankod/refine-mui";
 
-export const PostList: React.FC = () => {
-    const { tableQueryResult } = useTable<IPost>({
-        initialSorter: [
-            {
-                field: "id",
-                order: "asc",
-            },
-        ],
-    });
+const columns: GridColumns = [
+    { field: "id", headerName: "ID", type: "number" },
+    { field: "title", headerName: "Title", minWidth: 100, flex: 1 },
+    {
+        field: "image",
+        headerName: "Image URL",
+        renderCell: function render({ row }) {
+            // highlight-start
+            return (
+                <UrlField value={row.image[0].url} />
+            );
+            // highlight-end
+        },
+        minWidth: 100,
+        flex: 1,
+    },
+];
 
-    const { data } = tableQueryResult;
+const PostsList: React.FC = () => {
+    const { dataGridProps } = useDataGrid<IPost>();
 
     return (
         <List>
-            <Table aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Title</TableCell>
-                        <TableCell>Image</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {data?.data.map((row) => (
-                        <TableRow key={row.title}>
-                            <TableCell component="th" scope="row">
-                                {row.title}
-                            </TableCell>
-                            <TableCell>
-                                // highlight-next-line
-                                <UrlField value={row.image[0].url} />
-                            </TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+            <DataGrid {...dataGridProps} columns={columns} autoHeight />
         </List>
     );
 };
 
 interface IPost {
+    id: number;
     title: string;
     image: IImage[];
 }
@@ -71,17 +63,19 @@ interface IPost {
 interface IImage {
     url: string;
 }
-```
+// visible-block-end
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={urlField} alt="UrlField" />
-</div>
+render(
+    <RefineMuiDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostsList,
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 

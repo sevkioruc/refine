@@ -3,9 +3,6 @@ id: real-time
 title: Live / Realtime
 ---
 
-import realTimeDemo from '@site/static/img/guides-and-concepts/real-time/real-time.gif';
-import manualMode from '@site/static/img/guides-and-concepts/real-time/manual-mode.gif';
-import customSider from '@site/static/img/guides-and-concepts/real-time/custom-sider.gif';
 
 **refine** lets you add Realtime support to your app via `liveProvider` prop for [`<Refine>`](/api-reference/core/components/refine-config.md). It can be used to update and show data in Realtime throughout your app. **refine** remains agnostic in its API to allow different solutions([Ably](https://ably.com), [Socket.IO](https://socket.io/), [Mercure](https://mercure.rocks/), [supabase](https://supabase.com), etc.) to be integrated.
 
@@ -29,7 +26,7 @@ To make this example more visual, we used the [`@pankod/refine-antd`](https://gi
 
 Since we will need `apiKey` from Ably, you must first register and get the key from [Ably](https://ably.com).
 
-The app will have one resource: **posts** with [CRUD pages(list, create, edit and show) similar to base example](https://github.com/refinedev/refine/tree/master/examples/base/antd/src/pages/posts).
+The app will have one resource: **posts** with [CRUD pages(list, create, edit and show) similar to base example](https://github.com/refinedev/refine/tree/master/examples/base-antd/src/pages/posts).
 
 [You can also refer to StackBlitz to see final state of the app &#8594](#live-stackblitz-example)
 
@@ -56,7 +53,7 @@ import {
 import dataProvider from "@pankod/refine-simple-rest";
 import routerProvider from "@pankod/refine-react-router-v6";
 
-import "@pankod/refine-antd/dist/styles.min.css";
+import "@pankod/refine-antd/dist/reset.css";
 
 //highlight-next-line
 import { liveProvider } from "@pankod/refine-ably";
@@ -109,7 +106,7 @@ For live features to work automatically we added `liveMode: "auto"` in `options`
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={realTimeDemo} alt="Realtime Demo" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/real-time/real-time.gif" alt="Realtime Demo" />
 </div>
 
 ## Configuring `liveMode`
@@ -125,8 +122,9 @@ We will be alerting about changes in an alert box on top of the form instead of 
 
 export const PostEdit: React.FC = () => {
     //highlight-start
-    const [deprecated, setDeprecated] =
-        useState<"deleted" | "updated" | undefined>();
+    const [deprecated, setDeprecated] = useState<
+        "deleted" | "updated" | undefined
+    >();
     //highlight-end
 
     const { formProps, saveButtonProps, queryResult } = useForm<IPost>({
@@ -193,7 +191,7 @@ We can also implement similar thing in show page.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={manualMode} alt="Manual Mode Demo" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/real-time/manual-mode.gif" alt="Manual Mode Demo" />
 </div>
 
 ## Custom Subscriptions
@@ -454,12 +452,9 @@ useSubscription({
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={customSider} alt="Custom Sider Demo" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/real-time/custom-sider.gif" alt="Custom Sider Demo" />
 </div>
 
-## Live Condesandbox Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/ably/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-ably-example"
-></iframe>
+<StackblitzExample path="live-provider-ably" />

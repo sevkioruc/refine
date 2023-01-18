@@ -4,14 +4,14 @@ description: Improve the React app performance with useMemo() hook
 slug: react-usememo
 authors: abdullah_numan
 tags: [react, memoization, usememo, performance]
-image: /img/blog/2022-09-16-react-use-memo/social.jpg
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-16-react-use-memo/social.jpg
 hide_table_of_contents: false
 ---
 
-import usememo1 from '@site/static/img/blog/2022-09-16-react-use-memo/usememo1.png';
-import usememo2 from '@site/static/img/blog/2022-09-16-react-use-memo/usememo2.png';
-import usememo3 from '@site/static/img/blog/2022-09-16-react-use-memo/usememo3.png';
-import usememo4 from '@site/static/img/blog/2022-09-16-react-use-memo/usememo4.png';
+
+
+
+
 
 
 ## Introduction
@@ -111,7 +111,7 @@ export default sortPosts;
 If we look at the console, we see that `Sorting posts...` is being logged at 1000ms intervals, i.e. with the tick of our clock:
 
 <div  class="img-container" align-items="center" >
-     <img style={{alignSelf:"center", width:"400px"}} src={usememo1}  alt="usememo1" />
+     <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-16-react-use-memo/usememo1.png"  alt="usememo1" />
 </div>
 
 <br/>
@@ -121,7 +121,17 @@ This shows `sortPosts()` is called at every re-render of `<Blog />`. An expensiv
 
 ---
 
-<PromotionBanner title="Tired of looking for the best template for your B2B app?" image="/img/generic_banner.png" />
+<PromotionBanner title="CRUD apps are just boring!" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/diagram.png" description={<div>
+            Meet the headless, React-based solution to build sleek CRUD applications.  refine eliminates the repetitive tasks demanded by CRUD operations and provides industry standard solutions for critical parts like authentication, access control, routing, networking, state management, and i18n.
+            <br />
+            <br />
+            Try{" "}
+            <a href="https://github.com/refinedev/refine" target="_blank">
+                refine
+            </a>{" "}
+            to rapidly build your next <b>CRUD</b> project, whether {"it's"} an
+            admin panel, dashboard, internal tool or storefront.
+        </div>} />
 
 ---
 
@@ -138,7 +148,7 @@ Checking our console, we can see that `Sorting posts...` has been logged only on
 
 
 <div  class="img-container" align-items="center" >
-     <img style={{alignSelf:"center", width:"400px"}} src={usememo2}  alt="usememo2" />
+     <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-16-react-use-memo/usememo2.png"  alt="usememo2" />
 </div>
 
 <br/>
@@ -148,7 +158,7 @@ This gives us a huge performance gain.
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -165,7 +175,7 @@ If we check our console while clicking the button, we can clearly see `Sorting p
 <br/>
 
 <div class="img-container" align-items="center" >
-    <img style={{alignSelf:"center", width:"400px"}} src={usememo3} alt="usememo3" />
+    <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-16-react-use-memo/usememo3.png" alt="usememo3" />
 </div>
 
 <br/>
@@ -182,7 +192,7 @@ It is important to notice that, if we remove the dependency from `useMemo()`, `s
 There is no sorting going on when we need it:
 
 <div class="img-container" align-items="center" >
-     <img style={{alignSelf:"center", width:"400px"}} src={usememo4} alt="usememo4" />
+     <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-16-react-use-memo/usememo4.png" alt="usememo4" />
 </div>
 
 <br/>
@@ -201,17 +211,12 @@ In the next post, we will demonstrate the use of `useCallback()` hook.
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="https://refine.dev/img/discord-banner.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord-banner.png" alt="discord banner" />
 </a>
 </div>
 
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/react-memoization-memo/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="react-memoization-memo"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-react-memoization-memo" />
 

@@ -4,17 +4,17 @@ description: In this brief guide, we'll create a responsive navbar with Tailwind
 slug: react-navbar-responsive-tailwind
 authors: muhammed_arslan
 tags: [css, navbar, tailwind, react]
-image: /img/blog/2022-10-07-responsive-navbar/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/social.png
 hide_table_of_contents: false
 ---
 
 
-import pic1 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-1.png';
-import pic2 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-2.png';
-import pic3 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-3.png';
-import pic4 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-4.png';
-import pic5 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-5.png';
-import pic6 from '@site/static/img/blog/2022-10-07-responsive-navbar/pic-6.png';
+
+
+
+
+
+
 
 
 
@@ -55,7 +55,7 @@ Navigate to the `refine-navbar` folder and run `npm run dev` command.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic1} alt="app welcome page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-1.png" alt="app welcome page" />
 </div>
 
 <br/>
@@ -153,7 +153,7 @@ import 'App.css'
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic2} alt="post page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-2.png" alt="post page" />
 </div>
 
 <br/>
@@ -286,7 +286,7 @@ The output of the above code is as follows:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic3} alt="post page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-3.png" alt="post page" />
 </div>
 
 <br/>
@@ -315,7 +315,7 @@ Let's make it mobile responsive by adding the mobile menu:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic4} alt="post page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-4.png" alt="post page" />
 </div>
 
 <br/>
@@ -374,7 +374,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 ---
 
-<PromotionBanner title="Is your CRUD app overloaded with technical debt?" image="/img/generic_banner.png" />
+<PromotionBanner title="Is your CRUD app overloaded with technical debt?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 
@@ -401,7 +401,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 
 <div>
   <Navbar className="navbar-border" >
-    <img className="brand-image" src={"https://refine.dev/img/refine_logo.png"} width="100px" height="100px" />
+    <img className="brand-image" src="https://refine.ams3.cdn.digitaloceanspaces.comundefined" width="100px" height="100px" />
     <Nav>
         {menuItems.map(({ name, label, icon, route }) => (
             <Nav.Link className="nav-link">{name}</Nav.Link>
@@ -435,7 +435,7 @@ Add following CSS classes to `App.css` file:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic5} alt="post page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-5.png" alt="post page" />
 </div>
 
 <br/>
@@ -458,7 +458,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div>
             <Navbar className="navbar-border" expand="lg" >
-                <img className="brand-image" src={"https://refine.dev/img/refine_logo.png"} width="100px" height="100px" />
+                <img className="brand-image" src="https://refine.ams3.cdn.digitaloceanspaces.comundefined" width="100px" height="100px" />
                 <Navbar.Toggle />
                 <Navbar.Collapse>
                     <Nav>
@@ -480,7 +480,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-     <img  src={pic6} alt="post page" />
+     <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-07-responsive-navbar/pic-6.png" alt="post page" />
 </div>
 
 <br/>
@@ -489,7 +489,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -519,7 +519,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div>
             <Navbar className="navbar-border" expand="lg" >
-                <img className="brand-image" src={"https://refine.dev/img/refine_logo.png"} width="100px" height="100px" />
+                <img className="brand-image" src="https://refine.ams3.cdn.digitaloceanspaces.comundefined" width="100px" height="100px" />
                 <Navbar.Toggle />
                 <Navbar.Collapse>
                    //highlight-start
@@ -543,13 +543,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 ## Conclusion
 **Refine**  works with any custom design or UI framework. Every UI framework helps in creating layouts by providing utility classes or pre-designed components. In this article we implemented responsive navbar using Tailwind and Bootstrap.  You can choose any framework and design components according to your needs.
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/responsive-navbar/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="responsive-navbar"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-responsive-navbar" />
 
 

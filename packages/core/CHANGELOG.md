@@ -1,5 +1,137 @@
 # @pankod/refine-core
 
+## 3.95.1
+
+### Patch Changes
+
+-   [#3399](https://github.com/refinedev/refine/pull/3399) [`22b44a857a8`](https://github.com/refinedev/refine/commit/22b44a857a8ede3473965ab6baff70fc8ae31332) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Fix `useTable` hook error return type.
+
+## 3.95.0
+
+### Minor Changes
+
+-   [`22b44a857a8`](https://github.com/refinedev/refine/commit/22b44a857a8ede3473965ab6baff70fc8ae31332) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Fix `useTable` hook error return type.
+
+## 3.94.2
+
+### Patch Changes
+
+-   [#3364](https://github.com/refinedev/refine/pull/3364) [`98a1fbec65a`](https://github.com/refinedev/refine/commit/98a1fbec65abd38da9d6081e04c23b5fe4174acd) Thanks [@aliemir](https://github.com/aliemir)! - Changed `IResourceComponents` from `IResourceContext` to use `React.ComponentType` rather than `React.FunctionComponent` to make it compatible with other types and interfaces.
+
+-   [#3356](https://github.com/refinedev/refine/pull/3356) [`310ebd05990`](https://github.com/refinedev/refine/commit/310ebd05990dd629e64d0a2afcd2b371fe42440f) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed checkError hook is not called in onError of useCustomMutation
+
+## 3.94.1
+
+### Patch Changes
+
+-   [#3364](https://github.com/refinedev/refine/pull/3364) [`98a1fbec65a`](https://github.com/refinedev/refine/commit/98a1fbec65abd38da9d6081e04c23b5fe4174acd) Thanks [@aliemir](https://github.com/aliemir)! - Changed `IResourceComponents` from `IResourceContext` to use `React.ComponentType` rather than `React.FunctionComponent` to make it compatible with other types and interfaces.
+
+-   [#3356](https://github.com/refinedev/refine/pull/3356) [`310ebd05990`](https://github.com/refinedev/refine/commit/310ebd05990dd629e64d0a2afcd2b371fe42440f) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed checkError hook is not called in onError of useCustomMutation
+
+## 3.94.0
+
+### Minor Changes
+
+-   [#3335](https://github.com/refinedev/refine/pull/3335) [`ce6acf2b3d4`](https://github.com/refinedev/refine/commit/ce6acf2b3d4c181a87cbdb6c1264fd6e59a504f5) Thanks [@omeraplak](https://github.com/omeraplak)! - feat: `useResource` hook can now also return the current `action`
+
+## 3.93.0
+
+### Minor Changes
+
+-   [#3335](https://github.com/refinedev/refine/pull/3335) [`ce6acf2b3d4`](https://github.com/refinedev/refine/commit/ce6acf2b3d4c181a87cbdb6c1264fd6e59a504f5) Thanks [@omeraplak](https://github.com/omeraplak)! - feat: `useResource` hook can now also return the current `action`
+
+## 3.92.0
+
+### Minor Changes
+
+-   [#3324](https://github.com/refinedev/refine/pull/3324) [`9bfb34749bc`](https://github.com/refinedev/refine/commit/9bfb34749bc8ddaaf80ccffbd0ad6d0a4487309b) Thanks [@aliemir](https://github.com/aliemir)! - Added the ability to pass mutation options to `useMutation` hooks in mutation hooks:
+    -   `useCreate` (data)
+    -   `useUpdate` (data)
+    -   `useDelete` (data)
+    -   `useDeleteMany` (data)
+    -   `useUpdateMany` (data)
+    -   `useCreateMany` (data)
+    -   `useCustomMutation` (data)
+    -   `useLogin` (auth)
+    -   `useLogout` (auth)
+    -   `useRegister` (auth)
+    -   `useForgotPassword` (auth)
+    -   `useUpdatePassword` (auth)
+    -   `useForm` (form)
+
+### Patch Changes
+
+-   [`814eb1009da`](https://github.com/refinedev/refine/commit/814eb1009da53505f7e82f5ed49f2f90e260c316) Thanks [@omeraplak](https://github.com/omeraplak)! - chore: re-exported `@tanstack/react-query`
+
+## 3.91.0
+
+### Minor Changes
+
+-   [#3324](https://github.com/refinedev/refine/pull/3324) [`9bfb34749bc`](https://github.com/refinedev/refine/commit/9bfb34749bc8ddaaf80ccffbd0ad6d0a4487309b) Thanks [@aliemir](https://github.com/aliemir)! - Added the ability to pass mutation options to `useMutation` hooks in mutation hooks:
+    -   `useCreate` (data)
+    -   `useUpdate` (data)
+    -   `useDelete` (data)
+    -   `useDeleteMany` (data)
+    -   `useUpdateMany` (data)
+    -   `useCreateMany` (data)
+    -   `useCustomMutation` (data)
+    -   `useLogin` (auth)
+    -   `useLogout` (auth)
+    -   `useRegister` (auth)
+    -   `useForgotPassword` (auth)
+    -   `useUpdatePassword` (auth)
+    -   `useForm` (form)
+
+### Patch Changes
+
+-   [`814eb1009da`](https://github.com/refinedev/refine/commit/814eb1009da53505f7e82f5ed49f2f90e260c316) Thanks [@omeraplak](https://github.com/omeraplak)! - chore: re-exported `@tanstack/react-query`
+
+## 3.90.6
+
+### Patch Changes
+
+-   [#3224](https://github.com/refinedev/refine/pull/3224) [`a47f17931a8`](https://github.com/refinedev/refine/commit/a47f17931a8cad1466c25aa7ba4f9dce16dea2de) Thanks [@leapful](https://github.com/leapful)! - Restore filter operator after clear it by using filter dropdown
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+## 3.90.5
+
+### Patch Changes
+
+-   [#3224](https://github.com/refinedev/refine/pull/3224) [`a47f17931a8`](https://github.com/refinedev/refine/commit/a47f17931a8cad1466c25aa7ba4f9dce16dea2de) Thanks [@leapful](https://github.com/leapful)! - Restore filter operator after clear it by using filter dropdown
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+## 3.90.4
+
+### Patch Changes
+
+-   [#3098](https://github.com/refinedev/refine/pull/3098) [`a241ef3c957`](https://github.com/refinedev/refine/commit/a241ef3c95718340544dcf84e8432b53a5dc02be) Thanks [@aliemir](https://github.com/aliemir)! - Update `notificationProvider` prop handling by converting to a custom hook to prevent hook usage errors.
+
+## 3.90.3
+
+### Patch Changes
+
+-   [#3098](https://github.com/refinedev/refine/pull/3098) [`a241ef3c957`](https://github.com/refinedev/refine/commit/a241ef3c95718340544dcf84e8432b53a5dc02be) Thanks [@aliemir](https://github.com/aliemir)! - Update `notificationProvider` prop handling by converting to a custom hook to prevent hook usage errors.
+
+## 3.90.2
+
+### Patch Changes
+
+-   [#3073](https://github.com/refinedev/refine/pull/3073) [`38dfde0c2ec`](https://github.com/refinedev/refine/commit/38dfde0c2ec698c12f9c743881f351a2774542fa) Thanks [@samelhusseini](https://github.com/samelhusseini)! - Fixed `queryOptions` parameter of `useShow` hook
+
+## 3.90.1
+
+### Patch Changes
+
+-   [#3073](https://github.com/refinedev/refine/pull/3073) [`38dfde0c2ec`](https://github.com/refinedev/refine/commit/38dfde0c2ec698c12f9c743881f351a2774542fa) Thanks [@samelhusseini](https://github.com/samelhusseini)! - Fixed `queryOptions` parameter of `useShow` hook
+
+## 3.90.0
+
+### Minor Changes
+
+-   [#3030](https://github.com/refinedev/refine/pull/3030) [`d0998d66cd0`](https://github.com/refinedev/refine/commit/d0998d66cd086a046273b7349c6e6cb86aae6472) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Add `queryOptions` params on `useShow` hook.
+
 ## 3.89.0
 
 ### Minor Changes

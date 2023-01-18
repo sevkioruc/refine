@@ -4,18 +4,9 @@ description: Learn how to use the Google Chrome Lighthouse performance audit too
 slug: lighthouse-google-chrome
 authors: joseph_mawa
 tags: [lighthouse, seo, performance]
-image: /img/blog/2022-08-31-google-lighthouse/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-31-google-lighthouse/social.png
 hide_table_of_contents: false
 ---
-
-
-import checkedCategories from '@site/static/img/blog/2022-08-31-google-lighthouse/checked-categories.png';
-import extensionDropdown from '@site/static/img/blog/2022-08-31-google-lighthouse/chrome-extension-dropdown.png';
-import scoresAll from '@site/static/img/blog/2022-08-31-google-lighthouse/scores-all-categories.png';
-import pwaCategory from '@site/static/img/blog/2022-08-31-google-lighthouse/scores-pwa-category.png';
-import social from '@site/static/img/blog/2022-08-31-google-lighthouse/social.png';
-
-
 
 ## Introduction
 
@@ -75,7 +66,7 @@ You  can open Chrome DevTools by pressing the <kbd> F12 </kbd>  key. Click the l
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={checkedCategories} alt="Lighthouse checked" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-31-google-lighthouse/checked-categories.png" alt="Lighthouse checked" />
 </div>
 
 <br/>
@@ -103,7 +94,7 @@ After successfully analyzing the page, Google lighthouse will present the lighth
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={scoresAll} alt="Lighthouse scores for all categories" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-31-google-lighthouse/scores-all-categories.png" alt="Lighthouse scores for all categories" />
 </div>
 
 <br/>
@@ -152,7 +143,7 @@ Each mode has unique use cases, benefits, and limitations which the [Lighthouse
 <br/>
 <div>
 <a href="https://github.com/refinedev/refine">
-  <img  src="https://refine.dev/img/github-support-banner.png" alt="github support banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/github-support-banner.png" alt="github support banner" />
 </a>
 </div>
 
@@ -256,7 +247,7 @@ Open the Google lighthouse chrome extension popup by clicking the extension icon
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={extensionDropdown} alt="Lighthouse extension dropdown" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-31-google-lighthouse/chrome-extension-dropdown.png" alt="Lighthouse extension dropdown" />
 </div>
 
 <br/>
@@ -283,7 +274,7 @@ If you navigate to the [refine landing page](https://refine.dev/) and use Lighth
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={pwaCategory} alt="Lighthouse pwa" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-08-31-google-lighthouse/scores-pwa-category.png" alt="Lighthouse pwa" />
 </div>
 
 <br/>
@@ -362,7 +353,7 @@ Therefore, you must go above and beyond to test your site with actual users even
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="https://refine.dev/img/discord-banner.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord-banner.png" alt="discord banner" />
 </a>
 </div>
 
@@ -377,7 +368,7 @@ Check out [refine](https://github.com/refinedev/refine), if you are interested i
 
 <div>
 <a href="https://github.com/refinedev/refine">
-    <img  src="https://refine.dev/img/refine_blog_logo_1.png" alt="refine blog logo" />
+    <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/refine_blog_logo_1.png" alt="refine blog logo" />
 </a>
 </div>
 

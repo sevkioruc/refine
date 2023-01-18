@@ -59,8 +59,8 @@ necati:
     image_url: https://github.com/necatiozmen.png
     description: Feeling Irie
     github: https://github.com/necatiozmen
-    twitter: https://github.com/necatiozmen
-    linkedin: https://github.com/necatiozmen
+    twitter: https://twitter.com/necatiozmen3
+    linkedin: https://www.linkedin.com/in/necatiozmen/
 
 michael:
     name: Michael Hungbo
@@ -164,3 +164,19 @@ chidume_nnamdi:
     title: Software Engineer
     url: https://github.com/philipszdavido
     image_url: https://github.com/philipszdavido.png
+
+deborah_emeni:
+    name: Deborah Emeni
+    title: Software Engineer
+    url: https://github.com/debemenitammy
+    image_url: https://github.com/debemenitammy.png
+
+chukwuka_reuben:
+    name: Chukwuka Reuben
+    title: Frontend Developer
+    image_url: /img/generic-profile.png
+
+fimber_elemuwa:
+    name: Fimber Elemuwa
+    title: Web Developer
+    image_url: /img/generic-profile.png

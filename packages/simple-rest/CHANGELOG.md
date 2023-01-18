@@ -1,5 +1,47 @@
 # @pankod/refine-simple-rest
 
+## 3.37.4
+
+### Patch Changes
+
+-   [#3115](https://github.com/refinedev/refine/pull/3115) [`836f7091c13`](https://github.com/refinedev/refine/commit/836f7091c130ee0220105646869b484253525a7d) Thanks [@aliemir](https://github.com/aliemir)! - Add `refine.config.js` to included package files.
+
+## 3.37.3
+
+### Patch Changes
+
+-   [#3115](https://github.com/refinedev/refine/pull/3115) [`836f7091c13`](https://github.com/refinedev/refine/commit/836f7091c130ee0220105646869b484253525a7d) Thanks [@aliemir](https://github.com/aliemir)! - Add `refine.config.js` to included package files.
+
+## 3.37.2
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` message to include extra information and usage example.
+
+## 3.37.1
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` message to include extra information and usage example.
+
+## 3.37.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Moved helpers to separate files and updated the exports to make it compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+    -   `stringify` helper is now exported from `@pankod/refine-simple-rest` package.
+    -   `axios` instance is now exported from `@pankod/refine-simple-rest` package to allow users to configure the data provider without adding `axios` dependency.
+
+## 3.36.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Moved helpers to separate files and updated the exports to make it compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+    -   `stringify` helper is now exported from `@pankod/refine-simple-rest` package.
+    -   `axios` instance is now exported from `@pankod/refine-simple-rest` package to allow users to configure the data provider without adding `axios` dependency.
+
 ## 3.35.2
 
 ### Patch Changes

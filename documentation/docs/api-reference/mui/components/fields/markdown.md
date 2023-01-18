@@ -1,38 +1,56 @@
 ---
 id: markdown
 title: Markdown
+swizzle: true
 ---
 
-import markdownField from '@site/static/img/guides-and-concepts/fields/markdown/mardownFieldMui.png';
 
 This field lets you display markdown content. It supports [GitHub Flavored Markdown](https://github.github.com/gfm/).
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<MarkdownField>` in a show page.
 
-```tsx title="pages/posts/show.tsx"
-import { useShow } from "@pankod/refine-core";
+```tsx live url=http://localhost:3000/posts previewHeight=340px
+// visible-block-start
 import {
-    Show,
-    Typography,
+    useDataGrid,
+    DataGrid,
+    GridColumns,
+    List,
     // highlight-next-line
     MarkdownField,
 } from "@pankod/refine-mui";
 
-export const PostShow: React.FC = () => {
-    const { queryResult } = useShow<IPost>();
-    const { data, isLoading } = queryResult;
-    const record = data?.data;
+const columns: GridColumns = [
+    { field: "id", headerName: "ID", type: "number" },
+    { field: "title", headerName: "Title", minWidth: 100, flex: 1 },
+    {
+        field: "content",
+        headerName: "Content",
+        renderCell: function render({ row }) {
+            // highlight-start
+            return (
+                <MarkdownField value={row?.content} />
+            );
+            // highlight-end
+        },
+        minWidth: 100,
+        flex: 2,
+    },
+];
+
+const PostsList: React.FC = () => {
+    const { dataGridProps } = useDataGrid<IPost>();
 
     return (
-        <Show isLoading={isLoading}>
-            <Typography>Id</Typography>
-            <Typography>{record?.id}</Typography>
-            <Typography>Content</Typography>
-            // highlight-next-line
-            <MarkdownField value={record?.content} />
-        </Show>
+        <List>
+            <DataGrid {...dataGridProps} columns={columns} autoHeight />
+        </List>
     );
 };
 
@@ -41,17 +59,19 @@ interface IPost {
     title: string;
     content: string;
 }
-```
+// visible-block-end
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={markdownField} alt="MarkdownField" />
-</div>
+render(
+    <RefineMuiDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostsList,
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 
@@ -59,9 +79,6 @@ interface IPost {
 
 <PropsTable module="@pankod/refine-antd/MarkdownField" value-description="Markdown data to render"/>
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/inputs/customInputs?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-custom-inputs-example"
-></iframe>
+<StackblitzExample path="input-custom" />

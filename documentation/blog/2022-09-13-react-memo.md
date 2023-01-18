@@ -4,14 +4,14 @@ description: Improve the app performance with React.memo()
 slug: react-memo-guide
 authors: abdullah_numan
 tags: [react, memoization, react-memo, performance]
-image: /img/blog/2022-09-13-react-memo/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-13-react-memo/social.png
 hide_table_of_contents: false
 ---
 
-import memo1 from '@site/static/img/blog/2022-09-13-react-memo/memo1.png';
-import memo2 from '@site/static/img/blog/2022-09-13-react-memo/memo2.png';
-import memo3 from '@site/static/img/blog/2022-09-13-react-memo/memo3.png';
-import memo4 from '@site/static/img/blog/2022-09-13-react-memo/memo4.png';
+
+
+
+
 
 ## Introduction
 This is the first part of a series on the use of memoization in React. In this series, we'll cover memoizing a React component with `React.memo()` as well as caching functions and values with React's memoization hooks.
@@ -58,7 +58,7 @@ The focus of this article will be the `<Post />` component, but `<App />`, `<Blo
 
 ---
 
-<PromotionBanner title="Still building from scratch in 2022?" image="/img/mui_banner.png" />
+<PromotionBanner title="Still building from scratch in 2022?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/mui_banner.png" />
 
 ---
 
@@ -221,7 +221,7 @@ As you can see `<Post />` does not depend on `likesCount` but is re-rendered by 
 If we check our Chrome's console we have `<Post />` rendering again and again following an interval:
 
  <div class="img-container">
-    <img style={{alignSelf:"center", width:"400px"}} src={memo1}  alt="memo1" />
+    <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-13-react-memo/memo1.png"  alt="memo1" />
 </div>
 
 <br/>
@@ -252,7 +252,7 @@ Looking at the console, we can see that `Post` is no longer re-rendered at 3s in
 
 
  <div class="img-container">
-     <img style={{alignSelf:"center", width:"400px"}} src={memo2} alt="memo2" />
+     <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-13-react-memo/memo2.png" alt="memo2" />
 </div>
 
 <br/>
@@ -281,7 +281,7 @@ When we click on the `Sign Out` button in the navbar, we can see in the console 
 
 
 <div class="img-container">
-    <img width="400px" src={memo3} style={{alignSelf:"center"}} alt="memo3" />
+    <img width="400px" src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-13-react-memo/memo3.png" style={{alignSelf:"center"}} alt="memo3" />
 </div>
 
 <br/>
@@ -334,7 +334,7 @@ Here, we are omiting `signedIn` from being compared by comparing only `post` 's 
 
 
 <div class="img-container">
-     <img style={{alignSelf:"center", width:"400px"}} src={memo4} alt="memo4" />
+     <img style={{alignSelf:"center", width:"400px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-13-react-memo/memo4.png" alt="memo4" />
 </div>
 
 <br/>
@@ -351,17 +351,12 @@ In the next article, we will turn our attention back to the `<Blog />` component
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/react-memoization-memo/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="react-memoization-memo"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-react-memoization-memo" />
 
 

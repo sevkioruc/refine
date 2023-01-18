@@ -1,6 +1,7 @@
 ---
 id: text
 title: Text
+swizzle: true
 ---
 
 ```tsx live shared
@@ -23,6 +24,10 @@ const Wrapper = ({ children }) => {
 ```
 
 This field lets you show basic text. It uses Mantine [`<Text>`](https://chakra-ui.com/docs/components/text/usage) component.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

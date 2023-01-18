@@ -3,8 +3,6 @@ id: list-search
 title: List Search
 ---
 
-import basicList from '@site/static/img/guides-and-concepts/list-search/basic-list.png';
-import formList from '@site/static/img/guides-and-concepts/list-search/form-list.png';
 
 We will examine how to make an extensive search and filtering with the [`useSimpleList`](../../api-references/hooks/show/useSimpleList.md) hook that works with the Ant Design's [`<List>`](https://ant.design/components/list) component.
 
@@ -122,7 +120,7 @@ export default App;
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={basicList} alt="basic list" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/list-search/basic-list.png" alt="basic list" />
 </div>
 <br />
 
@@ -217,12 +215,12 @@ When the form is submitted, the `onSearch` method runs and we get the search for
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={formList} alt="form list" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/list-search/form-list.png" alt="form list" />
 </div>
 
 <br />
 
-:::important
+:::caution
 [`CrudFilters`](../../api-references/interfaces.md#crudfilters) type object has `field`, `operator` and `value` properties. These properties help us to filter in which field, with which operator, and with which data.
 :::
 

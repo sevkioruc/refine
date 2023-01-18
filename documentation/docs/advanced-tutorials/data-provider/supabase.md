@@ -3,14 +3,6 @@ id: supabase
 title: Supabase
 ---
 
-import login from '@site/static/img/guides-and-concepts/data-provider/supabase/login-screen.png';
-import welcome from '@site/static/img/guides-and-concepts/data-provider/supabase/welcome.png';
-import flow from '@site/static/img/guides-and-concepts/data-provider/supabase/flow.png';
-import list from '@site/static/img/guides-and-concepts/data-provider/supabase/list.png';
-import create from '@site/static/img/guides-and-concepts/data-provider/supabase/create.png';
-import realTime from '@site/static/img/guides-and-concepts/data-provider/supabase/real-time.gif';
-import socialLogin from '@site/static/img/guides-and-concepts/data-provider/supabase/social-login.gif';
-import supabaseConfig from '@site/static/img/guides-and-concepts/data-provider/supabase/supabase-config.png';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -22,7 +14,7 @@ refine offers built-in data provider support for Supabase and handles all requir
 
 We'll build a simple CRUD app with refine and use Supabase as a data provider. We'll also see how to use Supabase's authentication features on refine app.
 
-We are assuming that you have already know how refine works. If not, please check out the [Tutorial](/docs/tutorials/antd.md) section first.
+We are assuming that you have already know how refine works. If not, please check out the [Tutorial](/docs/tutorial/introduction/index/) section first.
 
 [Refer to docs for more information about data provider &#8594](/docs/api-reference/core/providers/data-provider.md)
 
@@ -30,7 +22,7 @@ We are assuming that you have already know how refine works. If not, please chec
 
 ## Project Setup
 
-We'll be using [superplate](https://github.com/pankod/superplate) CLI to bootstrap our example project with a special preset defined to Supabase example
+We'll be using `create refine-app` CLI to bootstrap our example project with a special preset defined to Supabase example
 
 <Tabs
 defaultValue="preset"
@@ -41,7 +33,7 @@ values={[
 <TabItem value="preset">
 
 ```
-npx superplate-cli --preset refine-antd-supabase my-supabase-app
+npm create refine-app@latest -- --preset refine-antd-supabase my-supabase-app
 ```
 
 Also, we need to install npm packages to use markdown editor:
@@ -58,7 +50,7 @@ This will create a new refine app with Supabase data provider and Ant Desing as 
 You are free to bootstrap a **refine** app with any other features you want. To do so, you can run the following command and choose any data provider or feature you want.
 
 ```
-npx superplate-cli example-app
+npm create refine-app@latest example-app
 ```
 
 Then choose the following options:
@@ -304,7 +296,7 @@ If you head over to localhost:3000, you'll see a welcome page.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={welcome} alt="welcome" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/welcome.png" alt="welcome" />
 </div>
 
 <br/>
@@ -316,7 +308,7 @@ Now it's time to add some resources to our app.
 Before diving into Supabase features, we'll add simple CRUD pages to make the app more interactive.
 
 :::note
-Since this post focuses on Supabase implementation, we'll not discuss how to create CRUD pages and how it works. You can refer to [Tutorial](/docs/tutorials/antd.md/#creating-a-list-page) to learn more about creating CRUD pages.
+Since this post focuses on Supabase implementation, we'll not discuss how to create CRUD pages and how it works. You can refer to [Tutorial](/docs/tutorial/introduction/index/) to learn more about creating CRUD pages.
 :::
 
 ### Adding a List page
@@ -862,7 +854,7 @@ After adding the resources, the app will look like:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img style={{alignSelf:"center", width:"700px"}} src={login} alt="login" />
+    <img style={{alignSelf:"center", width:"700px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/login-screen.png" alt="login" />
 </div>
 
 <br/>
@@ -923,7 +915,7 @@ Remember the [Understanding the Auth Provider](#understanding-auth-provider) sec
 <br/>
 
 <div style={{display:"flex", flexDirection:"column"}}>
-     <img style={{alignSelf:"center", width:"800px"}} src={flow} alt="flow" />
+     <img style={{alignSelf:"center", width:"800px"}} src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/flow.png" alt="flow" />
 </div>
 
 <br/>
@@ -948,7 +940,7 @@ We have successfully logged in to the app and `ListPage` renders table of data a
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={list} alt="list" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/list.png" alt="list" />
 </div>
 
 <br/>
@@ -964,7 +956,7 @@ Thanks to `refine-supabase` data provider, we can now start creating new records
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/create.png" alt="create" />
 </div>
 
 <br/>
@@ -1026,7 +1018,7 @@ You will find the Google Auth option in the Auth providers section; enable it an
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={supabaseConfig} alt="supabaseConfig" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/supabase-config.png" alt="supabaseConfig" />
 </div>
 
 <br/>
@@ -1041,7 +1033,7 @@ Here is the result:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={socialLogin} alt="socialLogin" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/social-login.gif" alt="socialLogin" />
 </div>
 
 <br/>
@@ -1102,7 +1094,7 @@ For live features to work automatically, we setted `liveMode: "auto"` in the opt
 <br/>
 
 <div class="img-container">
-    <img  src={realTime} alt="realTime" />
+    <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/data-provider/supabase/real-time.gif" alt="realTime" />
 </div>
 
 <br/>
@@ -1110,12 +1102,12 @@ For live features to work automatically, we setted `liveMode: "auto"` in the opt
 :::tip
 **refine** offers out-of-the-box live provider support:
 
--   **Ably** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/ably/src/index.ts) - [Demo](https://stackblitz.com/github/refinedev/refine/tree/master/examples/ably/?preset=node)
+-   **Ably** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/ably/src/index.ts) - [Demo](https://stackblitz.com/github/refinedev/refine/tree/master/examples/live-provider-ably/?preset=node)
 -   **Supabase** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/supabase/src/index.ts#L187)
 -   **Appwrite** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/appwrite/src/index.ts#L252)
 -   **Hasura** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/hasura/src/liveProvider/index.ts#L16)
 -   **Nhost** &#8594 [Source Code](https://github.com/refinedev/refine/blob/master/packages/nhost/src/liveProvider/index.ts#L16)
-    :::
+:::
 
 ## Using `metaData` to pass values to data provider
 
@@ -1216,13 +1208,8 @@ const { tableProps, sorter } = useTable({
 If you filter based on a table from an inner join, you will need to use `.select('*, mytable!inner(*)')` within Supabase.
 :::
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/dataProvider/supabase/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-supabase-example"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="data-provider-supabase" />
 
 ---

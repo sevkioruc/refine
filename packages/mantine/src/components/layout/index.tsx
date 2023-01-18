@@ -1,7 +1,7 @@
 import React from "react";
-import { RefineLayoutLayoutProps } from "@pankod/refine-ui-types";
 import { Box } from "@mantine/core";
 
+import { RefineLayoutLayoutProps } from "./types";
 import { Sider as DefaultSider } from "./sider";
 import { Header as DefaultHeader } from "./header";
 
@@ -23,6 +23,7 @@ export const Layout: React.FC<RefineLayoutLayoutProps> = ({
                     display: "flex",
                     flexDirection: "column",
                     flex: 1,
+                    overflow: "auto",
                 }}
             >
                 <HeaderToRender />

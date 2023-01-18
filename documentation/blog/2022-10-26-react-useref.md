@@ -4,12 +4,12 @@ description: We will explain the differences between useRef and React ref
 slug: react-useref-hook-and-ref
 authors: joel_adewole
 tags: [react, react-ref, useRef]
-image: /img/blog/2022-10-26-react-useref/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-26-react-useref/social.png
 hide_table_of_contents: false
 ---
 
 
-import useRef from '@site/static/img/blog/2022-10-26-react-useref/useref.gif';
+
 
 
 ## Introduction
@@ -98,7 +98,7 @@ In the code snippet above, we created a function that gets the current value of 
 
 ---
 
-<PromotionBanner title="Is your CRUD app overloaded with technical debt?" image="/img/generic_banner.png" />
+<PromotionBanner title="Is your CRUD app overloaded with technical debt?" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/generic_banner.png" />
 
 ---
 ## Difference between Ref and useRef
@@ -177,7 +177,7 @@ Now let’s see the output:
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={useRef}  alt="useRef" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-10-26-react-useref/useref.gif"  alt="useRef" />
 
 </div>
 
@@ -219,7 +219,7 @@ Because the component `FunctionalComponent` does not have instances, the ref in 
   <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 

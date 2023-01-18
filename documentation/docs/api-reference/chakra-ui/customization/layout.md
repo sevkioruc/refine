@@ -1,6 +1,7 @@
 ---
 id: layout
 title: Layout
+swizzle: true
 ---
 
 You can create custom layouts using [`<Refine>`][refine] and [`<LayoutWrapper>`][layoutwrapper] components.
@@ -13,6 +14,10 @@ Both of these components can accept the listed props for customization. [`<Refin
 -   [`Header`][header]
 -   [`OffLayoutArea`][offlayoutarea]
 -   [`Title`][title]
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Creating a Custom Layout
 

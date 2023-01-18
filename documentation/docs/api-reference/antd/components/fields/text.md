@@ -1,15 +1,21 @@
 ---
 id: text
 title: Text
+swizzle: true
 ---
 
 This field lets you show basic text. It uses Ant Design's [`<Typography.Text>`](https://ant.design/components/typography/#Typography.Text) component.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how to use it in a basic list page:
 
-```tsx  title="src/pages/posts/list.tsx"
+```tsx live
+// visible-block-start
 import { IResourceComponentsProps, useMany } from "@pankod/refine-core";
 import {
     List,
@@ -19,7 +25,7 @@ import {
     useTable,
 } from "@pankod/refine-antd";
 
-export const PostList: React.FC<IResourceComponentsProps> = (props) => {
+const PostList: React.FC<IResourceComponentsProps> = (props) => {
     const { tableProps } = useTable<IPost>();
 
     const categoryIds =
@@ -36,7 +42,7 @@ export const PostList: React.FC<IResourceComponentsProps> = (props) => {
     return (
         <List {...props}>
             <Table {...tableProps} rowKey="id">
-                <Table.Column dataIndex="title" title="title" />
+                <Table.Column dataIndex="title" title="title" width="50%" />
                 <Table.Column
                     dataIndex={["category", "id"]}
                     title="category"
@@ -57,6 +63,7 @@ export const PostList: React.FC<IResourceComponentsProps> = (props) => {
                         );
                         // highlight-end
                     }}
+                    width="50%"
                 />
             </Table>
         </List>
@@ -70,8 +77,21 @@ interface ICategory {
 
 interface IPost {
     id: number;
+    title: string;
     category: { id: number };
 }
+// visible-block-end
+
+render(
+    <RefineAntdDemo
+        resources={[
+            {
+                name: "posts",
+                list: PostList
+            },
+        ]}
+    />,
+);
 ```
 
 :::tip

@@ -4,7 +4,6 @@ title: Data Provider
 sidebar_label: Data Provider
 ---
 
-import dpFlow from '@site/static/img/guides-and-concepts/providers/data-provider/flow.png';
 
 ## Overview
 
@@ -55,13 +54,13 @@ const dataProvider = {
 -   [Altogic](https://github.com/refinedev/refine/tree/master/packages/altogic)
 
 ### Community ❤️
--   [Firebase](https://github.com/rturan29/refine-firebase) by [rturan29](https://github.com/rturan29)
+-   [Firebase](https://github.com/resulturan/refine-firebase) by [rturan29](https://github.com/resulturan)
 -   [Directus](https://github.com/tspvivek/refine-directus) by [tspvivek](https://github.com/tspvivek)
 :::
 
 <br/>
 
-:::important
+:::caution
 **refine** consumes this methods using [data hooks](api-references/hooks/data/useCreate.md).
 
 Data hooks are used to operate CRUD actions like creating a new record, listing a resource or deleting a record etc..
@@ -76,7 +75,7 @@ Data hooks uses [React Query](https://react-query.tanstack.com/) to manage data 
 <br/>
 
 <div>
-    <img src={dpFlow} />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/providers/data-provider/flow.png" />
 </div>
 
 <br/>

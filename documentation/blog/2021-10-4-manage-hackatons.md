@@ -4,12 +4,12 @@ description: We'll be building a demo app to manage hackathons with refine.
 slug: manage-hackathons-with-refine
 authors: muharrem
 tags: [refine, supabase, react, tutorial]
-image: /img/placeholder.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/placeholder.png
 hide_table_of_contents: false
 ---
 
-import hackathons from '@site/static/img/blog/2021-10-4-manage-hackathons/hackathons.png';
-import create from '@site/static/img/blog/2021-10-4-manage-hackathons/create.png';
+
+
 
 We'll be building a demo app to manage hackathons with [refine](https://refine.dev/). We'll be able to create new hackathons, new project entries for a hackathon and criterias for a hackathon.
 
@@ -21,7 +21,7 @@ We'll be building a demo app to manage hackathons with [refine](https://refine.d
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={hackathons} alt="hackathons" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-manage-hackathons/hackathons.png" alt="hackathons" />
 </div>
 <br/>
 
@@ -198,7 +198,7 @@ export default App;
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={create} alt="create" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2021-10-4-manage-hackathons/create.png" alt="create" />
 </div>
 <br/>
 
@@ -238,6 +238,6 @@ export const DashboardPage: React.FC = () => {
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
 
-We can get data from other resources in a similar fashion. You can find the [repo here](https://github.com/refinedev/refine/tree/master/examples/blog/hackathonize)
+We can get data from other resources in a similar fashion. You can find the [repo here](https://github.com/refinedev/refine/tree/master/examples/blog-hackathonize)
 ## Conclusion
 This project itself is a product of a hackathon. It lacks lots of feature like authorization though it shows how **refine** makes it easy to quickly build a working app.

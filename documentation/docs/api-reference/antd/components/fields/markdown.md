@@ -1,17 +1,21 @@
 ---
 id: markdown
 title: Markdown
+swizzle: true
 ---
 
-import markdownField from '@site/static/img/guides-and-concepts/fields/markdown/markdownfield.png';
 
 This field lets you display markdown content. It supports [GitHub Flavored Markdown](https://github.github.com/gfm/).
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 
 Let's see how we can use `<MarkdownField>` in a show page.
 
-```tsx  title="pages/posts/show.tsx"
+```tsx live
 import { useShow, IResourceComponentsProps } from "@pankod/refine-core";
 import {
     Show,
@@ -22,7 +26,7 @@ import {
 
 const { Title, Text } = Typography;
 
-export const PostShow: React.FC = () => {
+const PostShow: React.FC = () => {
     const { queryResult } = useShow<IPost>();
     const { data, isLoading } = queryResult;
     const record = data?.data;
@@ -34,7 +38,7 @@ export const PostShow: React.FC = () => {
 
             <Title level={5}>Content</Title>
 
-            // highlight-next-line
+            {/* highlight-next-line */}
             <MarkdownField value={record?.content} />
         </Show>
     );
@@ -45,17 +49,25 @@ interface IPost {
     title: string;
     content: string;
 }
-```
+// visible-block-end
 
-<br/>
-<div class="img-container">
-    <div class="window">
-        <div class="control red"></div>
-        <div class="control orange"></div>
-        <div class="control green"></div>
-    </div>
-    <img src={markdownField} alt="MarkdownField" />
-</div>
+render(
+    <RefineAntdDemo
+        initialRoutes={["/posts/show/123"]}
+        resources={[
+            {
+                name: "posts",
+                list: () => (
+                    <RefineAntd.List>
+                        <p>List page here...</p>
+                    </RefineAntd.List>
+                ),
+                show: PostShow
+            },
+        ]}
+    />,
+);
+```
 
 ## API Reference
 
@@ -63,9 +75,6 @@ interface IPost {
 
 <PropsTable module="@pankod/refine-antd/MarkdownField" value-description="Markdown data to render"/>
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/inputs/customInputs?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-    style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-    title="refine-custom-inputs-example"
-></iframe>
+<StackblitzExample path="input-custom" />

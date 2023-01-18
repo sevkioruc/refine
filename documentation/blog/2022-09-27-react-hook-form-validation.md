@@ -4,18 +4,18 @@ description: We'll implement React Hook Form custom validations and schema valid
 slug: react-hook-form-validation-examples
 authors: david_omotayo
 tags: [react, react-hook-form, refine, form-validation, yup, schema-validation]
-image: /img/blog/2022-09-27-react-hook-form-validation/social.png
+image: https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/social.png
 hide_table_of_contents: false
 ---
 
-import cli from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-cli.png';
-import dashboard from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-dashboard.png';
-import packageSize from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-package-size.png';
-import view from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form.png';
-import gif1 from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form.gif';
-import gif2 from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-big.gif';
-import gif3 from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-big2.gif';
-import gifConsole from '@site/static/img/blog/2022-09-27-react-hook-form-validation/react-hook-form-console.gif';
+
+
+
+
+
+
+
+
 
 ## Introduction
 Forms are crucial in how web administrators connect with their audience and how users interact with web applications. Hence, form validation is often the utmost priority for a developer when building web applications.
@@ -55,7 +55,7 @@ React Hook Form uses its constraint-based validation API to validate forms by le
 The package is super light, it has a minified size of 24.6kb and a minified + gzipped size of 8.8kb. This is because the library doesn’t use any dependencies to handle any of its functionalities under the hood.
 
 <div class="img-container" align-items="center" >
-   <img   src={packageSize}  alt="react Hook Form package size" />
+   <img   src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-package-size.png"  alt="react Hook Form package size" />
 </div>
 
 <br/>
@@ -71,7 +71,7 @@ There are a lot of benefits to using refine in your applications, to name a few:
 - Backend agnostic, you can connect with any backend technologies
 - Authentication, state management, data fetching routing, and more are prioritized.
 
-Visit [refine's documentation](https://refine.dev/docs/getting-started/overview/) to learn more about the framework.
+Visit [refine's documentation](https://refine.dev/docs/) to learn more about the framework.
 
 ## Project setup 
 Before we get into the nitty-gritty of how React Hook Form works and how to use it to validate forms in your projects, let's set up an example project with refine for reference purposes.
@@ -86,7 +86,7 @@ After running the command, you’ll be prompted to choose your preferences for t
 Select the following options to proceed:
 
 <div class="img-container" align-items="center" >
-   <img   src={cli}  alt="react Hook Form cli" />
+   <img   src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-cli.png"  alt="react Hook Form cli" />
 </div>
 
 <br/>
@@ -109,7 +109,7 @@ The second command will start the development server for our project and automat
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img   src={dashboard}  alt="react Hook Form dashboard" />
+   <img   src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-dashboard.png"  alt="react Hook Form dashboard" />
 
 </div>
 
@@ -301,7 +301,7 @@ If you save your progress and open up the browser, you should see a form similar
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={view}  alt="react Hook Form view" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form.png"  alt="react Hook Form view" />
 
 </div>
 
@@ -593,7 +593,17 @@ That’s it, our form has been successfully integrated with React Hook Form. Nex
 
 ---
 
-<PromotionBanner title="Small dev teams love this React framework!" image="/img/diagram.png" />
+<PromotionBanner title="Small dev teams love this React framework!" image="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/diagram.png"   description={<div>
+          Meet the headless, React-based solution to build sleek CRUD applications. With refine, you can build complex projects without having advanced frontend skills.
+            <br />
+            <br />
+            Try{" "}
+            <a href="https://github.com/refinedev/refine" target="_blank">
+                refine
+            </a>{" "}
+            to rapidly build your next <b>CRUD</b> project, whether {"it's"} an
+            admin panel, dashboard, internal tool or storefront.
+        </div>}  />
 
 ---
 
@@ -652,7 +662,7 @@ To display the error, we’d have to render a message based on the state of the 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={gif1}  alt="react Hook Form input" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form.gif"  alt="react Hook Form input" />
 
 </div>
 
@@ -746,7 +756,7 @@ That’s all we have to do to set up our schema, next we’ll look at a new way 
 <br/>
 <div>
 <a href="https://discord.gg/refine">
-  <img  src="/img/discord_big_blue.png" alt="discord banner" />
+  <img  src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/discord_big_blue.png" alt="discord banner" />
 </a>
 </div>
 
@@ -792,7 +802,7 @@ This will check if there's an error with the `error` prop, then it'll display a 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={gif2}  alt="react Hook Form yup" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-big.gif"  alt="react Hook Form yup" />
 
 </div>
 
@@ -881,7 +891,7 @@ Now, if you save your progress and go to the browser, the company and role field
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={gif3}  alt="react Hook Form error handling" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-big2.gif"  alt="react Hook Form error handling" />
 
 </div>
 
@@ -930,7 +940,7 @@ Now, if you save your progress and head over to the browser, you should get a lo
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-   <img src={gifConsole}  alt="React Hook Form error handling" />
+   <img src="https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-09-27-react-hook-form-validation/react-hook-form-console.gif"  alt="React Hook Form error handling" />
 
 </div>
 
@@ -942,13 +952,8 @@ If you’d like to use your form data in other parts of your refine application,
 There you have it, we’ve successfully built a form that can validate input values, display dynamic error messages, and render fields based on the selected select option, using refine, React Hook Form, and **yup schema validator**.
 
 
-## Live StackBlitz Example
+## Example
 
-<iframe loading="lazy" src="https://stackblitz.com/github/refinedev/refine/tree/master/examples/blog/refine-react-hook-form/?embed=1&view=preview&theme=dark&preset=node&ctl=1"
-     style={{width: "100%", height:"80vh", border: "0px", borderRadius: "8px", overflow:"hidden"}}
-     title="refine-react-hook-form"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<StackblitzExample path="blog-refine-react-hook-form" />
 
 ---

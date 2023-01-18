@@ -1,6 +1,7 @@
 ---
 id: export-button
 title: Export
+swizzle: true
 ---
 
 ```tsx live shared
@@ -163,6 +164,10 @@ render(
     </Wrapper>,
 );
 ```
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Properties
 

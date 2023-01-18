@@ -1,5 +1,95 @@
 # @pankod/refine-mui
 
+## 3.61.3
+
+### Patch Changes
+
+-   [#3399](https://github.com/refinedev/refine/pull/3399) [`22b44a857a8`](https://github.com/refinedev/refine/commit/22b44a857a8ede3473965ab6baff70fc8ae31332) Thanks [@yildirayunlu](https://github.com/yildirayunlu)! - Fix `useTable` hook error return type.
+
+## 3.61.2
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   [`93a7d7088ae`](https://github.com/refinedev/refine/commit/93a7d7088aee1ec6baad3b33f646fa67b25f4af0) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed `experimental_sx` export
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.2
+
+## 3.61.1
+
+### Patch Changes
+
+-   [#3220](https://github.com/refinedev/refine/pull/3220) [`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b) Thanks [@aliemir](https://github.com/aliemir)! - Updated image links in `README.MD` with CDN
+
+-   [`93a7d7088ae`](https://github.com/refinedev/refine/commit/93a7d7088aee1ec6baad3b33f646fa67b25f4af0) Thanks [@omeraplak](https://github.com/omeraplak)! - Fixed `experimental_sx` export
+
+-   Updated dependencies [[`b867497f469`](https://github.com/refinedev/refine/commit/b867497f4694a5fbd330106a39256dee3c56199b)]:
+    -   @pankod/refine-ui-types@0.14.1
+
+## 3.61.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 3.60.0
+
+### Minor Changes
+
+-   [#3159](https://github.com/refinedev/refine/pull/3159) [`af2eefb32a4`](https://github.com/refinedev/refine/commit/af2eefb32a4df157062c28125c53aa3a47f48ff8) Thanks [@aliemir](https://github.com/aliemir)! - Updated `LoginPage` and `ReadyPage` to use **refine** logos from CDN rather than bundled svg files.
+
+## 3.59.4
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 3.59.3
+
+### Patch Changes
+
+-   [#3128](https://github.com/refinedev/refine/pull/3128) [`db1000a7628`](https://github.com/refinedev/refine/commit/db1000a7628d910c965eb63cd1cff81ffcd4fd4a) Thanks [@alicanerdurmaz](https://github.com/alicanerdurmaz)! - Fixed: `crud` components import path changed to relative path due to export issues on build.
+
+## 3.59.2
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 3.59.1
+
+### Patch Changes
+
+-   [#3109](https://github.com/refinedev/refine/pull/3109) [`16549ed3012`](https://github.com/refinedev/refine/commit/16549ed30128750f04ae17da12024b9734d5adae) Thanks [@aliemir](https://github.com/aliemir)! - Updated `swizzle` items and their messages to include extra information and usage examples.
+
+## 3.59.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
+## 3.58.0
+
+### Minor Changes
+
+-   [#3062](https://github.com/refinedev/refine/pull/3062) [`6c2ed708a9a`](https://github.com/refinedev/refine/commit/6c2ed708a9a76faddb9d27a0aca9f4ada3c270af) Thanks [@aliemir](https://github.com/aliemir)! - - Updated components and their type imports to make them compatible with `swizzle` feature.
+    -   Added `refine.config.js` to configure the `swizzle` feature.
+
+## 3.57.0
+
+### Minor Changes
+
+-   [#3076](https://github.com/refinedev/refine/pull/3076) [`bcd47eabbfc`](https://github.com/refinedev/refine/commit/bcd47eabbfc911ff622d30bf5bbdcc3a9a7d8565) Thanks [@ahhshm](https://github.com/ahhshm)! - exported material-ui localization files
+
+## 3.56.0
+
+### Minor Changes
+
+-   [#3076](https://github.com/refinedev/refine/pull/3076) [`bcd47eabbfc`](https://github.com/refinedev/refine/commit/bcd47eabbfc911ff622d30bf5bbdcc3a9a7d8565) Thanks [@ahhshm](https://github.com/ahhshm)! - exported material-ui localization files
+
 ## 3.55.2
 
 ### Patch Changes

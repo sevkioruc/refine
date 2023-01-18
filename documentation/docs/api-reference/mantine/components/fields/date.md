@@ -1,6 +1,7 @@
 ---
 id: date
 title: Date
+swizzle: true
 ---
 
 ```tsx live shared
@@ -33,6 +34,10 @@ const Wrapper = ({ children }) => {
 ```
 
 This field is used to display dates. It uses [`Day.js`](https://day.js.org/docs/en/display/format) to display date format.
+
+:::info-tip Swizzle
+You can swizzle this component to customize it with the [**refine CLI**](/docs/packages/documentation/cli)
+:::
 
 ## Usage
 

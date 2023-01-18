@@ -1,21 +1,10 @@
 import React from "react";
-import { Button, ButtonProps } from "antd";
+import { Button } from "antd";
 import { RedoOutlined } from "@ant-design/icons";
 import { useOne, useTranslate, useResource } from "@pankod/refine-core";
-import {
-    RefineButtonTestIds,
-    RefineRefreshButtonProps,
-} from "@pankod/refine-ui-types";
+import { RefineButtonTestIds } from "@pankod/refine-ui-types";
 
-export type RefreshButtonProps = RefineRefreshButtonProps<
-    ButtonProps,
-    {
-        /**
-         * @deprecated resourceName deprecated. Use resourceNameOrRouteName instead # https://github.com/refinedev/refine/issues/1618
-         */
-        resourceName?: string;
-    }
->;
+import { RefreshButtonProps } from "../types";
 
 /**
  * `<RefreshButton>` uses Ant Design's {@link https://ant.design/components/button/ `<Button>`} component
@@ -55,7 +44,8 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
 
     return (
         <Button
-            onClick={(e) => (onClick ? onClick(e) : refetch())}
+            // TODO: fix any type
+            onClick={(e) => (onClick ? onClick(e as any) : refetch())}
             icon={<RedoOutlined spin={isFetching} />}
             data-testid={RefineButtonTestIds.RefreshButton}
             {...rest}

@@ -4,9 +4,6 @@ title: Auth Provider
 sidebar_label: Auth Provider
 ---
 
-import login from '@site/static/img/guides-and-concepts/providers/auth-provider/login.png';
-import logout from '@site/static/img/guides-and-concepts/providers/auth-provider/logout.gif';
-import header from '@site/static/img/guides-and-concepts/providers/auth-provider/header.png';
 
 **refine** let's you set authentication logic by providing the `authProvider` property to the `<Refine>` component.
 
@@ -25,7 +22,7 @@ const authProvider = {
 };
 ```
 
-:::important
+:::caution
 **refine** consumes these methods using [authorization hooks](api-references/hooks/auth/useLogin.md).
 Authorization hooks are used to manage authentication and authorization operations like login, logout and catching **HTTP** errors etc.
 :::
@@ -150,13 +147,13 @@ After submission, login form calls the `login` method from `authProvider`.
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={login} alt="Default Login Page" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/providers/auth-provider/login.png" alt="Default Login Page" />
 </div>
 
 <br />
 <br />
 
-:::important
+:::caution
 If an `authProvider` is given, `resources` passed to `<Refine>` as propery are only accessible if the login is successful. if no `authProvider` was provided, they are accessible without authentication.  
 :::
 
@@ -224,7 +221,7 @@ If authentication is enabled, a logout button appears at the bottom of the side 
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={logout} alt="Logout Action" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/providers/auth-provider/logout.gif" alt="Logout Action" />
 </div>
 <br/>
 
@@ -309,7 +306,7 @@ checkError: (error) => {
 }
 ```
 
-:::important
+:::caution
 Redirection path given to `checkError` overrides the one on `logout`.
 :::
 
@@ -489,7 +486,7 @@ If the resolved data has a `name` or `avatar` property, **refine** renders a sui
         <div class="control orange"></div>
         <div class="control green"></div>
     </div>
-    <img src={header} alt="Header View" />
+    <img src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/img/guides-and-concepts/providers/auth-provider/header.png" alt="Header View" />
 </div>
 
 <br />

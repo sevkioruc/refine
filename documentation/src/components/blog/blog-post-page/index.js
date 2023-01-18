@@ -16,7 +16,7 @@ import {
 
 import { Tags } from "@site/src/components/blog";
 import { Date, ReadingTime, Spacer } from "@site/src/components/blog/common";
-import NewsletterCta from "../../newsletter-cta";
+/* import NewsletterCta from "../../newsletter-cta"; */
 
 export const BlogPostPageView = ({ children }) => {
     const { metadata, isBlogPostPage } = useBlogPost();
@@ -39,7 +39,7 @@ export const BlogPostPageView = ({ children }) => {
         <BlogPostItemContainer className="blog-post-item-shadow rounded-[10px] p-4">
             <div className="relative">
                 <div className="absolute top-0 right-0 rounded-bl-[10px] bg-white">
-                    <div className="flex items-center px-2 py-1 space-x-2">
+                    <div className="flex items-center space-x-2 px-2 py-1">
                         <TwitterShareButton
                             windowWidth={750}
                             windowHeight={800}
@@ -48,7 +48,7 @@ export const BlogPostPageView = ({ children }) => {
                             title={title}
                             hashtags={tags.map((tag) => tag.label)}
                         >
-                            <TwitterIcon size={36} round />
+                            <TwitterIcon size={26} round />
                         </TwitterShareButton>
                         <RedditShareButton
                             className="flex"
@@ -57,7 +57,7 @@ export const BlogPostPageView = ({ children }) => {
                             url={url + permalink}
                             title={title}
                         >
-                            <RedditIcon size={36} round />
+                            <RedditIcon size={26} round />
                         </RedditShareButton>
                         <LinkedinShareButton
                             url={url + permalink}
@@ -66,13 +66,16 @@ export const BlogPostPageView = ({ children }) => {
                             summary={description}
                             className="flex"
                         >
-                            <LinkedinIcon size={36} round />
+                            <LinkedinIcon size={26} round />
                         </LinkedinShareButton>
                     </div>
                 </div>
                 <img
                     className="mb-2 rounded-xl"
-                    src={`https://refine-web.imgix.net${frontMatter.image}?w=800`}
+                    src={`https://refine-web.imgix.net${frontMatter.image?.replace(
+                        "https://refine.ams3.cdn.digitaloceanspaces.com",
+                        "",
+                    )}?w=800`}
                     alt="Post image"
                 />
             </div>
@@ -103,7 +106,7 @@ export const BlogPostPageView = ({ children }) => {
                 <br />
                 <Tags />
             </div>
-            <NewsletterCta />
+            {/* <NewsletterCta /> */}
         </BlogPostItemContainer>
     );
 };
